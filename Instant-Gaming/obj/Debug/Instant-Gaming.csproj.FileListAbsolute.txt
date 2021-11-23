@@ -1,0 +1,10 @@
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe.config
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.pdb
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.AssemblyReference.cache
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Form1.resources
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Properties.Resources.resources
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.GenerateResource.cache
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.CoreCompileInputs.cache
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.exe
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
