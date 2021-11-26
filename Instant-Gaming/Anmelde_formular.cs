@@ -15,7 +15,6 @@ namespace Instant_Gaming
         public Anmelde_formular()
         {
             InitializeComponent();
-            // dies ist nur ein TEST
         }
     }
 }
