@@ -8,14 +8,14 @@ C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.CoreCompileInputs.cache
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.exe
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe.config
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.pdb
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csprojAssemblyReference.cache
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Form1.resources
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Properties.Resources.resources
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Verkauf.resources
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.GenerateResource.cache
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.CoreCompileInputs.cache
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.exe
-C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe.config
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.exe
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.pdb
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csprojAssemblyReference.cache
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Einkauf.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Form1.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Properties.Resources.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.GenerateResource.cache
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.CoreCompileInputs.cache
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.exe
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
