@@ -20,3 +20,4 @@ C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Anmelde_formular.resources
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Einkauf.resources
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Verkauf.resources

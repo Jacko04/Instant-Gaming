@@ -16,5 +16,10 @@ namespace Instant_Gaming
         {
             InitializeComponent();
         }
+
+        private void lbl_Registrieren_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
