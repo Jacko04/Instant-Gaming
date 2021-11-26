@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Instant_Gaming
 {
-    public partial class Form1 : Form
+    public partial class Anmelde_formular : Form
     {
-        public Form1()
+        public Anmelde_formular()
         {
             InitializeComponent();
             // dies ist nur ein TEST
