@@ -12,7 +12,6 @@ C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\bin\Debug\Instant-Gaming.pdb
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csprojAssemblyReference.cache
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Einkauf.resources
-C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Form1.resources
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Properties.Resources.resources
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.GenerateResource.cache
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.csproj.CoreCompileInputs.cache
@@ -21,3 +20,5 @@ C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Anmelde_formular.resources
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Einkauf.resources
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Verkauf.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Anmelde_formular.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Verkauf.resources
