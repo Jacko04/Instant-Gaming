@@ -16,7 +16,7 @@ namespace Instant_Gaming
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Einkauf());
+            Application.Run(new Verkauf());
         }
     }
 }
