@@ -19,6 +19,7 @@ namespace Instant_Gaming
         string sql;
         decimal Gespreis;
         decimal Minuspreis;
+        int Row;
 
         public Verkauf()
         {
@@ -39,6 +40,7 @@ namespace Instant_Gaming
         public void Einlesen()
         {
             //Daten in Datagridview einlesen
+            dgv_Verkauf.Rows.Clear();
             sql = "select * from Produkt";
             Verbinden(sql);
             reader = cmd.ExecuteReader();
@@ -52,6 +54,46 @@ namespace Instant_Gaming
 
         private void btn_kaufen_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < lst_Warenkorb.Items.Count; i++)
+            {
+                
+                int anzahl = 0;
+                int abzug = 0;
+                int PiD = (int)lst_Warenkorb.Items[i];
+                int KiD = 0;
+                int Kosten;
+                
+                sql = "select Anzahl from Artikel where Name = '" + lst_Warenkorb.Items[i] + "'";
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Kosten = (int)reader.GetInt32(0);
+                }
+                reader.Close();
+                con.Close();
+
+                sql = "select Anzahl from Artikel where Name = '"+lst_Warenkorb.Items[i]+"'";
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    anzahl = (int)reader.GetInt32(0);
+                }
+                reader.Close();
+                con.Close();
+
+                //Bestand wird aktuallisiert 
+                abzug = anzahl--;
+                sql = "UPDATE Produkt SET Anzahl = " + abzug + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
+                Verbinden(sql);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Einlesen();
+                //DB eintrag Rechnung
+                sql = "INSERT INTO Rechnung(RiD,Pid,KiD,Anzahl,Datum,Kosten,Adresse) VALUES ('','"+PiD+"','"+KiD+ "','" + Anzahl + "','NOW()','')";
+            }
+
 
         }
 
@@ -78,7 +120,7 @@ namespace Instant_Gaming
         private void dgv_Verkauf_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Daten werden in den Warenkorb gelesen
-            int Row = e.RowIndex;
+            Row = e.RowIndex;
             lst_Warenkorb.Items.Add(dgv_Verkauf.Rows[Row].Cells[1].Value.ToString());
             Gespreis += Convert.ToDecimal(dgv_Verkauf.Rows[Row].Cells[2].Value);
             lbl_Gespreis.Text = Gespreis.ToString();
