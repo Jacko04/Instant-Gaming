@@ -68,7 +68,7 @@ namespace Instant_Gaming
                 {
                     while (reader.Read())
                     {
-                        if (ID == reader.GetInt64(0) )
+                        if (ID == reader.GetInt64(0)) ;
                     }
                 }
                 catch (Exception)
