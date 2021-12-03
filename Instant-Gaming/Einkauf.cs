@@ -20,7 +20,8 @@ namespace Instant_Gaming
         int anzahl;
         int anzahlerhöhen;
         int zeilenindex;
-
+        decimal Gesamtkosten;
+        decimal halbenPreis;
 
         public Einkauf()
         {
@@ -51,7 +52,7 @@ namespace Instant_Gaming
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                dgv_Produkte.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2) + " €", reader.GetInt32(3), reader.GetString(4));
+                dgv_Produkte.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2), reader.GetInt32(3), reader.GetString(4));
             }
             reader.Close();
           
@@ -76,6 +77,10 @@ namespace Instant_Gaming
              anzahl = int.Parse(txt_Anzahl.Text);
             anzahlerhöhen = 0;
             numeric_Anzahl.Value = anzahlerhöhen;
+            halbenPreis = Convert.ToDecimal(dgv_Produkte.Rows[zeilenindex].Cells[2].Value) / 2;
+          
+  
+            
         }
 
         private void btn_Produkte_kaufen_Click(object sender, EventArgs e)
@@ -111,6 +116,8 @@ namespace Instant_Gaming
         private void numeric_Anzahl_ValueChanged(object sender, EventArgs e)
         {
             anzahlerhöhen = int.Parse(numeric_Anzahl.Value.ToString());
+            Gesamtkosten = halbenPreis * anzahlerhöhen;
+            lbl_Gesamtkosten.Text = "Gesamtkosten : " + Gesamtkosten;
         }
 
         private void btn_Einkaufen_Click(object sender, EventArgs e)
@@ -122,6 +129,8 @@ namespace Instant_Gaming
             DialogResult dr = MessageBox.Show("Möchtest du das Produkt : " + txt_name.Text + " in der Anzahl : " + anzahlerhöhen + " erhöhen", "Eilemeldung", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
+                // Anwendung um die Produkt Tabelle zu aktualisieren und einen neuen Datensatz 
+                // in die Einkaufstabelle hinzuzufügen
                 con.Open();
                 cmd.CommandText = "Update Produkt Set Anzahl = " + anzahl + " Where PiD = " + id;
                 cmd.ExecuteNonQuery();
@@ -129,6 +138,8 @@ namespace Instant_Gaming
                 Produkte();
                 anzahlerhöhen = 0;
                 numeric_Anzahl.Value = anzahlerhöhen;
+                con.Open(); 
+               // cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( '" + txt_PiD.Text + "', " + anzahlerhöhen + ", "
 
 
             }
