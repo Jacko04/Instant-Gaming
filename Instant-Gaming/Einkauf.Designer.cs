@@ -39,13 +39,10 @@
             this.btn_Einkaufstabelle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Produkte = new System.Windows.Forms.DataGridView();
-            this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Produkte = new System.Windows.Forms.Panel();
             this.panel_Produkte_Kaufen = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_PiD = new System.Windows.Forms.TextBox();
             this.btn_Einkaufen = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.numeric_Anzahl = new System.Windows.Forms.NumericUpDown();
@@ -60,10 +57,15 @@
             this.txt_Anzahl = new System.Windows.Forms.TextBox();
             this.btn_Produkte_kaufen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_PiD = new System.Windows.Forms.TextBox();
             this.panel_Einkauf = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_Gesamtkosten = new System.Windows.Forms.Label();
+            this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
@@ -174,7 +176,7 @@
             this.PiD,
             this.Bezeichnung,
             this.Preis,
-            this.Anzahl,
+            this.Column5,
             this.Kategorie});
             this.dgv_Produkte.Location = new System.Drawing.Point(13, 56);
             this.dgv_Produkte.Margin = new System.Windows.Forms.Padding(2);
@@ -182,44 +184,9 @@
             this.dgv_Produkte.ReadOnly = true;
             this.dgv_Produkte.RowHeadersWidth = 62;
             this.dgv_Produkte.RowTemplate.Height = 28;
-            this.dgv_Produkte.Size = new System.Drawing.Size(577, 445);
+            this.dgv_Produkte.Size = new System.Drawing.Size(563, 445);
             this.dgv_Produkte.TabIndex = 3;
             this.dgv_Produkte.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Produkte_CellClick);
-            // 
-            // PiD
-            // 
-            this.PiD.HeaderText = "PiD";
-            this.PiD.MinimumWidth = 8;
-            this.PiD.Name = "PiD";
-            this.PiD.ReadOnly = true;
-            // 
-            // Bezeichnung
-            // 
-            this.Bezeichnung.HeaderText = "Name";
-            this.Bezeichnung.MinimumWidth = 8;
-            this.Bezeichnung.Name = "Bezeichnung";
-            this.Bezeichnung.ReadOnly = true;
-            // 
-            // Preis
-            // 
-            this.Preis.HeaderText = "Preis";
-            this.Preis.MinimumWidth = 8;
-            this.Preis.Name = "Preis";
-            this.Preis.ReadOnly = true;
-            // 
-            // Anzahl
-            // 
-            this.Anzahl.HeaderText = "Anzahl";
-            this.Anzahl.MinimumWidth = 8;
-            this.Anzahl.Name = "Anzahl";
-            this.Anzahl.ReadOnly = true;
-            // 
-            // Kategorie
-            // 
-            this.Kategorie.HeaderText = "Kategorie";
-            this.Kategorie.MinimumWidth = 8;
-            this.Kategorie.Name = "Kategorie";
-            this.Kategorie.ReadOnly = true;
             // 
             // panel_Produkte
             // 
@@ -239,6 +206,7 @@
             // 
             this.panel_Produkte_Kaufen.BackColor = System.Drawing.Color.White;
             this.panel_Produkte_Kaufen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_Produkte_Kaufen.Controls.Add(this.lbl_Gesamtkosten);
             this.panel_Produkte_Kaufen.Controls.Add(this.label9);
             this.panel_Produkte_Kaufen.Controls.Add(this.txt_PiD);
             this.panel_Produkte_Kaufen.Controls.Add(this.btn_Einkaufen);
@@ -253,11 +221,30 @@
             this.panel_Produkte_Kaufen.Controls.Add(this.txt_Preis);
             this.panel_Produkte_Kaufen.Controls.Add(this.txt_Kategorie);
             this.panel_Produkte_Kaufen.Controls.Add(this.txt_Anzahl);
-            this.panel_Produkte_Kaufen.Location = new System.Drawing.Point(610, 149);
+            this.panel_Produkte_Kaufen.Location = new System.Drawing.Point(610, 165);
             this.panel_Produkte_Kaufen.Name = "panel_Produkte_Kaufen";
             this.panel_Produkte_Kaufen.Size = new System.Drawing.Size(641, 460);
             this.panel_Produkte_Kaufen.TabIndex = 11;
             this.panel_Produkte_Kaufen.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(21, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 23);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "PiD";
+            // 
+            // txt_PiD
+            // 
+            this.txt_PiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PiD.Location = new System.Drawing.Point(117, 58);
+            this.txt_PiD.Name = "txt_PiD";
+            this.txt_PiD.ReadOnly = true;
+            this.txt_PiD.Size = new System.Drawing.Size(183, 27);
+            this.txt_PiD.TabIndex = 17;
             // 
             // btn_Einkaufen
             // 
@@ -402,30 +389,12 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Produkte";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 23);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "PiD";
-            // 
-            // txt_PiD
-            // 
-            this.txt_PiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_PiD.Location = new System.Drawing.Point(117, 58);
-            this.txt_PiD.Name = "txt_PiD";
-            this.txt_PiD.ReadOnly = true;
-            this.txt_PiD.Size = new System.Drawing.Size(183, 27);
-            this.txt_PiD.TabIndex = 17;
-            // 
             // panel_Einkauf
             // 
             this.panel_Einkauf.BackColor = System.Drawing.Color.Linen;
             this.panel_Einkauf.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_Einkauf.Controls.Add(this.panel_Produkte);
+            this.panel_Einkauf.Controls.Add(this.button1);
             this.panel_Einkauf.Controls.Add(this.dgv_Einkauftabelle);
             this.panel_Einkauf.Controls.Add(this.label10);
             this.panel_Einkauf.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -440,9 +409,64 @@
             this.label10.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(21, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 28);
+            this.label10.Size = new System.Drawing.Size(102, 28);
             this.label10.TabIndex = 6;
-            this.label10.Text = "Funktion";
+            this.label10.Text = "Einkauf";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(26, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 49);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Verwaltung";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Gesamtkosten
+            // 
+            this.lbl_Gesamtkosten.AutoSize = true;
+            this.lbl_Gesamtkosten.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Gesamtkosten.Location = new System.Drawing.Point(329, 56);
+            this.lbl_Gesamtkosten.Name = "lbl_Gesamtkosten";
+            this.lbl_Gesamtkosten.Size = new System.Drawing.Size(171, 25);
+            this.lbl_Gesamtkosten.TabIndex = 19;
+            this.lbl_Gesamtkosten.Text = "Gesamtkosten : ";
+            // 
+            // PiD
+            // 
+            this.PiD.HeaderText = "PiD";
+            this.PiD.MinimumWidth = 8;
+            this.PiD.Name = "PiD";
+            this.PiD.ReadOnly = true;
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.HeaderText = "Name";
+            this.Bezeichnung.MinimumWidth = 8;
+            this.Bezeichnung.Name = "Bezeichnung";
+            this.Bezeichnung.ReadOnly = true;
+            // 
+            // Preis
+            // 
+            this.Preis.HeaderText = "Preis";
+            this.Preis.MinimumWidth = 8;
+            this.Preis.Name = "Preis";
+            this.Preis.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Anzahl";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Kategorie
+            // 
+            this.Kategorie.HeaderText = "Kategorie";
+            this.Kategorie.MinimumWidth = 8;
+            this.Kategorie.Name = "Kategorie";
+            this.Kategorie.ReadOnly = true;
             // 
             // Einkauf
             // 
@@ -481,11 +505,6 @@
         private System.Windows.Forms.Button btn_Einkaufstabelle;
         private System.Windows.Forms.Button btn_Produkte;
         private System.Windows.Forms.DataGridView dgv_Produkte;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PiD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kategorie;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel_Produkte;
         private System.Windows.Forms.Label label1;
@@ -508,5 +527,12 @@
         private System.Windows.Forms.Panel panel_Einkauf;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_Gesamtkosten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PiD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kategorie;
     }
 }

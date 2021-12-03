@@ -19,7 +19,7 @@ namespace Instant_Gaming
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataReader reader;
 
-        int ID;
+        Int64 ID;
         string Passwort;
         bool Admin;
         string Tabelle;
@@ -47,8 +47,6 @@ namespace Instant_Gaming
         public void Überprüfen()
         {   //for schleife zu überprüfung der 2 Tabellen
             try{
-                con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
-                cmd.Connection = con;
                 for (int i = 0; i < 2; i++)
                 {
                     //Array zum Speichern der Tabellen
@@ -56,23 +54,26 @@ namespace Instant_Gaming
                     //Array zum Definieren der Abfrage
                     string[] Kennung = { "MiD", "KiD" };
                     //Array If Bedingugen
-                    int[] Zahlen = { 8, 6 };
+                    int[] Zahlen = { 6, 8 };
                
                     //Converten der Infromation aus der Form
-                    ID = Convert.ToInt32(txt_ID.Text);
+                    ID = Convert.ToInt64(txt_ID.Text);
                     Passwort = Convert.ToString(txt_Passwort.Text);
 
                     //Datenbankverbindung und Abfrage
-                    cmd.CommandText = "SELECT * FROM " + Tabellen[i] + " WHERE " + Kennung[i] + "= " + ID + " AND passwort = '" + Passwort + "'";
+                    con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
+                    cmd.Connection = con;
                     con.Open();
-                   
+                    cmd.CommandText = "SELECT * FROM " + Tabellen[i] + " WHERE " + Kennung[i] + "= " + ID  + "' AND passwort = '" + Passwort + "'";
                     reader = cmd.ExecuteReader();
+                    
                 
-               
+                 
+                
                 
                         while (reader.Read())
                         {
-                            if (ID == reader.GetInt32(0) && Passwort == reader.GetString(Zahlen[i]) )
+                            if (ID == reader.GetInt64(0) && Passwort == reader.GetString(Zahlen[i]) )
                             {
                                 if(i == 0)
                                 {
@@ -102,8 +103,6 @@ namespace Instant_Gaming
                                 }
                             }
                         }
-                    reader.Close();
-                    con.Close();
                  }
                 
 
@@ -116,7 +115,7 @@ namespace Instant_Gaming
             }
         }
 
-        public int get_ID()
+        public Int64 get_ID()
         {
             return ID;
         }
