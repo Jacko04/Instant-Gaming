@@ -12,9 +12,15 @@ namespace Instant_Gaming
 {
     public partial class Main_Menü : Form
     {
+
         public Main_Menü()
         {
             InitializeComponent();
+        }
+
+        private void Main_Menü_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
