@@ -22,11 +22,23 @@ namespace Instant_Gaming
         int zeilenindex;
         decimal Gesamtkosten;
         decimal halbenPreis;
+        //Variablen für neue Produkte 
+        int NeueProdukte_anzahl;
+        string NeueProdukte_Name;
+        decimal NeueProdukte_Preis;
+        string NeueProdukte_Kategorie;
+
+
+
+
 
         public Einkauf()
         {
             InitializeComponent();
-            panel_Produkte.Visible = false; 
+            panel_Produkte.Visible = false;
+            panel_Einkauf.Visible = false;
+            panel_NeueProdukte.Visible = false;
+            panel_Produkte_Kaufen.Visible = false; 
         }
         public void Produkte()
         {
@@ -56,6 +68,33 @@ namespace Instant_Gaming
             }
             reader.Close();
           
+        }
+        // Methode um die Datensätze der Einkaufstabelle anzuzeigen
+        public void Einkauftabelle()
+        {
+            con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb";
+            cmd.Connection = con;
+            cmd.CommandText = "Select * from Einkauf";
+            try
+            {
+                con.Open();
+                Einkaufsdaten();
+                con.Close(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void Einkaufsdaten()
+        {
+            dgv_Einkauftabelle.Rows.Clear();
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dgv_Einkauftabelle.Rows.Add(reader.GetInt32(0), reader.GetInt32(1), reader.GetDecimal(2), reader.GetInt32(3));
+            }
+            reader.Close();
         }
 
         private void btn_Produkte_Click(object sender, EventArgs e)
@@ -90,6 +129,7 @@ namespace Instant_Gaming
             if (panel_Produkte_Kaufen.Visible == false)
             {
                 panel_Produkte_Kaufen.Visible = true;
+                panel_NeueProdukte.Visible = false; 
                 
             }
             else
@@ -136,11 +176,14 @@ namespace Instant_Gaming
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Produkte();
+               
+                con.Open();
+                cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( " + txt_PiD.Text + ", " + anzahlerhöhen + ", " + Gesamtkosten + ", " + 1 + ");";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Einkauftabelle();
                 anzahlerhöhen = 0;
                 numeric_Anzahl.Value = anzahlerhöhen;
-                con.Open(); 
-               // cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( '" + txt_PiD.Text + "', " + anzahlerhöhen + ", "
-
 
             }
             if (dr == DialogResult.No)
@@ -156,8 +199,52 @@ namespace Instant_Gaming
 
         private void btn_Einkaufstabelle_Click(object sender, EventArgs e)
         {
+            // Panels werden sichtbar oder versteckt
             panel_Produkte.Visible = false;
             panel_Einkauf.Visible = true;
+        }
+
+        private void btn_Hinzufügen_Click(object sender, EventArgs e)
+        {
+            // Variablen deklaration und Neue Produkte hinzufügen können
+            decimal Gesamtkosten; 
+            NeueProdukte_Name = Convert.ToString(txt_NeueProdukte_Name.Text);
+            NeueProdukte_Preis = Convert.ToDecimal(txt_NeueProdukte_Preis.Text);
+            NeueProdukte_anzahl = Convert.ToInt32(nup_NeueProdukte_Anzahl.Value);
+            NeueProdukte_Kategorie = Convert.ToString(txt_NeueProdukte_Kategorie.Text);
+            Gesamtkosten = NeueProdukte_Preis * NeueProdukte_anzahl;
+
+            con.Open();
+            cmd.CommandText = "Insert Into Produkt (Name,Preis,Anzahl,Kategorie) Values ( '" + NeueProdukte_Name + "' , " + NeueProdukte_Preis + ", " + NeueProdukte_anzahl + ", '" + NeueProdukte_Kategorie + "');";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Produkte();
+            txt_NeueProdukte_Kategorie.Clear();
+            txt_NeueProdukte_Name.Clear();
+            txt_NeueProdukte_Preis.Clear();
+          
+            con.Open(); 
+            cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values ( " + dgv_Produkte.Rows.Count + ", "+ NeueProdukte_anzahl + ", " + Gesamtkosten + ", " + 1 + ");";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Einkauftabelle();
+            nup_NeueProdukte_Anzahl.Value = 0;
+
+
+        }
+
+        private void btn_NeueProdukte_Click(object sender, EventArgs e)
+        {
+            panel_Produkte_Kaufen.Visible = false;
+            panel_NeueProdukte.Visible = true; 
+        }
+
+        private void nup_NeueProdukte_Anzahl_ValueChanged(object sender, EventArgs e)
+        {
+            NeueProdukte_anzahl = Convert.ToInt32(nup_NeueProdukte_Anzahl.Value);
+            NeueProdukte_Preis = Convert.ToDecimal(txt_NeueProdukte_Preis.Text);
+            Gesamtkosten = NeueProdukte_Preis * NeueProdukte_anzahl;
+            lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : " + Gesamtkosten;
         }
     }
 }

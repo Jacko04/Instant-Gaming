@@ -78,6 +78,9 @@
     <EmbeddedResource Include="Einkauf.resx">
       <DependentUpon>Einkauf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Menü.resx">
+      <DependentUpon>Main_Menü.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
