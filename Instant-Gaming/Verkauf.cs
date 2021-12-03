@@ -66,6 +66,7 @@ namespace Instant_Gaming
                 decimal Kosten = 0;
                 string Adresse = "";
                 int RiD = 0;
+                string Key = "";
                 //Int64 ID = A.get_ID();
 
                 //nacher löschen
@@ -133,11 +134,14 @@ namespace Instant_Gaming
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    RiD = reader.GetInt32(0);
+                    RiD = reader.GetInt32(0);                    
                 }
                 reader.Close();
                 con.Close();
                 RiD++;
+
+                //Keygenerator
+
 
                 //Bestand wird aktuallisiert 
                 anzahl--;
@@ -148,7 +152,10 @@ namespace Instant_Gaming
                 Einlesen();
 
                 //DB eintrag Rechnung
-                sql = "INSERT INTO Rechnung(RiD,Pid,KiD,Anzahl,Datum,Kosten,Adresse) VALUES ('"+RiD+"','"+PiD+"','"+KiD+ "','" + anzahl + "','NOW()','"+ Kosten +"','"+Adresse+"')";
+                sql = "INSERT INTO Rechnung(RiD,PiD,KiD,Anzahl,Datum,Kosten,Adresse,Key) VALUES ("+RiD+","+PiD+","+KiD+ "," + anzahl + ",NOW(),'"+ Kosten +"','"+Adresse+"','"+Key+"')";
+                Verbinden(sql);
+                cmd.ExecuteNonQuery();
+                con.Close();
             }
 
 
