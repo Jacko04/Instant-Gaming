@@ -146,6 +146,7 @@ namespace Instant_Gaming
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Einlesen();
+
                 //DB eintrag Rechnung
                 sql = "INSERT INTO Rechnung(RiD,Pid,KiD,Anzahl,Datum,Kosten,Adresse) VALUES ('"+RiD+"','"+PiD+"','"+KiD+ "','" + anzahl + "','NOW()','"+ Kosten +"','"+Adresse+"')";
             }
