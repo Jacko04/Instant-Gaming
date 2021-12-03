@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Instant_Gaming
 {
     public partial class Verkauf : Form
     {
+        Anmelde_formular A = new Anmelde_formular();
         OleDbCommand cmd = new OleDbCommand();
         OleDbConnection con = new OleDbConnection();
         OleDbDataReader reader;
@@ -30,6 +32,7 @@ namespace Instant_Gaming
         public void Verbinden(string sql)
         {
             //Methode zum Verbinden
+            con.Close();
             con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb";
             cmd.CommandText = sql;
             cmd.Connection = con;
@@ -58,40 +61,93 @@ namespace Instant_Gaming
             {
                 
                 int anzahl = 0;
-                int abzug = 0;
-                int PiD = (int)lst_Warenkorb.Items[i];
+                int PiD = 0;
                 int KiD = 0;
-                int Kosten;
-                
-                sql = "select Anzahl from Artikel where Name = '" + lst_Warenkorb.Items[i] + "'";
+                decimal Kosten = 0;
+                string Adresse = "";
+                int RiD = 0;
+                //Int64 ID = A.get_ID();
+
+                //nacher löschen
+                    int ID = 1;
+                //
+
+                //Kid ranholen
+                sql = "select * from Kunden where KiD = " + ID + "";
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Kosten = (int)reader.GetInt32(0);
+                    KiD = reader.GetInt32(0);
                 }
                 reader.Close();
                 con.Close();
 
-                sql = "select Anzahl from Artikel where Name = '"+lst_Warenkorb.Items[i]+"'";
+                //Kosten aus datenbank lesen
+                sql = "select Preis from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    anzahl = (int)reader.GetInt32(0);
+                    Kosten = reader.GetDecimal(0);
                 }
                 reader.Close();
                 con.Close();
+
+                //anzahl aus datenbank lesen
+                sql = "select Anzahl from Produkt where Name = '" + lst_Warenkorb.Items[i]+"'";
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    anzahl = reader.GetInt32(0);
+                }
+                reader.Close();
+                con.Close();
+
+                //PiD aus datenbank lesen
+                sql = "select PiD from Produkt where Name = '" + lst_Warenkorb.Items[i]+"'";
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    PiD = reader.GetInt32(0);
+                }
+                reader.Close();
+                con.Close();
+
+                //Adresse aus datenbank lesen
+                sql = "select Adresse from Kunden where KiD = " + KiD;
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Adresse = reader.GetString(0);
+                }
+                reader.Close();
+                con.Close();
+
+                //RiD erstellen
+                sql = "select LAST(RiD) from Rechnung";
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    RiD = reader.GetInt32(0);
+                }
+                reader.Close();
+                con.Close();
+                RiD++;
 
                 //Bestand wird aktuallisiert 
-                abzug = anzahl--;
-                sql = "UPDATE Produkt SET Anzahl = " + abzug + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
+                anzahl--;
+                sql = "UPDATE Produkt SET Anzahl = " + anzahl + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
                 Verbinden(sql);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Einlesen();
                 //DB eintrag Rechnung
-                sql = "INSERT INTO Rechnung(RiD,Pid,KiD,Anzahl,Datum,Kosten,Adresse) VALUES ('','"+PiD+"','"+KiD+ "','" + Anzahl + "','NOW()','')";
+                sql = "INSERT INTO Rechnung(RiD,Pid,KiD,Anzahl,Datum,Kosten,Adresse) VALUES ('"+RiD+"','"+PiD+"','"+KiD+ "','" + anzahl + "','NOW()','"+ Kosten +"','"+Adresse+"')";
             }
 
 
