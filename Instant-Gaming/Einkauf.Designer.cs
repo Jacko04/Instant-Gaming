@@ -39,8 +39,26 @@
             this.btn_Einkaufstabelle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Produkte = new System.Windows.Forms.DataGridView();
+            this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Produkte = new System.Windows.Forms.Panel();
+            this.panel_NeueProdukte = new System.Windows.Forms.Panel();
+            this.btn_Hinzufügen = new System.Windows.Forms.Button();
+            this.nup_NeueProdukte_Anzahl = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txt_NeueProdukte_Name = new System.Windows.Forms.TextBox();
+            this.txt_NeueProdukte_Preis = new System.Windows.Forms.TextBox();
+            this.txt_NeueProdukte_Kategorie = new System.Windows.Forms.TextBox();
+            this.btn_NeueProdukte = new System.Windows.Forms.Button();
             this.panel_Produkte_Kaufen = new System.Windows.Forms.Panel();
+            this.lbl_Gesamtkosten = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_PiD = new System.Windows.Forms.TextBox();
             this.btn_Einkaufen = new System.Windows.Forms.Button();
@@ -58,18 +76,16 @@
             this.btn_Produkte_kaufen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Einkauf = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lbl_Gesamtkosten = new System.Windows.Forms.Label();
-            this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_NeueProdukte_Gesamtkosten = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
             this.panel_Produkte.SuspendLayout();
+            this.panel_NeueProdukte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nup_NeueProdukte_Anzahl)).BeginInit();
             this.panel_Produkte_Kaufen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Anzahl)).BeginInit();
             this.panel_Einkauf.SuspendLayout();
@@ -135,11 +151,11 @@
             // btn_Produkte
             // 
             this.btn_Produkte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Produkte.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Produkte.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Produkte.ForeColor = System.Drawing.Color.White;
-            this.btn_Produkte.Location = new System.Drawing.Point(58, 167);
+            this.btn_Produkte.Location = new System.Drawing.Point(58, 90);
             this.btn_Produkte.Name = "btn_Produkte";
-            this.btn_Produkte.Size = new System.Drawing.Size(151, 62);
+            this.btn_Produkte.Size = new System.Drawing.Size(151, 123);
             this.btn_Produkte.TabIndex = 5;
             this.btn_Produkte.Text = "Produkte";
             this.btn_Produkte.UseVisualStyleBackColor = true;
@@ -148,11 +164,11 @@
             // btn_Einkaufstabelle
             // 
             this.btn_Einkaufstabelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Einkaufstabelle.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Einkaufstabelle.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Einkaufstabelle.ForeColor = System.Drawing.Color.White;
-            this.btn_Einkaufstabelle.Location = new System.Drawing.Point(58, 67);
+            this.btn_Einkaufstabelle.Location = new System.Drawing.Point(58, 268);
             this.btn_Einkaufstabelle.Name = "btn_Einkaufstabelle";
-            this.btn_Einkaufstabelle.Size = new System.Drawing.Size(151, 62);
+            this.btn_Einkaufstabelle.Size = new System.Drawing.Size(151, 123);
             this.btn_Einkaufstabelle.TabIndex = 4;
             this.btn_Einkaufstabelle.Text = "Einkauf";
             this.btn_Einkaufstabelle.UseVisualStyleBackColor = true;
@@ -161,10 +177,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 17);
+            this.label2.Font = new System.Drawing.Font("Century", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(51, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 28);
+            this.label2.Size = new System.Drawing.Size(168, 41);
             this.label2.TabIndex = 3;
             this.label2.Text = "Funktion";
             // 
@@ -188,10 +204,46 @@
             this.dgv_Produkte.TabIndex = 3;
             this.dgv_Produkte.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Produkte_CellClick);
             // 
+            // PiD
+            // 
+            this.PiD.HeaderText = "PiD";
+            this.PiD.MinimumWidth = 8;
+            this.PiD.Name = "PiD";
+            this.PiD.ReadOnly = true;
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.HeaderText = "Name";
+            this.Bezeichnung.MinimumWidth = 8;
+            this.Bezeichnung.Name = "Bezeichnung";
+            this.Bezeichnung.ReadOnly = true;
+            // 
+            // Preis
+            // 
+            this.Preis.HeaderText = "Preis";
+            this.Preis.MinimumWidth = 8;
+            this.Preis.Name = "Preis";
+            this.Preis.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Anzahl";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Kategorie
+            // 
+            this.Kategorie.HeaderText = "Kategorie";
+            this.Kategorie.MinimumWidth = 8;
+            this.Kategorie.Name = "Kategorie";
+            this.Kategorie.ReadOnly = true;
+            // 
             // panel_Produkte
             // 
             this.panel_Produkte.BackColor = System.Drawing.Color.Linen;
             this.panel_Produkte.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_Produkte.Controls.Add(this.panel_NeueProdukte);
+            this.panel_Produkte.Controls.Add(this.btn_NeueProdukte);
             this.panel_Produkte.Controls.Add(this.panel_Produkte_Kaufen);
             this.panel_Produkte.Controls.Add(this.btn_Produkte_kaufen);
             this.panel_Produkte.Controls.Add(this.label1);
@@ -201,6 +253,139 @@
             this.panel_Produkte.Name = "panel_Produkte";
             this.panel_Produkte.Size = new System.Drawing.Size(1006, 617);
             this.panel_Produkte.TabIndex = 4;
+            // 
+            // panel_NeueProdukte
+            // 
+            this.panel_NeueProdukte.BackColor = System.Drawing.Color.White;
+            this.panel_NeueProdukte.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_NeueProdukte.Controls.Add(this.lbl_NeueProdukte_Gesamtkosten);
+            this.panel_NeueProdukte.Controls.Add(this.btn_Hinzufügen);
+            this.panel_NeueProdukte.Controls.Add(this.nup_NeueProdukte_Anzahl);
+            this.panel_NeueProdukte.Controls.Add(this.label15);
+            this.panel_NeueProdukte.Controls.Add(this.label16);
+            this.panel_NeueProdukte.Controls.Add(this.label17);
+            this.panel_NeueProdukte.Controls.Add(this.label18);
+            this.panel_NeueProdukte.Controls.Add(this.label19);
+            this.panel_NeueProdukte.Controls.Add(this.txt_NeueProdukte_Name);
+            this.panel_NeueProdukte.Controls.Add(this.txt_NeueProdukte_Preis);
+            this.panel_NeueProdukte.Controls.Add(this.txt_NeueProdukte_Kategorie);
+            this.panel_NeueProdukte.Location = new System.Drawing.Point(610, 157);
+            this.panel_NeueProdukte.Name = "panel_NeueProdukte";
+            this.panel_NeueProdukte.Size = new System.Drawing.Size(641, 460);
+            this.panel_NeueProdukte.TabIndex = 20;
+            this.panel_NeueProdukte.Visible = false;
+            // 
+            // btn_Hinzufügen
+            // 
+            this.btn_Hinzufügen.BackColor = System.Drawing.Color.Linen;
+            this.btn_Hinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Hinzufügen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Hinzufügen.ForeColor = System.Drawing.Color.Black;
+            this.btn_Hinzufügen.Location = new System.Drawing.Point(25, 369);
+            this.btn_Hinzufügen.Name = "btn_Hinzufügen";
+            this.btn_Hinzufügen.Size = new System.Drawing.Size(151, 62);
+            this.btn_Hinzufügen.TabIndex = 12;
+            this.btn_Hinzufügen.Text = "Hinzufügen";
+            this.btn_Hinzufügen.UseVisualStyleBackColor = false;
+            this.btn_Hinzufügen.Click += new System.EventHandler(this.btn_Hinzufügen_Click);
+            // 
+            // nup_NeueProdukte_Anzahl
+            // 
+            this.nup_NeueProdukte_Anzahl.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nup_NeueProdukte_Anzahl.Location = new System.Drawing.Point(119, 153);
+            this.nup_NeueProdukte_Anzahl.Name = "nup_NeueProdukte_Anzahl";
+            this.nup_NeueProdukte_Anzahl.Size = new System.Drawing.Size(183, 27);
+            this.nup_NeueProdukte_Anzahl.TabIndex = 15;
+            this.nup_NeueProdukte_Anzahl.ValueChanged += new System.EventHandler(this.nup_NeueProdukte_Anzahl_ValueChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label15.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(24, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(183, 30);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Neue Produkte";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(20, 110);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 23);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Preis";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(20, 152);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 23);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Anzahl";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(20, 195);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 23);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Kategorie";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(20, 64);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 23);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Name";
+            // 
+            // txt_NeueProdukte_Name
+            // 
+            this.txt_NeueProdukte_Name.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NeueProdukte_Name.Location = new System.Drawing.Point(119, 67);
+            this.txt_NeueProdukte_Name.Name = "txt_NeueProdukte_Name";
+            this.txt_NeueProdukte_Name.Size = new System.Drawing.Size(183, 27);
+            this.txt_NeueProdukte_Name.TabIndex = 7;
+            // 
+            // txt_NeueProdukte_Preis
+            // 
+            this.txt_NeueProdukte_Preis.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NeueProdukte_Preis.Location = new System.Drawing.Point(119, 110);
+            this.txt_NeueProdukte_Preis.Name = "txt_NeueProdukte_Preis";
+            this.txt_NeueProdukte_Preis.Size = new System.Drawing.Size(183, 27);
+            this.txt_NeueProdukte_Preis.TabIndex = 10;
+            // 
+            // txt_NeueProdukte_Kategorie
+            // 
+            this.txt_NeueProdukte_Kategorie.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NeueProdukte_Kategorie.Location = new System.Drawing.Point(119, 195);
+            this.txt_NeueProdukte_Kategorie.Name = "txt_NeueProdukte_Kategorie";
+            this.txt_NeueProdukte_Kategorie.Size = new System.Drawing.Size(183, 27);
+            this.txt_NeueProdukte_Kategorie.TabIndex = 8;
+            // 
+            // btn_NeueProdukte
+            // 
+            this.btn_NeueProdukte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NeueProdukte.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NeueProdukte.ForeColor = System.Drawing.Color.Black;
+            this.btn_NeueProdukte.Location = new System.Drawing.Point(808, 56);
+            this.btn_NeueProdukte.Name = "btn_NeueProdukte";
+            this.btn_NeueProdukte.Size = new System.Drawing.Size(151, 62);
+            this.btn_NeueProdukte.TabIndex = 12;
+            this.btn_NeueProdukte.Text = "Neue Produkte";
+            this.btn_NeueProdukte.UseVisualStyleBackColor = true;
+            this.btn_NeueProdukte.Click += new System.EventHandler(this.btn_NeueProdukte_Click);
             // 
             // panel_Produkte_Kaufen
             // 
@@ -226,6 +411,16 @@
             this.panel_Produkte_Kaufen.Size = new System.Drawing.Size(641, 460);
             this.panel_Produkte_Kaufen.TabIndex = 11;
             this.panel_Produkte_Kaufen.Visible = false;
+            // 
+            // lbl_Gesamtkosten
+            // 
+            this.lbl_Gesamtkosten.AutoSize = true;
+            this.lbl_Gesamtkosten.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Gesamtkosten.Location = new System.Drawing.Point(329, 56);
+            this.lbl_Gesamtkosten.Name = "lbl_Gesamtkosten";
+            this.lbl_Gesamtkosten.Size = new System.Drawing.Size(171, 25);
+            this.lbl_Gesamtkosten.TabIndex = 19;
+            this.lbl_Gesamtkosten.Text = "Gesamtkosten : ";
             // 
             // label9
             // 
@@ -282,10 +477,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label7.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(20, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 28);
+            this.label7.Size = new System.Drawing.Size(201, 30);
             this.label7.TabIndex = 12;
             this.label7.Text = "Produkte kaufen";
             // 
@@ -403,16 +600,6 @@
             this.panel_Einkauf.Size = new System.Drawing.Size(1010, 621);
             this.panel_Einkauf.TabIndex = 5;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 28);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Einkauf";
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -424,49 +611,35 @@
             this.button1.Text = "Verwaltung";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // lbl_Gesamtkosten
+            // label10
             // 
-            this.lbl_Gesamtkosten.AutoSize = true;
-            this.lbl_Gesamtkosten.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Gesamtkosten.Location = new System.Drawing.Point(329, 56);
-            this.lbl_Gesamtkosten.Name = "lbl_Gesamtkosten";
-            this.lbl_Gesamtkosten.Size = new System.Drawing.Size(171, 25);
-            this.lbl_Gesamtkosten.TabIndex = 19;
-            this.lbl_Gesamtkosten.Text = "Gesamtkosten : ";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(21, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 28);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Einkauf";
             // 
-            // PiD
+            // label11
             // 
-            this.PiD.HeaderText = "PiD";
-            this.PiD.MinimumWidth = 8;
-            this.PiD.Name = "PiD";
-            this.PiD.ReadOnly = true;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(441, 215);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(764, 77);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Instant Gaming Einkauf";
             // 
-            // Bezeichnung
+            // lbl_NeueProdukte_Gesamtkosten
             // 
-            this.Bezeichnung.HeaderText = "Name";
-            this.Bezeichnung.MinimumWidth = 8;
-            this.Bezeichnung.Name = "Bezeichnung";
-            this.Bezeichnung.ReadOnly = true;
-            // 
-            // Preis
-            // 
-            this.Preis.HeaderText = "Preis";
-            this.Preis.MinimumWidth = 8;
-            this.Preis.Name = "Preis";
-            this.Preis.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Anzahl";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Kategorie
-            // 
-            this.Kategorie.HeaderText = "Kategorie";
-            this.Kategorie.MinimumWidth = 8;
-            this.Kategorie.Name = "Kategorie";
-            this.Kategorie.ReadOnly = true;
+            this.lbl_NeueProdukte_Gesamtkosten.AutoSize = true;
+            this.lbl_NeueProdukte_Gesamtkosten.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NeueProdukte_Gesamtkosten.Location = new System.Drawing.Point(20, 252);
+            this.lbl_NeueProdukte_Gesamtkosten.Name = "lbl_NeueProdukte_Gesamtkosten";
+            this.lbl_NeueProdukte_Gesamtkosten.Size = new System.Drawing.Size(153, 23);
+            this.lbl_NeueProdukte_Gesamtkosten.TabIndex = 16;
+            this.lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : ";
             // 
             // Einkauf
             // 
@@ -475,6 +648,7 @@
             this.ClientSize = new System.Drawing.Size(1283, 621);
             this.Controls.Add(this.panel_Einkauf);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label11);
             this.Name = "Einkauf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Einkauf";
@@ -485,12 +659,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).EndInit();
             this.panel_Produkte.ResumeLayout(false);
             this.panel_Produkte.PerformLayout();
+            this.panel_NeueProdukte.ResumeLayout(false);
+            this.panel_NeueProdukte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nup_NeueProdukte_Anzahl)).EndInit();
             this.panel_Produkte_Kaufen.ResumeLayout(false);
             this.panel_Produkte_Kaufen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Anzahl)).EndInit();
             this.panel_Einkauf.ResumeLayout(false);
             this.panel_Einkauf.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -534,5 +712,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategorie;
+        private System.Windows.Forms.Panel panel_NeueProdukte;
+        private System.Windows.Forms.Button btn_Hinzufügen;
+        private System.Windows.Forms.NumericUpDown nup_NeueProdukte_Anzahl;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txt_NeueProdukte_Name;
+        private System.Windows.Forms.TextBox txt_NeueProdukte_Preis;
+        private System.Windows.Forms.TextBox txt_NeueProdukte_Kategorie;
+        private System.Windows.Forms.Button btn_NeueProdukte;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_NeueProdukte_Gesamtkosten;
     }
 }
