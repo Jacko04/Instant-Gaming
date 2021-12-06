@@ -16,6 +16,10 @@ namespace Instant_Gaming
         // DB Connection Variablen 
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
+
+       
+        Anmelde_formular amf = new Anmelde_formular();
+       
         OleDbDataReader reader;
         int anzahl;
         int anzahlerhöhen;
@@ -34,14 +38,21 @@ namespace Instant_Gaming
 
         public Einkauf()
         {
+
             InitializeComponent();
+            // Die meisten panels werden zum Anfang hin versteckt
             panel_Produkte.Visible = false;
             panel_Einkauf.Visible = false;
             panel_NeueProdukte.Visible = false;
-            panel_Produkte_Kaufen.Visible = false; 
+            panel_Produkte_Kaufen.Visible = false;
+            panel_Einkauf_Verwaltung.Visible = false;
+            lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
+            Uhrzeit.Start();
+
         }
         public void Produkte()
         {
+            // Methode um die Tabelle Produkte zu laden
             con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb";
             cmd.Connection = con;
             cmd.CommandText = "Select * from Produkt";
@@ -88,6 +99,7 @@ namespace Instant_Gaming
         }
         public void Einkaufsdaten()
         {
+            // Die Daten von der Einkaufs Access Tabelle werden eingefügt mit Hilfe eines Readers 
             dgv_Einkauftabelle.Rows.Clear();
             reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -155,6 +167,7 @@ namespace Instant_Gaming
 
         private void numeric_Anzahl_ValueChanged(object sender, EventArgs e)
         {
+            // Gesamtkosten werden berechnet, wo die Anzahl der Produkte aufgefüllt werden
             anzahlerhöhen = int.Parse(numeric_Anzahl.Value.ToString());
             Gesamtkosten = halbenPreis * anzahlerhöhen;
             lbl_Gesamtkosten.Text = "Gesamtkosten : " + Gesamtkosten;
@@ -178,7 +191,7 @@ namespace Instant_Gaming
                 Produkte();
                
                 con.Open();
-                cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( " + txt_PiD.Text + ", " + anzahlerhöhen + ", " + Gesamtkosten + ", " + 1 + ");";
+                cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( " + txt_PiD.Text + ", " + anzahlerhöhen + ", " + Gesamtkosten + ", " + amf.get_ID() + ");";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Einkauftabelle();
@@ -209,7 +222,6 @@ namespace Instant_Gaming
             // Variablen deklaration und Neue Produkte hinzufügen können
             decimal Gesamtkosten; 
             NeueProdukte_Name = Convert.ToString(txt_NeueProdukte_Name.Text);
-            NeueProdukte_Preis = Convert.ToDecimal(txt_NeueProdukte_Preis.Text);
             NeueProdukte_anzahl = Convert.ToInt32(nup_NeueProdukte_Anzahl.Value);
             NeueProdukte_Kategorie = Convert.ToString(txt_NeueProdukte_Kategorie.Text);
             Gesamtkosten = NeueProdukte_Preis * NeueProdukte_anzahl;
@@ -222,7 +234,7 @@ namespace Instant_Gaming
             txt_NeueProdukte_Kategorie.Clear();
             txt_NeueProdukte_Name.Clear();
             txt_NeueProdukte_Preis.Clear();
-          
+
             con.Open(); 
             cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values ( " + dgv_Produkte.Rows.Count + ", "+ NeueProdukte_anzahl + ", " + Gesamtkosten + ", " + 1 + ");";
             cmd.ExecuteNonQuery();
@@ -241,10 +253,50 @@ namespace Instant_Gaming
 
         private void nup_NeueProdukte_Anzahl_ValueChanged(object sender, EventArgs e)
         {
+            // Gesamtkosten werden berechnet , für neue Produkte
             NeueProdukte_anzahl = Convert.ToInt32(nup_NeueProdukte_Anzahl.Value);
-            NeueProdukte_Preis = Convert.ToDecimal(txt_NeueProdukte_Preis.Text);
             Gesamtkosten = NeueProdukte_Preis * NeueProdukte_anzahl;
             lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : " + Gesamtkosten;
+        }
+
+        private void txt_NeueProdukte_Preis_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NeueProdukte_Preis = Convert.ToDecimal(txt_NeueProdukte_Preis.Text);
+            }
+            catch (Exception)
+            {
+                txt_NeueProdukte_Preis.Clear(); 
+            }
+        }
+
+        private void btn_Verwaltung_Click(object sender, EventArgs e)
+        {
+            if (panel_Einkauf_Verwaltung.Visible == false)
+            {
+                panel_Einkauf_Verwaltung.Visible = true;
+            }
+            else
+            {
+                panel_Einkauf_Verwaltung.Visible = false; 
+            }
+        }
+
+        private void dgv_Einkauftabelle_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int zeilenindex = e.RowIndex;
+            txt_Einkauf_Verwaltung_PiD.Text = dgv_Einkauftabelle.Rows[zeilenindex].Cells[0].Value.ToString();
+            txt_Einkauf_Verwaltung_Anzahl.Text = dgv_Einkauftabelle.Rows[zeilenindex].Cells[1].Value.ToString();
+            txt_Verwaltung_Einkauf_Gesamtkosten.Text = dgv_Einkauftabelle.Rows[zeilenindex].Cells[2].Value.ToString();
+            txt_Einkauf_Verwaltung_MiD.Text = dgv_Einkauftabelle.Rows[zeilenindex].Cells[3].Value.ToString();
+
+        }
+
+        private void Uhrzeit_Tick(object sender, EventArgs e)
+        {
+            DateTime Uhrzeit = DateTime.Now;
+            lbl_DateTime.Text = "Aktuelle Uhrzeit : " + Uhrzeit.ToLongTimeString();
         }
     }
 }

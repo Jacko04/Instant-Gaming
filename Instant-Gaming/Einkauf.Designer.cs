@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgv_Einkauftabelle = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,7 @@
             this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Produkte = new System.Windows.Forms.Panel();
             this.panel_NeueProdukte = new System.Windows.Forms.Panel();
+            this.lbl_NeueProdukte_Gesamtkosten = new System.Windows.Forms.Label();
             this.btn_Hinzufügen = new System.Windows.Forms.Button();
             this.nup_NeueProdukte_Anzahl = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
@@ -76,10 +78,21 @@
             this.btn_Produkte_kaufen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Einkauf = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Verwaltung = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbl_NeueProdukte_Gesamtkosten = new System.Windows.Forms.Label();
+            this.panel_Einkauf_Verwaltung = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_Einkauf_Verwaltung_PiD = new System.Windows.Forms.TextBox();
+            this.txt_Einkauf_Verwaltung_Anzahl = new System.Windows.Forms.TextBox();
+            this.txt_Verwaltung_Einkauf_Gesamtkosten = new System.Windows.Forms.TextBox();
+            this.txt_Einkauf_Verwaltung_MiD = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_DateTime = new System.Windows.Forms.Label();
+            this.Uhrzeit = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
@@ -89,6 +102,7 @@
             this.panel_Produkte_Kaufen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Anzahl)).BeginInit();
             this.panel_Einkauf.SuspendLayout();
+            this.panel_Einkauf_Verwaltung.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Einkauftabelle
@@ -106,6 +120,7 @@
             this.dgv_Einkauftabelle.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgv_Einkauftabelle.Size = new System.Drawing.Size(597, 252);
             this.dgv_Einkauftabelle.TabIndex = 0;
+            this.dgv_Einkauftabelle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Einkauftabelle_CellClick);
             // 
             // Column1
             // 
@@ -131,6 +146,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbl_DateTime);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btn_Produkte);
             this.panel1.Controls.Add(this.btn_Einkaufstabelle);
@@ -138,7 +154,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 621);
+            this.panel1.Size = new System.Drawing.Size(273, 647);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -200,7 +216,7 @@
             this.dgv_Produkte.ReadOnly = true;
             this.dgv_Produkte.RowHeadersWidth = 62;
             this.dgv_Produkte.RowTemplate.Height = 28;
-            this.dgv_Produkte.Size = new System.Drawing.Size(563, 445);
+            this.dgv_Produkte.Size = new System.Drawing.Size(563, 483);
             this.dgv_Produkte.TabIndex = 3;
             this.dgv_Produkte.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Produkte_CellClick);
             // 
@@ -251,7 +267,7 @@
             this.panel_Produkte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Produkte.Location = new System.Drawing.Point(0, 0);
             this.panel_Produkte.Name = "panel_Produkte";
-            this.panel_Produkte.Size = new System.Drawing.Size(1006, 617);
+            this.panel_Produkte.Size = new System.Drawing.Size(1037, 643);
             this.panel_Produkte.TabIndex = 4;
             // 
             // panel_NeueProdukte
@@ -274,6 +290,16 @@
             this.panel_NeueProdukte.Size = new System.Drawing.Size(641, 460);
             this.panel_NeueProdukte.TabIndex = 20;
             this.panel_NeueProdukte.Visible = false;
+            // 
+            // lbl_NeueProdukte_Gesamtkosten
+            // 
+            this.lbl_NeueProdukte_Gesamtkosten.AutoSize = true;
+            this.lbl_NeueProdukte_Gesamtkosten.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NeueProdukte_Gesamtkosten.Location = new System.Drawing.Point(20, 252);
+            this.lbl_NeueProdukte_Gesamtkosten.Name = "lbl_NeueProdukte_Gesamtkosten";
+            this.lbl_NeueProdukte_Gesamtkosten.Size = new System.Drawing.Size(153, 23);
+            this.lbl_NeueProdukte_Gesamtkosten.TabIndex = 16;
+            this.lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : ";
             // 
             // btn_Hinzufügen
             // 
@@ -365,6 +391,7 @@
             this.txt_NeueProdukte_Preis.Name = "txt_NeueProdukte_Preis";
             this.txt_NeueProdukte_Preis.Size = new System.Drawing.Size(183, 27);
             this.txt_NeueProdukte_Preis.TabIndex = 10;
+            this.txt_NeueProdukte_Preis.TextChanged += new System.EventHandler(this.txt_NeueProdukte_Preis_TextChanged);
             // 
             // txt_NeueProdukte_Kategorie
             // 
@@ -591,25 +618,27 @@
             this.panel_Einkauf.BackColor = System.Drawing.Color.Linen;
             this.panel_Einkauf.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_Einkauf.Controls.Add(this.panel_Produkte);
-            this.panel_Einkauf.Controls.Add(this.button1);
+            this.panel_Einkauf.Controls.Add(this.btn_Verwaltung);
             this.panel_Einkauf.Controls.Add(this.dgv_Einkauftabelle);
             this.panel_Einkauf.Controls.Add(this.label10);
+            this.panel_Einkauf.Controls.Add(this.panel_Einkauf_Verwaltung);
             this.panel_Einkauf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Einkauf.Location = new System.Drawing.Point(273, 0);
             this.panel_Einkauf.Name = "panel_Einkauf";
-            this.panel_Einkauf.Size = new System.Drawing.Size(1010, 621);
+            this.panel_Einkauf.Size = new System.Drawing.Size(1041, 647);
             this.panel_Einkauf.TabIndex = 5;
             // 
-            // button1
+            // btn_Verwaltung
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 342);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Verwaltung";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Verwaltung.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Verwaltung.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Verwaltung.Location = new System.Drawing.Point(26, 342);
+            this.btn_Verwaltung.Name = "btn_Verwaltung";
+            this.btn_Verwaltung.Size = new System.Drawing.Size(123, 49);
+            this.btn_Verwaltung.TabIndex = 7;
+            this.btn_Verwaltung.Text = "Verwaltung";
+            this.btn_Verwaltung.UseVisualStyleBackColor = true;
+            this.btn_Verwaltung.Click += new System.EventHandler(this.btn_Verwaltung_Click);
             // 
             // label10
             // 
@@ -631,21 +660,132 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Instant Gaming Einkauf";
             // 
-            // lbl_NeueProdukte_Gesamtkosten
+            // panel_Einkauf_Verwaltung
             // 
-            this.lbl_NeueProdukte_Gesamtkosten.AutoSize = true;
-            this.lbl_NeueProdukte_Gesamtkosten.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NeueProdukte_Gesamtkosten.Location = new System.Drawing.Point(20, 252);
-            this.lbl_NeueProdukte_Gesamtkosten.Name = "lbl_NeueProdukte_Gesamtkosten";
-            this.lbl_NeueProdukte_Gesamtkosten.Size = new System.Drawing.Size(153, 23);
-            this.lbl_NeueProdukte_Gesamtkosten.TabIndex = 16;
-            this.lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : ";
+            this.panel_Einkauf_Verwaltung.BackColor = System.Drawing.Color.White;
+            this.panel_Einkauf_Verwaltung.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.label21);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.label20);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.label14);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.label13);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.txt_Einkauf_Verwaltung_MiD);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.txt_Verwaltung_Einkauf_Gesamtkosten);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.txt_Einkauf_Verwaltung_Anzahl);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.txt_Einkauf_Verwaltung_PiD);
+            this.panel_Einkauf_Verwaltung.Controls.Add(this.label12);
+            this.panel_Einkauf_Verwaltung.Location = new System.Drawing.Point(169, 342);
+            this.panel_Einkauf_Verwaltung.Name = "panel_Einkauf_Verwaltung";
+            this.panel_Einkauf_Verwaltung.Size = new System.Drawing.Size(566, 247);
+            this.panel_Einkauf_Verwaltung.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(152, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(293, 28);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Einzelne Daten einsehen";
+            // 
+            // txt_Einkauf_Verwaltung_PiD
+            // 
+            this.txt_Einkauf_Verwaltung_PiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_PiD.Location = new System.Drawing.Point(173, 60);
+            this.txt_Einkauf_Verwaltung_PiD.Name = "txt_Einkauf_Verwaltung_PiD";
+            this.txt_Einkauf_Verwaltung_PiD.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_PiD.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_PiD.TabIndex = 8;
+            // 
+            // txt_Einkauf_Verwaltung_Anzahl
+            // 
+            this.txt_Einkauf_Verwaltung_Anzahl.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_Anzahl.Location = new System.Drawing.Point(173, 95);
+            this.txt_Einkauf_Verwaltung_Anzahl.Name = "txt_Einkauf_Verwaltung_Anzahl";
+            this.txt_Einkauf_Verwaltung_Anzahl.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_Anzahl.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_Anzahl.TabIndex = 9;
+            // 
+            // txt_Verwaltung_Einkauf_Gesamtkosten
+            // 
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Location = new System.Drawing.Point(173, 130);
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Name = "txt_Verwaltung_Einkauf_Gesamtkosten";
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.ReadOnly = true;
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Size = new System.Drawing.Size(161, 27);
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.TabIndex = 10;
+            // 
+            // txt_Einkauf_Verwaltung_MiD
+            // 
+            this.txt_Einkauf_Verwaltung_MiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_MiD.Location = new System.Drawing.Point(173, 172);
+            this.txt_Einkauf_Verwaltung_MiD.Name = "txt_Einkauf_Verwaltung_MiD";
+            this.txt_Einkauf_Verwaltung_MiD.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_MiD.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_MiD.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(28, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 23);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "PiD";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(28, 95);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(74, 23);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Anzahl";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(28, 130);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(138, 23);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Gesamtkosten";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(28, 176);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 23);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "MiD";
+            // 
+            // lbl_DateTime
+            // 
+            this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_DateTime.AutoSize = true;
+            this.lbl_DateTime.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DateTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_DateTime.Location = new System.Drawing.Point(3, 594);
+            this.lbl_DateTime.Name = "lbl_DateTime";
+            this.lbl_DateTime.Size = new System.Drawing.Size(76, 23);
+            this.lbl_DateTime.TabIndex = 6;
+            this.lbl_DateTime.Text = "label22";
+            // 
+            // Uhrzeit
+            // 
+            this.Uhrzeit.Interval = 1000;
+            this.Uhrzeit.Tick += new System.EventHandler(this.Uhrzeit_Tick);
             // 
             // Einkauf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 621);
+            this.ClientSize = new System.Drawing.Size(1314, 647);
             this.Controls.Add(this.panel_Einkauf);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
@@ -667,6 +807,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Anzahl)).EndInit();
             this.panel_Einkauf.ResumeLayout(false);
             this.panel_Einkauf.PerformLayout();
+            this.panel_Einkauf_Verwaltung.ResumeLayout(false);
+            this.panel_Einkauf_Verwaltung.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,7 +847,7 @@
         private System.Windows.Forms.Panel panel_Einkauf;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Verwaltung;
         private System.Windows.Forms.Label lbl_Gesamtkosten;
         private System.Windows.Forms.DataGridViewTextBoxColumn PiD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
@@ -726,5 +868,17 @@
         private System.Windows.Forms.Button btn_NeueProdukte;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbl_NeueProdukte_Gesamtkosten;
+        private System.Windows.Forms.Panel panel_Einkauf_Verwaltung;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_Einkauf_Verwaltung_MiD;
+        private System.Windows.Forms.TextBox txt_Verwaltung_Einkauf_Gesamtkosten;
+        private System.Windows.Forms.TextBox txt_Einkauf_Verwaltung_Anzahl;
+        private System.Windows.Forms.TextBox txt_Einkauf_Verwaltung_PiD;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_DateTime;
+        private System.Windows.Forms.Timer Uhrzeit;
     }
 }

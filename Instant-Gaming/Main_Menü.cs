@@ -22,5 +22,12 @@ namespace Instant_Gaming
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Einkauf eink = new Einkauf();
+            eink.Show();
+            this.Visible = false; 
+        }
     }
 }
