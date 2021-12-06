@@ -18,11 +18,12 @@ namespace Instant_Gaming
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataReader reader;
-
+        
         int ID;
         string Passwort;
         bool Admin;
         string Tabelle;
+        bool Ladenvorgang;
         
 
         public Anmelde_formular()
@@ -39,6 +40,7 @@ namespace Instant_Gaming
         private void btn_Bestätigen_Click(object sender, EventArgs e)
         {
             Überprüfen();
+            
         }
 
         
@@ -78,27 +80,32 @@ namespace Instant_Gaming
                                 {
                                     if (reader.GetBoolean(6) == true )
                                     {
+                                        Ladenvorgang = true;    
                                         Admin = true; 
                                         Tabelle = "Mitarbeiter";
                                         Main_menü = new Main_Menü();
                                         Main_menü.Visible = true;
                                         this.Visible = false;
-                                    }
+                                }
                                     else
                                     {
+                                        Ladenvorgang = true;
                                         Admin = false;
                                         Tabelle = "Mitarbeiter";
                                         Main_menü = new Main_Menü();
                                         Main_menü.Visible = true;
                                         this.Visible = false;
-                                    }
+
+                                }
                                 }
                                 else if (i == 1)
                                 {
                                     Tabelle = "Kunden";
+                                    Ladenvorgang = true;
                                     Main_menü = new Main_Menü();
                                     Main_menü.Visible = true;
-                                    this.Visible = false;
+                                    this.Visible = false;   
+
                                 }
                             }
                         }
@@ -129,6 +136,11 @@ namespace Instant_Gaming
         {
             return Admin;
         }
-        
+
+        public bool get_Ladevorgang()
+        {
+            return Ladenvorgang;
+        }
+
     }
 }
