@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pn_funktion = new System.Windows.Forms.Panel();
+            this.lbl_euro = new System.Windows.Forms.Label();
             this.btn_entfernen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_Gespreis = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_euro = new System.Windows.Forms.Label();
+            this.btn_rechnungsform = new System.Windows.Forms.Button();
             this.pn_funktion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Verkauf)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // pn_funktion
             // 
             this.pn_funktion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pn_funktion.Controls.Add(this.btn_rechnungsform);
             this.pn_funktion.Controls.Add(this.lbl_euro);
             this.pn_funktion.Controls.Add(this.btn_entfernen);
             this.pn_funktion.Controls.Add(this.label2);
@@ -62,13 +64,26 @@
             this.pn_funktion.Size = new System.Drawing.Size(410, 802);
             this.pn_funktion.TabIndex = 0;
             // 
+            // lbl_euro
+            // 
+            this.lbl_euro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_euro.AutoSize = true;
+            this.lbl_euro.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_euro.Location = new System.Drawing.Point(358, 646);
+            this.lbl_euro.Name = "lbl_euro";
+            this.lbl_euro.Size = new System.Drawing.Size(38, 42);
+            this.lbl_euro.TabIndex = 6;
+            this.lbl_euro.Text = "€";
+            // 
             // btn_entfernen
             // 
             this.btn_entfernen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_entfernen.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_entfernen.Location = new System.Drawing.Point(13, 579);
             this.btn_entfernen.Name = "btn_entfernen";
-            this.btn_entfernen.Size = new System.Drawing.Size(94, 54);
+            this.btn_entfernen.Size = new System.Drawing.Size(107, 54);
             this.btn_entfernen.TabIndex = 5;
             this.btn_entfernen.Text = "Entfernen";
             this.btn_entfernen.UseVisualStyleBackColor = true;
@@ -149,11 +164,12 @@
             this.dgv_Verkauf.Location = new System.Drawing.Point(410, 0);
             this.dgv_Verkauf.Name = "dgv_Verkauf";
             this.dgv_Verkauf.ReadOnly = true;
+            this.dgv_Verkauf.RowHeadersVisible = false;
             this.dgv_Verkauf.RowHeadersWidth = 62;
             this.dgv_Verkauf.RowTemplate.Height = 28;
             this.dgv_Verkauf.Size = new System.Drawing.Size(865, 802);
             this.dgv_Verkauf.TabIndex = 1;
-            this.dgv_Verkauf.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Verkauf_CellClick);
+            this.dgv_Verkauf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Verkauf_CellContentClick);
             // 
             // PiD
             // 
@@ -190,17 +206,17 @@
             this.Kategorie.Name = "Kategorie";
             this.Kategorie.ReadOnly = true;
             // 
-            // lbl_euro
+            // btn_rechnungsform
             // 
-            this.lbl_euro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_rechnungsform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_euro.AutoSize = true;
-            this.lbl_euro.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_euro.Location = new System.Drawing.Point(358, 646);
-            this.lbl_euro.Name = "lbl_euro";
-            this.lbl_euro.Size = new System.Drawing.Size(38, 42);
-            this.lbl_euro.TabIndex = 6;
-            this.lbl_euro.Text = "€";
+            this.btn_rechnungsform.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rechnungsform.Location = new System.Drawing.Point(183, 579);
+            this.btn_rechnungsform.Name = "btn_rechnungsform";
+            this.btn_rechnungsform.Size = new System.Drawing.Size(213, 54);
+            this.btn_rechnungsform.TabIndex = 7;
+            this.btn_rechnungsform.Text = "Rechnungen anzeigen";
+            this.btn_rechnungsform.UseVisualStyleBackColor = true;
             // 
             // Verkauf
             // 
@@ -236,5 +252,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_entfernen;
         private System.Windows.Forms.Label lbl_euro;
+        private System.Windows.Forms.Button btn_rechnungsform;
     }
 }

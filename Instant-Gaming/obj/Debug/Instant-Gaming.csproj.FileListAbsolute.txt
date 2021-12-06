@@ -47,3 +47,4 @@ C:\Users\koste\OneDrive\Desktop\Backup\Instant-Gaming\Instant-Gaming\obj\Debug\I
 C:\Users\koste\OneDrive\Desktop\Backup\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.exe
 C:\Users\koste\OneDrive\Desktop\Backup\Instant-Gaming\Instant-Gaming\obj\Debug\Instant-Gaming.pdb
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Main_Menü.resources
+C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Main_Menü.resources

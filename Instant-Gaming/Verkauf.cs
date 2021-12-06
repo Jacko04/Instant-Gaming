@@ -27,6 +27,10 @@ namespace Instant_Gaming
         {
             InitializeComponent();
             Einlesen();
+            foreach (DataGridViewColumn colum in dgv_Verkauf.Columns)
+            {
+                colum.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         public void Verbinden(string sql)
@@ -57,32 +61,45 @@ namespace Instant_Gaming
 
         private void btn_kaufen_Click(object sender, EventArgs e)
         {
+            int RiD = 0;
+            //RiD erstellen
+            sql = "select LAST(RiD) from Rechnung";
+            Verbinden(sql);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                RiD = reader.GetInt32(0);
+            }
+            reader.Close();
+            con.Close();
+            RiD++;
+
             for (int i = 0; i < lst_Warenkorb.Items.Count; i++)
             {
                 
                 int anzahl = 0;
                 int PiD = 0;
-                int KiD = 0;
+                //int KiD = 0;
                 decimal Kosten = 0;
                 string Adresse = "";
-                int RiD = 0;
+
                 string Key = "";
                 //Int64 ID = A.get_ID();
 
                 //nacher löschen
-                    int ID = 1;
+                    int KiD = 1;
                 //
 
-                //Kid ranholen
-                sql = "select * from Kunden where KiD = " + ID + "";
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    KiD = reader.GetInt32(0);
-                }
-                reader.Close();
-                con.Close();
+                ////Kid ranholen
+                //sql = "select * from Kunden where KiD = " + ID + "";
+                //Verbinden(sql);
+                //reader = cmd.ExecuteReader();
+                //while (reader.Read())
+                //{
+                //    KiD = reader.GetInt32(0);
+                //}
+                //reader.Close();
+                //con.Close();
 
                 //Kosten aus datenbank lesen
                 sql = "select Preis from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
@@ -95,7 +112,7 @@ namespace Instant_Gaming
                 reader.Close();
                 con.Close();
 
-                //anzahl aus datenbank lesen
+                //bestellungsanzahl
                 sql = "select Anzahl from Produkt where Name = '" + lst_Warenkorb.Items[i]+"'";
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
@@ -128,20 +145,18 @@ namespace Instant_Gaming
                 reader.Close();
                 con.Close();
 
-                //RiD erstellen
-                sql = "select LAST(RiD) from Rechnung";
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    RiD = reader.GetInt32(0);                    
-                }
-                reader.Close();
-                con.Close();
-                RiD++;
-
                 //Keygenerator
+                var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                var Charsarr = new char[8];
+                var random = new Random();
 
+                for (int u = 0; u < Charsarr.Length; u++)
+                {
+                    Charsarr[u] = characters[random.Next(characters.Length)];
+                }
+
+                var resultString = new String(Charsarr);
+                Key = resultString;
 
                 //Bestand wird aktuallisiert 
                 anzahl--;
@@ -152,13 +167,11 @@ namespace Instant_Gaming
                 Einlesen();
 
                 //DB eintrag Rechnung
-                sql = "INSERT INTO Rechnung(RiD,PiD,KiD,Anzahl,Datum,Kosten,Adresse,Key) VALUES ("+RiD+","+PiD+","+KiD+ "," + anzahl + ",NOW(),'"+ Kosten +"','"+Adresse+"','"+Key+"')";
+                sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Anzahl, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + "," + anzahl + ",NOW(),'"+ Kosten + "','" + Adresse + "','" + Key + "');";
                 Verbinden(sql);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
-
         }
 
         private void btn_entfernen_Click(object sender, EventArgs e)
@@ -181,7 +194,7 @@ namespace Instant_Gaming
             }
         }
 
-        private void dgv_Verkauf_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_Verkauf_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Daten werden in den Warenkorb gelesen
             Row = e.RowIndex;
