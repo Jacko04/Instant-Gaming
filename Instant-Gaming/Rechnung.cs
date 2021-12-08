@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Instant_Gaming
 {
     public partial class Rechnung : Form
     {
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbConnection con = new OleDbConnection();
+        OleDbDataReader reader;
+        string sql;
+        int Kid = 1;
+        List<int> Ridload = new List<int>();    
+
         public Rechnung()
         {
             InitializeComponent();
@@ -26,11 +34,38 @@ namespace Instant_Gaming
 
         private void Rechnung_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "instant_Gaming_VerkaufDataSet1.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.rechnungTableAdapter1.Fill(this.instant_Gaming_VerkaufDataSet1.Rechnung);
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "instant_Gaming_VerkaufDataSet.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.rechnungTableAdapter.Fill(this.instant_Gaming_VerkaufDataSet.Rechnung);
+            for (int i = 0; i < dgv_Rechnungen.Rows.Count + 1; i++)
+            {
+                sql = "select DISTINCT RiD from Rechnung where KiD =" + Kid;
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Ridload.Add(reader.GetInt32(0));
+                }
+                con.Close();
+                reader.Close();
+                sql = "select Datum from Rechnung where KiD =" + Kid;
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    dgv_Rechnungen.Rows.Add(Ridload[i], reader.GetDateTime(0));
+                }
+                con.Close();
+                reader.Close();
+            }
 
+        }
+
+        public void Verbinden(string sql)
+        {
+            //Methode zum Verbinden
+            con.Close();
+            con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            con.Open();
         }
     }
 }

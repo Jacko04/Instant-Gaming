@@ -58,16 +58,6 @@
     <Compile Include="Einkauf.Designer.cs">
       <DependentUpon>Einkauf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instant_Gaming_VerkaufDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Instant_Gaming_VerkaufDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Instant_Gaming_VerkaufDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Instant_Gaming_VerkaufDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Main_Menü.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,28 +102,6 @@
     <EmbeddedResource Include="Verkauf.resx">
       <DependentUpon>Verkauf.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Instant_Gaming_VerkaufDataSet.xsc">
-      <DependentUpon>Instant_Gaming_VerkaufDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Instant_Gaming_VerkaufDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Instant_Gaming_VerkaufDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Instant_Gaming_VerkaufDataSet.xss">
-      <DependentUpon>Instant_Gaming_VerkaufDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Instant_Gaming_VerkaufDataSet1.xsc">
-      <DependentUpon>Instant_Gaming_VerkaufDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Instant_Gaming_VerkaufDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Instant_Gaming_VerkaufDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Instant_Gaming_VerkaufDataSet1.xss">
-      <DependentUpon>Instant_Gaming_VerkaufDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,11 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Instant Gaming Verkauf.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
