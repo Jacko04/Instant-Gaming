@@ -13,17 +13,39 @@ namespace Instant_Gaming
     public partial class Main_Menü : Form
     {
         int ID;
-        string Tabelle; 
+        string Tabelle;
+        bool admin;
         public Main_Menü(int id , string tb, bool Admin)
         {
             InitializeComponent();
             ID = id;
-            Tabelle = tb; 
+            Tabelle = tb;
+            admin = Admin;
+
         }
 
         private void Main_Menü_Load(object sender, EventArgs e)
         {
+            if (Tabelle == "Mitarbeiter")
+            {
+                if (admin ==  true)
+                {
+                    panel_Kunden.Visible = false;
+                    panel_Mitarbeiter.Visible = false;
+                }
+                else
+                {
+                    panel_Admin.Visible = false;
+                    panel_Kunden.Visible = false;
+                }
+            
+            }
+            else
+            {
+                panel_Admin.Visible = false;
+                panel_Mitarbeiter.Visible = false; 
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
