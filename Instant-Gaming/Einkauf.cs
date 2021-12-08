@@ -17,9 +17,13 @@ namespace Instant_Gaming
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
 
-       
-        Anmelde_formular amf = new Anmelde_formular();
-       
+
+       // Anmelde_formular amf = new Anmelde_formular();
+
+
+        int ID;
+        string Tabelle; 
+
         OleDbDataReader reader;
         int anzahl;
         int anzahlerhöhen;
@@ -36,9 +40,10 @@ namespace Instant_Gaming
 
 
 
-        public Einkauf()
+        public Einkauf(int id, string tb)
         {
-
+            ID = id;
+            Tabelle = tb; 
             InitializeComponent();
             // Die meisten panels werden zum Anfang hin versteckt
             panel_Produkte.Visible = false;
@@ -47,7 +52,10 @@ namespace Instant_Gaming
             panel_Produkte_Kaufen.Visible = false;
             panel_Einkauf_Verwaltung.Visible = false;
             lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
-            Uhrzeit.Start();
+            Werteübermitteln(ID,Tabelle);
+            
+            lbl_Test.Text = "die ID lautet : " + ID + "\n" + "die Tabelle lauutet : " + Tabelle;
+           // Uhrzeit.Start();
 
         }
         public void Produkte()
@@ -191,7 +199,7 @@ namespace Instant_Gaming
                 Produkte();
                
                 con.Open();
-                cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( " + txt_PiD.Text + ", " + anzahlerhöhen + ", " + Gesamtkosten + ", " + amf.get_ID() + ");";
+                cmd.CommandText = "Insert Into Einkauf (PiD,Anzahl,Gesamtkosten,MiD) Values( " + txt_PiD.Text + ", " + anzahlerhöhen + ", " + Gesamtkosten + ", " + 1 + ");";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Einkauftabelle();
@@ -298,5 +306,12 @@ namespace Instant_Gaming
             DateTime Uhrzeit = DateTime.Now;
             lbl_DateTime.Text = "Aktuelle Uhrzeit : " + Uhrzeit.ToLongTimeString();
         }
+        public void Werteübermitteln(int id, string tb)
+        {
+            id = ID;
+            tb = Tabelle;
+        }
+
+       
     }
 }

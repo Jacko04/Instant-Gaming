@@ -12,10 +12,13 @@ namespace Instant_Gaming
 {
     public partial class Main_Menü : Form
     {
-
-        public Main_Menü()
+        int ID;
+        string Tabelle; 
+        public Main_Menü(int id , string tb, bool Admin)
         {
             InitializeComponent();
+            ID = id;
+            Tabelle = tb; 
         }
 
         private void Main_Menü_Load(object sender, EventArgs e)
@@ -25,7 +28,7 @@ namespace Instant_Gaming
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Einkauf eink = new Einkauf();
+            Einkauf eink = new Einkauf(ID,Tabelle);
             eink.Show();
             this.Visible = false; 
         }
