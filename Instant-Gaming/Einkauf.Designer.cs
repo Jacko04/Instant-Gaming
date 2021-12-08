@@ -35,6 +35,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_Test = new System.Windows.Forms.Label();
+            this.lbl_DateTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Produkte = new System.Windows.Forms.Button();
             this.btn_Einkaufstabelle = new System.Windows.Forms.Button();
@@ -80,18 +82,17 @@
             this.panel_Einkauf = new System.Windows.Forms.Panel();
             this.btn_Verwaltung = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel_Einkauf_Verwaltung = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Einkauf_Verwaltung_PiD = new System.Windows.Forms.TextBox();
-            this.txt_Einkauf_Verwaltung_Anzahl = new System.Windows.Forms.TextBox();
-            this.txt_Verwaltung_Einkauf_Gesamtkosten = new System.Windows.Forms.TextBox();
-            this.txt_Einkauf_Verwaltung_MiD = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.lbl_DateTime = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_Einkauf_Verwaltung_MiD = new System.Windows.Forms.TextBox();
+            this.txt_Verwaltung_Einkauf_Gesamtkosten = new System.Windows.Forms.TextBox();
+            this.txt_Einkauf_Verwaltung_Anzahl = new System.Windows.Forms.TextBox();
+            this.txt_Einkauf_Verwaltung_PiD = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.Uhrzeit = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,6 +147,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbl_Test);
             this.panel1.Controls.Add(this.lbl_DateTime);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btn_Produkte);
@@ -156,6 +158,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 647);
             this.panel1.TabIndex = 2;
+            // 
+            // lbl_Test
+            // 
+            this.lbl_Test.AutoSize = true;
+            this.lbl_Test.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Test.Location = new System.Drawing.Point(2, 423);
+            this.lbl_Test.Name = "lbl_Test";
+            this.lbl_Test.Size = new System.Drawing.Size(62, 25);
+            this.lbl_Test.TabIndex = 7;
+            this.lbl_Test.Text = "hallo";
+           
+            // 
+            // lbl_DateTime
+            // 
+            this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_DateTime.AutoSize = true;
+            this.lbl_DateTime.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DateTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_DateTime.Location = new System.Drawing.Point(3, 594);
+            this.lbl_DateTime.Name = "lbl_DateTime";
+            this.lbl_DateTime.Size = new System.Drawing.Size(76, 23);
+            this.lbl_DateTime.TabIndex = 6;
+            this.lbl_DateTime.Text = "label22";
             // 
             // panel2
             // 
@@ -650,16 +675,6 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Einkauf";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(441, 215);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(764, 77);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Instant Gaming Einkauf";
-            // 
             // panel_Einkauf_Verwaltung
             // 
             this.panel_Einkauf_Verwaltung.BackColor = System.Drawing.Color.White;
@@ -678,71 +693,15 @@
             this.panel_Einkauf_Verwaltung.Size = new System.Drawing.Size(566, 247);
             this.panel_Einkauf_Verwaltung.TabIndex = 8;
             // 
-            // label12
+            // label21
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(152, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(293, 28);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Einzelne Daten einsehen";
-            // 
-            // txt_Einkauf_Verwaltung_PiD
-            // 
-            this.txt_Einkauf_Verwaltung_PiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Einkauf_Verwaltung_PiD.Location = new System.Drawing.Point(173, 60);
-            this.txt_Einkauf_Verwaltung_PiD.Name = "txt_Einkauf_Verwaltung_PiD";
-            this.txt_Einkauf_Verwaltung_PiD.ReadOnly = true;
-            this.txt_Einkauf_Verwaltung_PiD.Size = new System.Drawing.Size(161, 27);
-            this.txt_Einkauf_Verwaltung_PiD.TabIndex = 8;
-            // 
-            // txt_Einkauf_Verwaltung_Anzahl
-            // 
-            this.txt_Einkauf_Verwaltung_Anzahl.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Einkauf_Verwaltung_Anzahl.Location = new System.Drawing.Point(173, 95);
-            this.txt_Einkauf_Verwaltung_Anzahl.Name = "txt_Einkauf_Verwaltung_Anzahl";
-            this.txt_Einkauf_Verwaltung_Anzahl.ReadOnly = true;
-            this.txt_Einkauf_Verwaltung_Anzahl.Size = new System.Drawing.Size(161, 27);
-            this.txt_Einkauf_Verwaltung_Anzahl.TabIndex = 9;
-            // 
-            // txt_Verwaltung_Einkauf_Gesamtkosten
-            // 
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.Location = new System.Drawing.Point(173, 130);
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.Name = "txt_Verwaltung_Einkauf_Gesamtkosten";
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.ReadOnly = true;
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.Size = new System.Drawing.Size(161, 27);
-            this.txt_Verwaltung_Einkauf_Gesamtkosten.TabIndex = 10;
-            // 
-            // txt_Einkauf_Verwaltung_MiD
-            // 
-            this.txt_Einkauf_Verwaltung_MiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Einkauf_Verwaltung_MiD.Location = new System.Drawing.Point(173, 172);
-            this.txt_Einkauf_Verwaltung_MiD.Name = "txt_Einkauf_Verwaltung_MiD";
-            this.txt_Einkauf_Verwaltung_MiD.ReadOnly = true;
-            this.txt_Einkauf_Verwaltung_MiD.Size = new System.Drawing.Size(161, 27);
-            this.txt_Einkauf_Verwaltung_MiD.TabIndex = 11;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 60);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 23);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "PiD";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(28, 95);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 23);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Anzahl";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(28, 176);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 23);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "MiD";
             // 
             // label20
             // 
@@ -754,27 +713,81 @@
             this.label20.TabIndex = 14;
             this.label20.Text = "Gesamtkosten";
             // 
-            // label21
+            // label14
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(28, 176);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 23);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "MiD";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(28, 95);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(74, 23);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Anzahl";
             // 
-            // lbl_DateTime
+            // label13
             // 
-            this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_DateTime.AutoSize = true;
-            this.lbl_DateTime.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DateTime.ForeColor = System.Drawing.Color.White;
-            this.lbl_DateTime.Location = new System.Drawing.Point(3, 594);
-            this.lbl_DateTime.Name = "lbl_DateTime";
-            this.lbl_DateTime.Size = new System.Drawing.Size(76, 23);
-            this.lbl_DateTime.TabIndex = 6;
-            this.lbl_DateTime.Text = "label22";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(28, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 23);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "PiD";
+            // 
+            // txt_Einkauf_Verwaltung_MiD
+            // 
+            this.txt_Einkauf_Verwaltung_MiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_MiD.Location = new System.Drawing.Point(173, 172);
+            this.txt_Einkauf_Verwaltung_MiD.Name = "txt_Einkauf_Verwaltung_MiD";
+            this.txt_Einkauf_Verwaltung_MiD.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_MiD.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_MiD.TabIndex = 11;
+            // 
+            // txt_Verwaltung_Einkauf_Gesamtkosten
+            // 
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Location = new System.Drawing.Point(173, 130);
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Name = "txt_Verwaltung_Einkauf_Gesamtkosten";
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.ReadOnly = true;
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.Size = new System.Drawing.Size(161, 27);
+            this.txt_Verwaltung_Einkauf_Gesamtkosten.TabIndex = 10;
+            // 
+            // txt_Einkauf_Verwaltung_Anzahl
+            // 
+            this.txt_Einkauf_Verwaltung_Anzahl.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_Anzahl.Location = new System.Drawing.Point(173, 95);
+            this.txt_Einkauf_Verwaltung_Anzahl.Name = "txt_Einkauf_Verwaltung_Anzahl";
+            this.txt_Einkauf_Verwaltung_Anzahl.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_Anzahl.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_Anzahl.TabIndex = 9;
+            // 
+            // txt_Einkauf_Verwaltung_PiD
+            // 
+            this.txt_Einkauf_Verwaltung_PiD.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Einkauf_Verwaltung_PiD.Location = new System.Drawing.Point(173, 60);
+            this.txt_Einkauf_Verwaltung_PiD.Name = "txt_Einkauf_Verwaltung_PiD";
+            this.txt_Einkauf_Verwaltung_PiD.ReadOnly = true;
+            this.txt_Einkauf_Verwaltung_PiD.Size = new System.Drawing.Size(161, 27);
+            this.txt_Einkauf_Verwaltung_PiD.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(152, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(293, 28);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Einzelne Daten einsehen";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(441, 215);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(764, 77);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Instant Gaming Einkauf";
             // 
             // Uhrzeit
             // 
@@ -880,5 +893,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_DateTime;
         private System.Windows.Forms.Timer Uhrzeit;
+        private System.Windows.Forms.Label lbl_Test;
     }
 }

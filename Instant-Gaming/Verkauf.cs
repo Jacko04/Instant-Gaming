@@ -14,7 +14,7 @@ namespace Instant_Gaming
 {
     public partial class Verkauf : Form
     {
-        Anmelde_formular A = new Anmelde_formular();
+        //Anmelde_formular A = new Anmelde_formular();
         OleDbCommand cmd = new OleDbCommand();
         OleDbConnection con = new OleDbConnection();
         OleDbDataReader reader;

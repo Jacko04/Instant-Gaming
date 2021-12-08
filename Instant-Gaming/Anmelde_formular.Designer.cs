@@ -77,6 +77,7 @@
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(100, 20);
             this.txt_ID.TabIndex = 5;
+            this.txt_ID.TextChanged += new System.EventHandler(this.txt_ID_TextChanged);
             // 
             // txt_Passwort
             // 
@@ -85,6 +86,7 @@
             this.txt_Passwort.Name = "txt_Passwort";
             this.txt_Passwort.Size = new System.Drawing.Size(100, 20);
             this.txt_Passwort.TabIndex = 6;
+            this.txt_Passwort.TextChanged += new System.EventHandler(this.txt_Passwort_TextChanged);
             // 
             // lbl_Registrieren
             // 

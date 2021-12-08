@@ -18,6 +18,7 @@ namespace Instant_Gaming
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataReader reader;
+       // Einkauf enk = new Einkauf();
         
         int ID;
         string Passwort;
@@ -26,12 +27,12 @@ namespace Instant_Gaming
         bool Ladenvorgang;
         
 
-        public Anmelde_formular()
+        public Anmelde_formular( )
         {
             InitializeComponent();
             
         }
-
+        
         private void lbl_Registrieren_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +41,6 @@ namespace Instant_Gaming
         private void btn_Bestätigen_Click(object sender, EventArgs e)
         {
             Überprüfen();
-            
         }
 
         
@@ -83,7 +83,7 @@ namespace Instant_Gaming
                                         Ladenvorgang = true;    
                                         Admin = true; 
                                         Tabelle = "Mitarbeiter";
-                                        Main_menü = new Main_Menü();
+                                        Main_menü = new Main_Menü(ID,Tabelle, Admin);
                                         Main_menü.Visible = true;
                                         this.Visible = false;
                                 }
@@ -92,7 +92,7 @@ namespace Instant_Gaming
                                         Ladenvorgang = true;
                                         Admin = false;
                                         Tabelle = "Mitarbeiter";
-                                        Main_menü = new Main_Menü();
+                                        Main_menü = new Main_Menü(ID,Tabelle, Admin);
                                         Main_menü.Visible = true;
                                         this.Visible = false;
 
@@ -102,17 +102,20 @@ namespace Instant_Gaming
                                 {
                                     Tabelle = "Kunden";
                                     Ladenvorgang = true;
-                                    Main_menü = new Main_Menü();
+                                    Admin = false; 
+                                    Main_menü = new Main_Menü(ID,Tabelle, Admin);
                                     Main_menü.Visible = true;
                                     this.Visible = false;   
-
+                               
                                 }
                             }
                         }
+                
+                   
                     reader.Close();
                     con.Close();
                  }
-                
+      
 
             }
             catch (Exception)
@@ -141,6 +144,34 @@ namespace Instant_Gaming
         {
             return Ladenvorgang;
         }
+        public void WerteÜbermitteln(int id, string tabelle) 
+        {
+            id = ID;
+            tabelle = Tabelle;
+        }
 
+        private void txt_ID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ID = Convert.ToInt32(txt_ID.Text);
+            }
+            catch (Exception)
+            {
+                txt_ID.Clear(); 
+            }
+        }
+
+        private void txt_Passwort_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Passwort = Convert.ToString(txt_Passwort.Text);
+            }
+            catch (Exception)
+            {
+                txt_Passwort.Clear();
+            }
+        }
     }
 }
