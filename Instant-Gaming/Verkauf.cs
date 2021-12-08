@@ -82,24 +82,12 @@ namespace Instant_Gaming
                 //int KiD = 0;
                 decimal Kosten = 0;
                 string Adresse = "";
-
-                string Key = "";
+                string Key;
                 //Int64 ID = A.get_ID();
 
                 //nacher löschen
                     int KiD = 1;
                 //
-
-                ////Kid ranholen
-                //sql = "select * from Kunden where KiD = " + ID + "";
-                //Verbinden(sql);
-                //reader = cmd.ExecuteReader();
-                //while (reader.Read())
-                //{
-                //    KiD = reader.GetInt32(0);
-                //}
-                //reader.Close();
-                //con.Close();
 
                 //Kosten aus datenbank lesen
                 sql = "select Preis from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
@@ -201,6 +189,13 @@ namespace Instant_Gaming
             lst_Warenkorb.Items.Add(dgv_Verkauf.Rows[Row].Cells[1].Value.ToString());
             Gespreis += Convert.ToDecimal(dgv_Verkauf.Rows[Row].Cells[2].Value);
             lbl_Gespreis.Text = Gespreis.ToString();
+        }
+
+        private void btn_rechnungsform_Click(object sender, EventArgs e)
+        {
+            Rechnung Rechnung = new Rechnung();
+            Rechnung.Show();
+            this.Hide();
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pn_funktion = new System.Windows.Forms.Panel();
+            this.btn_rechnungsform = new System.Windows.Forms.Button();
             this.lbl_euro = new System.Windows.Forms.Label();
             this.btn_entfernen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_rechnungsform = new System.Windows.Forms.Button();
             this.pn_funktion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Verkauf)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,19 @@
             this.pn_funktion.Name = "pn_funktion";
             this.pn_funktion.Size = new System.Drawing.Size(410, 802);
             this.pn_funktion.TabIndex = 0;
+            // 
+            // btn_rechnungsform
+            // 
+            this.btn_rechnungsform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_rechnungsform.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rechnungsform.Location = new System.Drawing.Point(183, 579);
+            this.btn_rechnungsform.Name = "btn_rechnungsform";
+            this.btn_rechnungsform.Size = new System.Drawing.Size(213, 54);
+            this.btn_rechnungsform.TabIndex = 7;
+            this.btn_rechnungsform.Text = "Rechnungen anzeigen";
+            this.btn_rechnungsform.UseVisualStyleBackColor = true;
+            this.btn_rechnungsform.Click += new System.EventHandler(this.btn_rechnungsform_Click);
             // 
             // lbl_euro
             // 
@@ -205,18 +218,6 @@
             this.Kategorie.MinimumWidth = 8;
             this.Kategorie.Name = "Kategorie";
             this.Kategorie.ReadOnly = true;
-            // 
-            // btn_rechnungsform
-            // 
-            this.btn_rechnungsform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_rechnungsform.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rechnungsform.Location = new System.Drawing.Point(183, 579);
-            this.btn_rechnungsform.Name = "btn_rechnungsform";
-            this.btn_rechnungsform.Size = new System.Drawing.Size(213, 54);
-            this.btn_rechnungsform.TabIndex = 7;
-            this.btn_rechnungsform.Text = "Rechnungen anzeigen";
-            this.btn_rechnungsform.UseVisualStyleBackColor = true;
             // 
             // Verkauf
             // 
