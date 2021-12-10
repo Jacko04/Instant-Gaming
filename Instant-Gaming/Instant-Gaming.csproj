@@ -95,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Rechnung.resx">
       <DependentUpon>Rechnung.cs</DependentUpon>
@@ -114,6 +115,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produkte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Einkauf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produkte kaufen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neue Produkte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hinzufügen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Einkaufen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verwalten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

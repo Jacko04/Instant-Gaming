@@ -30,14 +30,13 @@ namespace Instant_Gaming
         private void InitializeComponent()
         {
             this.panel_Mitarbeiter = new System.Windows.Forms.Panel();
-            this.btn_Mitarbeiter_Kunden = new System.Windows.Forms.Button();
+            this.btn_Mitarbeiter_Verwaltung = new System.Windows.Forms.Button();
             this.btn_Mitarbeiter_Rechnung = new System.Windows.Forms.Button();
             this.btn_Mitarbeiter_Einkauf = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Mitarbeiter_Verkauf = new System.Windows.Forms.Button();
             this.panel_Admin = new System.Windows.Forms.Panel();
-            this.btn_Admin_Mitarbeiter = new System.Windows.Forms.Button();
-            this.btn_Admin_Kunden = new System.Windows.Forms.Button();
+            this.btn_Admin_Verwaltung = new System.Windows.Forms.Button();
             this.btn_Admin_Rechnung = new System.Windows.Forms.Button();
             this.btn_Admin_Einkauf = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@ namespace Instant_Gaming
             // 
             // panel_Mitarbeiter
             // 
-            this.panel_Mitarbeiter.Controls.Add(this.btn_Mitarbeiter_Kunden);
+            this.panel_Mitarbeiter.Controls.Add(this.btn_Mitarbeiter_Verwaltung);
             this.panel_Mitarbeiter.Controls.Add(this.btn_Mitarbeiter_Rechnung);
             this.panel_Mitarbeiter.Controls.Add(this.btn_Mitarbeiter_Einkauf);
             this.panel_Mitarbeiter.Controls.Add(this.label1);
@@ -66,15 +65,16 @@ namespace Instant_Gaming
             this.panel_Mitarbeiter.Size = new System.Drawing.Size(873, 538);
             this.panel_Mitarbeiter.TabIndex = 0;
             // 
-            // btn_Mitarbeiter_Kunden
+            // btn_Mitarbeiter_Verwaltung
             // 
-            this.btn_Mitarbeiter_Kunden.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Mitarbeiter_Kunden.Location = new System.Drawing.Point(250, 250);
-            this.btn_Mitarbeiter_Kunden.Name = "btn_Mitarbeiter_Kunden";
-            this.btn_Mitarbeiter_Kunden.Size = new System.Drawing.Size(100, 75);
-            this.btn_Mitarbeiter_Kunden.TabIndex = 4;
-            this.btn_Mitarbeiter_Kunden.Text = "Kunden";
-            this.btn_Mitarbeiter_Kunden.UseVisualStyleBackColor = true;
+            this.btn_Mitarbeiter_Verwaltung.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mitarbeiter_Verwaltung.Location = new System.Drawing.Point(250, 250);
+            this.btn_Mitarbeiter_Verwaltung.Name = "btn_Mitarbeiter_Verwaltung";
+            this.btn_Mitarbeiter_Verwaltung.Size = new System.Drawing.Size(100, 75);
+            this.btn_Mitarbeiter_Verwaltung.TabIndex = 4;
+            this.btn_Mitarbeiter_Verwaltung.Text = "Verwaltung";
+            this.btn_Mitarbeiter_Verwaltung.UseVisualStyleBackColor = true;
+            this.btn_Mitarbeiter_Verwaltung.Click += new System.EventHandler(this.btn_Mitarbeiter_Verwaltung_Click);
             // 
             // btn_Mitarbeiter_Rechnung
             // 
@@ -85,6 +85,7 @@ namespace Instant_Gaming
             this.btn_Mitarbeiter_Rechnung.TabIndex = 3;
             this.btn_Mitarbeiter_Rechnung.Text = "Rechnung";
             this.btn_Mitarbeiter_Rechnung.UseVisualStyleBackColor = true;
+            this.btn_Mitarbeiter_Rechnung.Click += new System.EventHandler(this.btn_Mitarbeiter_Rechnung_Click);
             // 
             // btn_Mitarbeiter_Einkauf
             // 
@@ -95,6 +96,7 @@ namespace Instant_Gaming
             this.btn_Mitarbeiter_Einkauf.TabIndex = 2;
             this.btn_Mitarbeiter_Einkauf.Text = "Einkaufen";
             this.btn_Mitarbeiter_Einkauf.UseVisualStyleBackColor = true;
+            this.btn_Mitarbeiter_Einkauf.Click += new System.EventHandler(this.btn_Mitarbeiter_Einkauf_Click);
             // 
             // label1
             // 
@@ -116,11 +118,11 @@ namespace Instant_Gaming
             this.btn_Mitarbeiter_Verkauf.TabIndex = 0;
             this.btn_Mitarbeiter_Verkauf.Text = "Verkauf";
             this.btn_Mitarbeiter_Verkauf.UseVisualStyleBackColor = true;
+            this.btn_Mitarbeiter_Verkauf.Click += new System.EventHandler(this.btn_Mitarbeiter_Verkauf_Click);
             // 
             // panel_Admin
             // 
-            this.panel_Admin.Controls.Add(this.btn_Admin_Mitarbeiter);
-            this.panel_Admin.Controls.Add(this.btn_Admin_Kunden);
+            this.panel_Admin.Controls.Add(this.btn_Admin_Verwaltung);
             this.panel_Admin.Controls.Add(this.btn_Admin_Rechnung);
             this.panel_Admin.Controls.Add(this.btn_Admin_Einkauf);
             this.panel_Admin.Controls.Add(this.label2);
@@ -131,25 +133,16 @@ namespace Instant_Gaming
             this.panel_Admin.Size = new System.Drawing.Size(873, 538);
             this.panel_Admin.TabIndex = 5;
             // 
-            // btn_Admin_Mitarbeiter
+            // btn_Admin_Verwaltung
             // 
-            this.btn_Admin_Mitarbeiter.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Admin_Mitarbeiter.Location = new System.Drawing.Point(375, 350);
-            this.btn_Admin_Mitarbeiter.Name = "btn_Admin_Mitarbeiter";
-            this.btn_Admin_Mitarbeiter.Size = new System.Drawing.Size(100, 75);
-            this.btn_Admin_Mitarbeiter.TabIndex = 5;
-            this.btn_Admin_Mitarbeiter.Text = "Mitarbeiter";
-            this.btn_Admin_Mitarbeiter.UseVisualStyleBackColor = true;
-            // 
-            // btn_Admin_Kunden
-            // 
-            this.btn_Admin_Kunden.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Admin_Kunden.Location = new System.Drawing.Point(250, 250);
-            this.btn_Admin_Kunden.Name = "btn_Admin_Kunden";
-            this.btn_Admin_Kunden.Size = new System.Drawing.Size(100, 75);
-            this.btn_Admin_Kunden.TabIndex = 4;
-            this.btn_Admin_Kunden.Text = "Kunden";
-            this.btn_Admin_Kunden.UseVisualStyleBackColor = true;
+            this.btn_Admin_Verwaltung.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Admin_Verwaltung.Location = new System.Drawing.Point(250, 250);
+            this.btn_Admin_Verwaltung.Name = "btn_Admin_Verwaltung";
+            this.btn_Admin_Verwaltung.Size = new System.Drawing.Size(100, 75);
+            this.btn_Admin_Verwaltung.TabIndex = 4;
+            this.btn_Admin_Verwaltung.Text = "Verwaltung";
+            this.btn_Admin_Verwaltung.UseVisualStyleBackColor = true;
+            this.btn_Admin_Verwaltung.Click += new System.EventHandler(this.btn_Admin_Verwaltung_Click);
             // 
             // btn_Admin_Rechnung
             // 
@@ -160,6 +153,7 @@ namespace Instant_Gaming
             this.btn_Admin_Rechnung.TabIndex = 3;
             this.btn_Admin_Rechnung.Text = "Rechnung";
             this.btn_Admin_Rechnung.UseVisualStyleBackColor = true;
+            this.btn_Admin_Rechnung.Click += new System.EventHandler(this.btn_Admin_Rechnung_Click);
             // 
             // btn_Admin_Einkauf
             // 
@@ -170,6 +164,7 @@ namespace Instant_Gaming
             this.btn_Admin_Einkauf.TabIndex = 2;
             this.btn_Admin_Einkauf.Text = "Einkaufen";
             this.btn_Admin_Einkauf.UseVisualStyleBackColor = true;
+            this.btn_Admin_Einkauf.Click += new System.EventHandler(this.btn_Admin_Einkauf_Click);
             // 
             // label2
             // 
@@ -191,6 +186,7 @@ namespace Instant_Gaming
             this.btn_Admin_Verkauf.TabIndex = 0;
             this.btn_Admin_Verkauf.Text = "Verkauf";
             this.btn_Admin_Verkauf.UseVisualStyleBackColor = true;
+            this.btn_Admin_Verkauf.Click += new System.EventHandler(this.btn_Admin_Verkauf_Click);
             // 
             // panel_Kunden
             // 
@@ -213,7 +209,7 @@ namespace Instant_Gaming
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btn_Kunden_Rechnung
             // 
@@ -224,6 +220,7 @@ namespace Instant_Gaming
             this.btn_Kunden_Rechnung.TabIndex = 3;
             this.btn_Kunden_Rechnung.Text = "Rechnung";
             this.btn_Kunden_Rechnung.UseVisualStyleBackColor = true;
+            this.btn_Kunden_Rechnung.Click += new System.EventHandler(this.btn_Kunden_Rechnung_Click);
             // 
             // btn_Kunden_Einkauf
             // 
@@ -234,6 +231,7 @@ namespace Instant_Gaming
             this.btn_Kunden_Einkauf.TabIndex = 2;
             this.btn_Kunden_Einkauf.Text = "Einkaufen";
             this.btn_Kunden_Einkauf.UseVisualStyleBackColor = true;
+            this.btn_Kunden_Einkauf.Click += new System.EventHandler(this.btn_Kunden_Einkauf_Click);
             // 
             // label3
             // 
@@ -255,15 +253,16 @@ namespace Instant_Gaming
             this.btn_Kunden_Profil.TabIndex = 0;
             this.btn_Kunden_Profil.Text = "Profil";
             this.btn_Kunden_Profil.UseVisualStyleBackColor = true;
+            this.btn_Kunden_Profil.Click += new System.EventHandler(this.btn_Kunden_Profil_Click);
             // 
             // Main_Menü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 538);
+            this.Controls.Add(this.panel_Mitarbeiter);
             this.Controls.Add(this.panel_Admin);
             this.Controls.Add(this.panel_Kunden);
-            this.Controls.Add(this.panel_Mitarbeiter);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Main_Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -283,17 +282,16 @@ namespace Instant_Gaming
 
         private System.Windows.Forms.Panel panel_Mitarbeiter;
         private System.Windows.Forms.Button btn_Mitarbeiter_Verkauf;
-        private System.Windows.Forms.Button btn_Mitarbeiter_Kunden;
+        private System.Windows.Forms.Button btn_Mitarbeiter_Verwaltung;
         private System.Windows.Forms.Button btn_Mitarbeiter_Rechnung;
         private System.Windows.Forms.Button btn_Mitarbeiter_Einkauf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_Admin;
-        private System.Windows.Forms.Button btn_Admin_Kunden;
+        private System.Windows.Forms.Button btn_Admin_Verwaltung;
         private System.Windows.Forms.Button btn_Admin_Rechnung;
         private System.Windows.Forms.Button btn_Admin_Einkauf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Admin_Verkauf;
-        private System.Windows.Forms.Button btn_Admin_Mitarbeiter;
         private System.Windows.Forms.Panel panel_Kunden;
         private System.Windows.Forms.Button btn_Kunden_Rechnung;
         private System.Windows.Forms.Button btn_Kunden_Einkauf;
