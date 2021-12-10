@@ -35,7 +35,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Test = new System.Windows.Forms.Label();
             this.lbl_DateTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Produkte = new System.Windows.Forms.Button();
@@ -147,7 +146,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lbl_Test);
             this.panel1.Controls.Add(this.lbl_DateTime);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btn_Produkte);
@@ -158,17 +156,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 647);
             this.panel1.TabIndex = 2;
-            // 
-            // lbl_Test
-            // 
-            this.lbl_Test.AutoSize = true;
-            this.lbl_Test.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Test.Location = new System.Drawing.Point(2, 423);
-            this.lbl_Test.Name = "lbl_Test";
-            this.lbl_Test.Size = new System.Drawing.Size(62, 25);
-            this.lbl_Test.TabIndex = 7;
-            this.lbl_Test.Text = "hallo";
-           
             // 
             // lbl_DateTime
             // 
@@ -893,6 +880,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_DateTime;
         private System.Windows.Forms.Timer Uhrzeit;
-        private System.Windows.Forms.Label lbl_Test;
     }
 }

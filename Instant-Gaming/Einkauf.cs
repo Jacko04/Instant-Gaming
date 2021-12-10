@@ -54,7 +54,7 @@ namespace Instant_Gaming
             lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
             Werteübermitteln(ID,Tabelle);
             
-            lbl_Test.Text = "die ID lautet : " + ID + "\n" + "die Tabelle lauutet : " + Tabelle;
+          
            // Uhrzeit.Start();
 
         }

@@ -21,7 +21,9 @@ namespace Instant_Gaming
             ID = id;
             Tabelle = tb;
             admin = Admin;
-
+            panel_Admin.Visible = false;
+            panel_Mitarbeiter.Visible = false;
+            panel_Kunden.Visible = false; 
         }
 
         private void Main_Menü_Load(object sender, EventArgs e)
@@ -32,18 +34,21 @@ namespace Instant_Gaming
                 {
                     panel_Kunden.Visible = false;
                     panel_Mitarbeiter.Visible = false;
+                    panel_Admin.Visible = true; 
                 }
                 else
                 {
                     panel_Admin.Visible = false;
                     panel_Kunden.Visible = false;
+                    panel_Mitarbeiter.Visible = true; 
                 }
             
             }
             else
             {
                 panel_Admin.Visible = false;
-                panel_Mitarbeiter.Visible = false; 
+                panel_Mitarbeiter.Visible = false;
+                panel_Kunden.Visible = true; 
 
             }
         }
@@ -54,5 +59,7 @@ namespace Instant_Gaming
             eink.Show();
             this.Visible = false; 
         }
+
+       
     }
 }
