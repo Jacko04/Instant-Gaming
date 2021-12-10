@@ -55,7 +55,7 @@ namespace Instant_Gaming
             Werteübermitteln(ID,Tabelle);
             
           
-           // Uhrzeit.Start();
+            Uhrzeit.Start();
 
         }
         public void Produkte()
@@ -121,6 +121,7 @@ namespace Instant_Gaming
         {
             //  Produkt panel anzeigen und die Daten einfügen
             panel_Produkte.Visible = true;
+            
             Produkte(); 
         }
 
