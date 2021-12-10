@@ -52,3 +52,4 @@ C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug
 C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnung.resources
 C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\bin\Debug\Instant Gaming Verkauf.mdb
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnung.resources
+C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnung.resources
