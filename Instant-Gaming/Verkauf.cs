@@ -22,10 +22,14 @@ namespace Instant_Gaming
         decimal Gespreis;
         decimal Minuspreis;
         int Row;
+        int KiD;
+        string Tab;
 
-        public Verkauf()
+        public Verkauf(int id, string Tabelle)
         {
             InitializeComponent();
+            KiD = id;
+            Tab = Tabelle;
             Einlesen();
             foreach (DataGridViewColumn colum in dgv_Verkauf.Columns)
             {
@@ -41,7 +45,6 @@ namespace Instant_Gaming
             cmd.CommandText = sql;
             cmd.Connection = con;
             con.Open();
-            
         }
 
         public void Einlesen()
@@ -61,104 +64,102 @@ namespace Instant_Gaming
 
         private void btn_kaufen_Click(object sender, EventArgs e)
         {
-            int RiD = 0;
-            //RiD erstellen
-            sql = "select LAST(RiD) from Rechnung";
-            Verbinden(sql);
-            reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (Tab == "Kunden")
             {
-                RiD = reader.GetInt32(0);
-            }
-            reader.Close();
-            con.Close();
-            RiD++;
-
-            for (int i = 0; i < lst_Warenkorb.Items.Count; i++)
-            {
-                
-                int anzahl = 0;
-                int PiD = 0;
-                //int KiD = 0;
-                decimal Kosten = 0;
-                string Adresse = "";
-                string Key;
-                //Int64 ID = A.get_ID();
-
-                //nacher löschen
-                    int KiD = 1;
-                //
-
-                //Kosten aus datenbank lesen
-                sql = "select Preis from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
+                int RiD = 0;
+                //RiD erstellen
+                sql = "select LAST(RiD) from Rechnung";
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Kosten = reader.GetDecimal(0);
+                    RiD = reader.GetInt32(0);
                 }
                 reader.Close();
                 con.Close();
+                RiD++;
 
-                //bestellungsanzahl
-                sql = "select Anzahl from Produkt where Name = '" + lst_Warenkorb.Items[i]+"'";
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
+                for (int i = 0; i < lst_Warenkorb.Items.Count; i++)
                 {
-                    anzahl = reader.GetInt32(0);
+
+                    int anzahl = 0;
+                    int PiD = 0;
+                    decimal Kosten = 0;
+                    string Adresse = "";
+                    string Key;
+
+                    //Kosten aus datenbank lesen
+                    sql = "select Preis from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
+                    Verbinden(sql);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Kosten = reader.GetDecimal(0);
+                    }
+                    reader.Close();
+                    con.Close();
+
+                    //bestellungsanzahl
+                    sql = "select Anzahl from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
+                    Verbinden(sql);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        anzahl = reader.GetInt32(0);
+                    }
+                    reader.Close();
+                    con.Close();
+
+                    //PiD aus datenbank lesen
+                    sql = "select PiD from Produkt where Name = '" + lst_Warenkorb.Items[i] + "'";
+                    Verbinden(sql);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        PiD = reader.GetInt32(0);
+                    }
+                    reader.Close();
+                    con.Close();
+
+                    //Adresse aus datenbank lesen
+                    sql = "select Adresse from Kunden where KiD = " + KiD;
+                    Verbinden(sql);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Adresse = reader.GetString(0);
+                    }
+                    reader.Close();
+                    con.Close();
+
+                    //Keygenerator
+                    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                    var Charsarr = new char[8];
+                    var random = new Random();
+
+                    for (int u = 0; u < Charsarr.Length; u++)
+                    {
+                        Charsarr[u] = characters[random.Next(characters.Length)];
+                    }
+
+                    var resultString = new String(Charsarr);
+                    Key = resultString;
+
+                    //Bestand wird aktuallisiert 
+                    anzahl--;
+                    sql = "UPDATE Produkt SET Anzahl = " + anzahl + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
+                    Verbinden(sql);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Einlesen();
+
+                    //DB eintrag Rechnung
+                    sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Anzahl, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + "," + anzahl + ",NOW(),'" + Kosten + "','" + Adresse + "','" + Key + "');";
+                    Verbinden(sql);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
                 }
-                reader.Close();
-                con.Close();
-
-                //PiD aus datenbank lesen
-                sql = "select PiD from Produkt where Name = '" + lst_Warenkorb.Items[i]+"'";
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    PiD = reader.GetInt32(0);
-                }
-                reader.Close();
-                con.Close();
-
-                //Adresse aus datenbank lesen
-                sql = "select Adresse from Kunden where KiD = " + KiD;
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    Adresse = reader.GetString(0);
-                }
-                reader.Close();
-                con.Close();
-
-                //Keygenerator
-                var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                var Charsarr = new char[8];
-                var random = new Random();
-
-                for (int u = 0; u < Charsarr.Length; u++)
-                {
-                    Charsarr[u] = characters[random.Next(characters.Length)];
-                }
-
-                var resultString = new String(Charsarr);
-                Key = resultString;
-
-                //Bestand wird aktuallisiert 
-                anzahl--;
-                sql = "UPDATE Produkt SET Anzahl = " + anzahl + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
-                Verbinden(sql);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Einlesen();
-
-                //DB eintrag Rechnung
-                sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Anzahl, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + "," + anzahl + ",NOW(),'"+ Kosten + "','" + Adresse + "','" + Key + "');";
-                Verbinden(sql);
-                cmd.ExecuteNonQuery();
-                con.Close();
+            
             }
         }
 
@@ -193,7 +194,7 @@ namespace Instant_Gaming
 
         private void btn_rechnungsform_Click(object sender, EventArgs e)
         {
-            Rechnung Rechnung = new Rechnung();
+            Rechnung Rechnung = new Rechnung(KiD, Tab);
             Rechnung.Show();
             this.Hide();
         }

@@ -38,6 +38,7 @@
             this.dgv_Rechnungen = new System.Windows.Forms.DataGridView();
             this.RiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_vorschau)).BeginInit();
             this.panel2.SuspendLayout();
@@ -99,6 +100,7 @@
             this.btn_öffnen.TabIndex = 2;
             this.btn_öffnen.Text = "Rechnung öffnen";
             this.btn_öffnen.UseVisualStyleBackColor = true;
+            this.btn_öffnen.Click += new System.EventHandler(this.btn_öffnen_Click);
             // 
             // Uberschrift
             // 
@@ -113,10 +115,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Rechnungen);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(369, 0);
+            this.panel2.Location = new System.Drawing.Point(1259, 668);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(910, 691);
+            this.panel2.Size = new System.Drawing.Size(20, 23);
             this.panel2.TabIndex = 2;
             // 
             // dgv_Rechnungen
@@ -132,7 +133,7 @@
             this.dgv_Rechnungen.ReadOnly = true;
             this.dgv_Rechnungen.RowHeadersWidth = 62;
             this.dgv_Rechnungen.RowTemplate.Height = 28;
-            this.dgv_Rechnungen.Size = new System.Drawing.Size(910, 691);
+            this.dgv_Rechnungen.Size = new System.Drawing.Size(20, 23);
             this.dgv_Rechnungen.TabIndex = 0;
             // 
             // RiD
@@ -182,5 +183,6 @@
         private System.Windows.Forms.Button btn_öffnen;
         private System.Windows.Forms.DataGridViewTextBoxColumn RiD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
+        private System.Windows.Forms.PrintDialog PrintDialog1;
     }
 }
