@@ -12,9 +12,15 @@ namespace Instant_Gaming
 {
     public partial class Main_Menü : Form
     {
+        //Variabeln
         int ID;
         string Tabelle;
         bool admin;
+        Einkauf einkauf;
+        Verkauf verkauf;
+        Rechnung rechnung;
+        string bearbeitung = "Diese Funktion ist noch in beartbeitung";
+
         public Main_Menü(int id , string tb, bool Admin)
         {
             InitializeComponent();
@@ -52,14 +58,94 @@ namespace Instant_Gaming
 
             }
         }
+       
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Einkauf eink = new Einkauf(ID,Tabelle);
             eink.Show();
             this.Visible = false; 
         }
 
-       
+        private void btn_Mitarbeiter_Verkauf_Click(object sender, EventArgs e)
+        {
+            Einkauf();
+        }
+
+        private void btn_Mitarbeiter_Einkauf_Click(object sender, EventArgs e)
+        {
+            Einkauf();
+        }
+
+        private void btn_Mitarbeiter_Verwaltung_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(bearbeitung);
+        }
+
+        private void btn_Mitarbeiter_Rechnung_Click(object sender, EventArgs e)
+        {
+            Rechnung();
+        }
+
+        private void btn_Admin_Verkauf_Click(object sender, EventArgs e)
+        {
+            Verkauf();
+        }
+
+        private void btn_Admin_Einkauf_Click(object sender, EventArgs e)
+        {
+            Einkauf();
+        }
+
+        private void btn_Admin_Verwaltung_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(bearbeitung);
+        }
+
+        private void btn_Admin_Rechnung_Click(object sender, EventArgs e)
+        {
+            Rechnung();
+        }
+
+        private void btn_Kunden_Profil_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(bearbeitung);
+        }
+
+        private void btn_Kunden_Einkauf_Click(object sender, EventArgs e)
+        {
+            Verkauf();
+        }
+
+        private void btn_Kunden_Rechnung_Click(object sender, EventArgs e)
+        {
+            Rechnung();
+        }
+
+        //Methoden
+
+        //öffnen der Einkaufs form
+        public void Einkauf()
+        {
+            einkauf = new Einkauf(ID, Tabelle);
+            einkauf.Visible = true;
+            this.Visible = false;
+        }
+
+        //öffnen der Verkaufs form
+        public void Verkauf()
+        {
+           // verkauf = new Verkauf(ID , Tabelle);
+            einkauf.Visible = true;
+            this.Visible = true;
+
+        }
+
+        public void Rechnung()
+        {
+           // rechnung = new Rechnung( ID , Tabelle);
+            einkauf.Visible = true;
+            this.Visible = false;
+        }   
     }
 }
