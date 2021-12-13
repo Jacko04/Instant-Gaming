@@ -129,22 +129,25 @@ namespace Instant_Gaming
         {
             einkauf = new Einkauf(ID, Tabelle);
             einkauf.Visible = true;
+            einkauf.Show();
             this.Visible = false;
         }
 
         //öffnen der Verkaufs form
         public void Verkauf()
         {
-           // verkauf = new Verkauf(ID , Tabelle);
+           verkauf = new Verkauf(ID , Tabelle);
             einkauf.Visible = true;
+            verkauf.Show();
             this.Visible = true;
 
         }
 
         public void Rechnung()
         {
-           // rechnung = new Rechnung( ID , Tabelle);
+            rechnung = new Rechnung( ID , Tabelle);
             einkauf.Visible = true;
+            rechnung.Show();
             this.Visible = false;
         }   
     }
