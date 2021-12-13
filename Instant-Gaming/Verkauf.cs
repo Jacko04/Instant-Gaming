@@ -35,6 +35,14 @@ namespace Instant_Gaming
             {
                 colum.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+            if (Tab == "Kunde")
+            {
+                lbl_uberschrift.Text = "Einkauf";
+            }
+            else
+            {
+                lbl_uberschrift.Text = "Verkauf";
+            }
         }
 
         public void Verbinden(string sql)

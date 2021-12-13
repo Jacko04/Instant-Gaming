@@ -36,7 +36,7 @@
             this.lbl_Gespreis = new System.Windows.Forms.Label();
             this.btn_kaufen = new System.Windows.Forms.Button();
             this.lst_Warenkorb = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_uberschrift = new System.Windows.Forms.Label();
             this.dgv_Verkauf = new System.Windows.Forms.DataGridView();
             this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +57,7 @@
             this.pn_funktion.Controls.Add(this.lbl_Gespreis);
             this.pn_funktion.Controls.Add(this.btn_kaufen);
             this.pn_funktion.Controls.Add(this.lst_Warenkorb);
-            this.pn_funktion.Controls.Add(this.label1);
+            this.pn_funktion.Controls.Add(this.lbl_uberschrift);
             this.pn_funktion.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_funktion.Location = new System.Drawing.Point(0, 0);
             this.pn_funktion.Name = "pn_funktion";
@@ -152,16 +152,16 @@
             this.lst_Warenkorb.Size = new System.Drawing.Size(383, 466);
             this.lst_Warenkorb.TabIndex = 1;
             // 
-            // label1
+            // lbl_uberschrift
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Verkauf";
+            this.lbl_uberschrift.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_uberschrift.AutoSize = true;
+            this.lbl_uberschrift.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_uberschrift.Location = new System.Drawing.Point(92, 32);
+            this.lbl_uberschrift.Name = "lbl_uberschrift";
+            this.lbl_uberschrift.Size = new System.Drawing.Size(204, 57);
+            this.lbl_uberschrift.TabIndex = 0;
+            this.lbl_uberschrift.Text = "Einkauf";
             // 
             // dgv_Verkauf
             // 
@@ -241,7 +241,7 @@
 
         private System.Windows.Forms.Panel pn_funktion;
         private System.Windows.Forms.DataGridView dgv_Verkauf;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_uberschrift;
         private System.Windows.Forms.DataGridViewTextBoxColumn PiD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
