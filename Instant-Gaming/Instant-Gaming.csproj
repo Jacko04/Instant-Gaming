@@ -140,5 +140,8 @@
   <ItemGroup>
     <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click_&amp;_collect_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

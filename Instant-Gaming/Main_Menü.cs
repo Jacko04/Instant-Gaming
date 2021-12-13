@@ -60,12 +60,7 @@ namespace Instant_Gaming
         }
        
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            Einkauf eink = new Einkauf(ID,Tabelle);
-            eink.Show();
-            this.Visible = false; 
-        }
+       
 
         private void btn_Mitarbeiter_Verkauf_Click(object sender, EventArgs e)
         {
@@ -127,24 +122,24 @@ namespace Instant_Gaming
         //öffnen der Einkaufs form
         public void Einkauf()
         {
-            einkauf = new Einkauf(ID, Tabelle);
-            einkauf.Visible = true;
+            Einkauf enk = new Einkauf(ID, Tabelle);
+            enk.Show();
             this.Visible = false;
         }
 
         //öffnen der Verkaufs form
         public void Verkauf()
         {
-           // verkauf = new Verkauf(ID , Tabelle);
-            einkauf.Visible = true;
-            this.Visible = true;
+            Verkauf vk = new Verkauf(ID,Tabelle);
+            vk.Show();
+            this.Visible = false; 
 
         }
 
         public void Rechnung()
         {
-           // rechnung = new Rechnung( ID , Tabelle);
-            einkauf.Visible = true;
+            Rechnung rng = new Rechnung( ID , Tabelle);
+            rng.Show();
             this.Visible = false;
         }   
     }

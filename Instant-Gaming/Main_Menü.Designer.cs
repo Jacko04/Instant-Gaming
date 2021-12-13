@@ -42,11 +42,10 @@ namespace Instant_Gaming
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Admin_Verkauf = new System.Windows.Forms.Button();
             this.panel_Kunden = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_Kunden_Rechnung = new System.Windows.Forms.Button();
-            this.btn_Kunden_Einkauf = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Kunden_Profil = new System.Windows.Forms.Button();
+            this.btn_Kunden_Einkauf = new System.Windows.Forms.Button();
             this.panel_Mitarbeiter.SuspendLayout();
             this.panel_Admin.SuspendLayout();
             this.panel_Kunden.SuspendLayout();
@@ -190,7 +189,7 @@ namespace Instant_Gaming
             // 
             // panel_Kunden
             // 
-            this.panel_Kunden.Controls.Add(this.button1);
+            this.panel_Kunden.BackColor = System.Drawing.Color.Linen;
             this.panel_Kunden.Controls.Add(this.btn_Kunden_Rechnung);
             this.panel_Kunden.Controls.Add(this.btn_Kunden_Einkauf);
             this.panel_Kunden.Controls.Add(this.label3);
@@ -200,16 +199,6 @@ namespace Instant_Gaming
             this.panel_Kunden.Name = "panel_Kunden";
             this.panel_Kunden.Size = new System.Drawing.Size(873, 538);
             this.panel_Kunden.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 84);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btn_Kunden_Rechnung
             // 
@@ -221,17 +210,6 @@ namespace Instant_Gaming
             this.btn_Kunden_Rechnung.Text = "Rechnung";
             this.btn_Kunden_Rechnung.UseVisualStyleBackColor = true;
             this.btn_Kunden_Rechnung.Click += new System.EventHandler(this.btn_Kunden_Rechnung_Click);
-            // 
-            // btn_Kunden_Einkauf
-            // 
-            this.btn_Kunden_Einkauf.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Kunden_Einkauf.Location = new System.Drawing.Point(500, 120);
-            this.btn_Kunden_Einkauf.Name = "btn_Kunden_Einkauf";
-            this.btn_Kunden_Einkauf.Size = new System.Drawing.Size(100, 75);
-            this.btn_Kunden_Einkauf.TabIndex = 2;
-            this.btn_Kunden_Einkauf.Text = "Einkaufen";
-            this.btn_Kunden_Einkauf.UseVisualStyleBackColor = true;
-            this.btn_Kunden_Einkauf.Click += new System.EventHandler(this.btn_Kunden_Einkauf_Click);
             // 
             // label3
             // 
@@ -255,14 +233,31 @@ namespace Instant_Gaming
             this.btn_Kunden_Profil.UseVisualStyleBackColor = true;
             this.btn_Kunden_Profil.Click += new System.EventHandler(this.btn_Kunden_Profil_Click);
             // 
+            // btn_Kunden_Einkauf
+            // 
+            this.btn_Kunden_Einkauf.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Kunden_Einkauf.FlatAppearance.BorderSize = 0;
+            this.btn_Kunden_Einkauf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Kunden_Einkauf.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Kunden_Einkauf.Image = global::Instant_Gaming.Properties.Resources.click___collect_48px;
+            this.btn_Kunden_Einkauf.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Kunden_Einkauf.Location = new System.Drawing.Point(500, 120);
+            this.btn_Kunden_Einkauf.Name = "btn_Kunden_Einkauf";
+            this.btn_Kunden_Einkauf.Size = new System.Drawing.Size(100, 75);
+            this.btn_Kunden_Einkauf.TabIndex = 2;
+            this.btn_Kunden_Einkauf.Text = "Einkaufen";
+            this.btn_Kunden_Einkauf.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Kunden_Einkauf.UseVisualStyleBackColor = false;
+            this.btn_Kunden_Einkauf.Click += new System.EventHandler(this.btn_Kunden_Einkauf_Click);
+            // 
             // Main_Menü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 538);
+            this.Controls.Add(this.panel_Kunden);
             this.Controls.Add(this.panel_Mitarbeiter);
             this.Controls.Add(this.panel_Admin);
-            this.Controls.Add(this.panel_Kunden);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Main_Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -297,6 +292,5 @@ namespace Instant_Gaming
         private System.Windows.Forms.Button btn_Kunden_Einkauf;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Kunden_Profil;
-        private System.Windows.Forms.Button button1;
     }
 }

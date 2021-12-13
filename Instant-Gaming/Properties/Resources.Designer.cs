@@ -63,6 +63,16 @@ namespace Instant_Gaming.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap click___collect_48px {
+            get {
+                object obj = ResourceManager.GetObject("click_&_collect_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Einkauf {
             get {
                 object obj = ResourceManager.GetObject("Einkauf", resourceCulture);
