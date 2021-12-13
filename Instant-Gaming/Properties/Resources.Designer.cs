@@ -63,6 +63,16 @@ namespace Instant_Gaming.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap click___collect_48px {
+            get {
+                object obj = ResourceManager.GetObject("click_&_collect_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Einkauf {
             get {
                 object obj = ResourceManager.GetObject("Einkauf", resourceCulture);
@@ -93,6 +103,16 @@ namespace Instant_Gaming.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invoice_48px {
+            get {
+                object obj = ResourceManager.GetObject("invoice_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Neue_Produkte {
             get {
                 object obj = ResourceManager.GetObject("Neue Produkte", resourceCulture);
@@ -116,6 +136,26 @@ namespace Instant_Gaming.Properties {
         internal static System.Drawing.Bitmap produkte_kaufen {
             get {
                 object obj = ResourceManager.GetObject("produkte kaufen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profil {
+            get {
+                object obj = ResourceManager.GetObject("profil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_business_48px {
+            get {
+                object obj = ResourceManager.GetObject("small_business_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
