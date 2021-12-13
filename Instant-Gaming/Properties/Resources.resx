@@ -127,11 +127,20 @@
   <data name="Hinzufügen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hinzufügen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="profil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Neue Produkte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Neue Produkte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="click_&amp;_collect_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click_&amp;_collect_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Produkte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Produkte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invoice_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="produkte kaufen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\produkte kaufen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +148,10 @@
   <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="click_&amp;_collect_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\click_&amp;_collect_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Einkaufen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Einkaufen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small_business_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small_business_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

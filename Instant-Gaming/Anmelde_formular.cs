@@ -30,12 +30,13 @@ namespace Instant_Gaming
         public Anmelde_formular( )
         {
             InitializeComponent();
-            
+            panel_Registrieren.Visible = false;
         }
         
         private void lbl_Registrieren_Click(object sender, EventArgs e)
         {
-
+          //  panel_Anmelden.Visible = false;
+            panel_Registrieren.Visible = true;
         }
 
         private void btn_Bestätigen_Click(object sender, EventArgs e)
@@ -172,6 +173,43 @@ namespace Instant_Gaming
             {
                 txt_Passwort.Clear();
             }
+        }
+
+        private void Kunden_Hinzufügen()
+        {
+            //Werte für Den Sql befehl werden geholt
+            string Vorname = Convert.ToString(txt_Vorname.Text);
+            string Nachname = Convert.ToString(txt_Nachname.Text);
+            string Email = Convert.ToString(txt_Email.Text);
+            string Adresse = Convert.ToString(txt_Adresse.Text);
+            int TelNR = Convert.ToInt32(txt_TelNr.Text);
+            string Passwort = Convert.ToString(txt_Reg_Passwort.Text);
+
+            con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
+            cmd.Connection = con;
+
+           
+            con.Open();
+            cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNR + " ,'" + Passwort + "')  ";
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Reg_Bestätigen_Click(object sender, EventArgs e)
+        {
+            Kunden_Hinzufügen();
+            panel_Registrieren.Visible = false;
+            panel_Anmelden.Visible = true;
         }
     }
 }
