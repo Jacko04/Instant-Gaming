@@ -30,17 +30,13 @@
         {
             this.btn_back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pb_vorschau = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_öffnen = new System.Windows.Forms.Button();
             this.Uberschrift = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Rechnungen = new System.Windows.Forms.DataGridView();
             this.RiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrintDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_vorschau)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Rechnungen)).BeginInit();
             this.SuspendLayout();
@@ -59,8 +55,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pb_vorschau);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_öffnen);
             this.panel1.Controls.Add(this.Uberschrift);
             this.panel1.Controls.Add(this.btn_back);
@@ -69,26 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 691);
             this.panel1.TabIndex = 1;
-            // 
-            // pb_vorschau
-            // 
-            this.pb_vorschau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pb_vorschau.Location = new System.Drawing.Point(45, 155);
-            this.pb_vorschau.Name = "pb_vorschau";
-            this.pb_vorschau.Size = new System.Drawing.Size(280, 392);
-            this.pb_vorschau.TabIndex = 4;
-            this.pb_vorschau.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Vorschau:";
             // 
             // btn_öffnen
             // 
@@ -164,7 +138,6 @@
             this.Load += new System.EventHandler(this.Rechnung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_vorschau)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Rechnungen)).EndInit();
             this.ResumeLayout(false);
@@ -178,11 +151,8 @@
         private System.Windows.Forms.Label Uberschrift;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_Rechnungen;
-        private System.Windows.Forms.PictureBox pb_vorschau;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_öffnen;
         private System.Windows.Forms.DataGridViewTextBoxColumn RiD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
-        private System.Windows.Forms.PrintDialog PrintDialog1;
     }
 }
