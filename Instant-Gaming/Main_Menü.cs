@@ -141,6 +141,8 @@ namespace Instant_Gaming
             Rechnung rng = new Rechnung( ID , Tabelle);
             rng.Show();
             this.Visible = false;
-        }   
+        }
+
+       
     }
 }
