@@ -177,6 +177,8 @@ namespace Instant_Gaming
 
         private void Kunden_Hinzufügen()
         {
+            //Zusatz werte 
+            int ID;
             //Werte für Den Sql befehl werden geholt
             string Vorname = Convert.ToString(txt_Vorname.Text);
             string Nachname = Convert.ToString(txt_Nachname.Text);
@@ -184,6 +186,7 @@ namespace Instant_Gaming
             string Adresse = Convert.ToString(txt_Adresse.Text);
             int TelNR = Convert.ToInt32(txt_TelNr.Text);
             string Passwort = Convert.ToString(txt_Reg_Passwort.Text);
+            
 
             con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
             cmd.Connection = con;
@@ -193,6 +196,22 @@ namespace Instant_Gaming
             cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNR + " ,'" + Passwort + "')  ";
             cmd.ExecuteNonQuery();
             con.Close();
+
+
+            cmd.CommandText = "Select KiD from Kunden where 'E-Mail' = '" + Email + "' and passwort = '" + Passwort + "'";
+            con.Open();
+            reader = cmd.ExecuteReader();
+           
+
+            while (reader.Read())
+            {
+                ID = reader.GetInt32(0);
+                MessageBox.Show("Ihre ID ist = " + ID);
+            }
+            reader.Close();
+          
+            con.Close();
+
         }
 
         private void label6_Click(object sender, EventArgs e)

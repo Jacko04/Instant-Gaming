@@ -75,8 +75,7 @@ namespace Instant_Gaming
 
         private void btn_öffnen_Click(object sender, EventArgs e)
         {
-            Rechnungsvorlage vorlage = new Rechnungsvorlage();
-            vorlage.ShowDialog();
+           
         }
     }
 }
