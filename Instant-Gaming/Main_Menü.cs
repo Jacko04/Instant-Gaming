@@ -122,7 +122,7 @@ namespace Instant_Gaming
         //öffnen der Einkaufs form
         public void Einkauf()
         {
-            Einkauf enk = new Einkauf(ID, Tabelle);
+            Einkauf enk = new Einkauf(ID, Tabelle,admin);
             enk.Show();
             this.Visible = false;
         }

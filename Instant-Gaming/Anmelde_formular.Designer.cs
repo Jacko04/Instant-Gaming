@@ -37,20 +37,20 @@
             this.btn_Bestätigen = new System.Windows.Forms.Button();
             this.panel_Anmelden = new System.Windows.Forms.Panel();
             this.panel_Registrieren = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_Vorname = new System.Windows.Forms.TextBox();
-            this.txt_Nachname = new System.Windows.Forms.TextBox();
-            this.txt_Email = new System.Windows.Forms.TextBox();
-            this.txt_Adresse = new System.Windows.Forms.TextBox();
-            this.txt_TelNr = new System.Windows.Forms.TextBox();
-            this.txt_Reg_Passwort = new System.Windows.Forms.TextBox();
             this.btn_Reg_Bestätigen = new System.Windows.Forms.Button();
+            this.txt_Reg_Passwort = new System.Windows.Forms.TextBox();
+            this.txt_TelNr = new System.Windows.Forms.TextBox();
+            this.txt_Adresse = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_Nachname = new System.Windows.Forms.TextBox();
+            this.txt_Vorname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel_Anmelden.SuspendLayout();
             this.panel_Registrieren.SuspendLayout();
             this.SuspendLayout();
@@ -165,61 +165,68 @@
             this.panel_Registrieren.Size = new System.Drawing.Size(884, 461);
             this.panel_Registrieren.TabIndex = 9;
             // 
-            // label4
+            // btn_Reg_Bestätigen
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(281, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 57);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Registration";
+            this.btn_Reg_Bestätigen.Location = new System.Drawing.Point(307, 291);
+            this.btn_Reg_Bestätigen.Name = "btn_Reg_Bestätigen";
+            this.btn_Reg_Bestätigen.Size = new System.Drawing.Size(195, 60);
+            this.btn_Reg_Bestätigen.TabIndex = 13;
+            this.btn_Reg_Bestätigen.Text = "Bestätigen";
+            this.btn_Reg_Bestätigen.UseVisualStyleBackColor = true;
+            this.btn_Reg_Bestätigen.Click += new System.EventHandler(this.btn_Reg_Bestätigen_Click);
             // 
-            // label5
+            // txt_Reg_Passwort
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(303, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Vorname";
+            this.txt_Reg_Passwort.Location = new System.Drawing.Point(402, 250);
+            this.txt_Reg_Passwort.Name = "txt_Reg_Passwort";
+            this.txt_Reg_Passwort.Size = new System.Drawing.Size(100, 20);
+            this.txt_Reg_Passwort.TabIndex = 12;
             // 
-            // label6
+            // txt_TelNr
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(303, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Nachname";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.txt_TelNr.Location = new System.Drawing.Point(402, 224);
+            this.txt_TelNr.Name = "txt_TelNr";
+            this.txt_TelNr.Size = new System.Drawing.Size(100, 20);
+            this.txt_TelNr.TabIndex = 11;
             // 
-            // label7
+            // txt_Adresse
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(303, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 20);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Email";
+            this.txt_Adresse.Location = new System.Drawing.Point(402, 198);
+            this.txt_Adresse.Name = "txt_Adresse";
+            this.txt_Adresse.Size = new System.Drawing.Size(100, 20);
+            this.txt_Adresse.TabIndex = 10;
             // 
-            // label8
+            // txt_Email
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(303, 197);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Adresse";
+            this.txt_Email.Location = new System.Drawing.Point(402, 172);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(100, 20);
+            this.txt_Email.TabIndex = 9;
+            // 
+            // txt_Nachname
+            // 
+            this.txt_Nachname.Location = new System.Drawing.Point(402, 142);
+            this.txt_Nachname.Name = "txt_Nachname";
+            this.txt_Nachname.Size = new System.Drawing.Size(100, 20);
+            this.txt_Nachname.TabIndex = 8;
+            // 
+            // txt_Vorname
+            // 
+            this.txt_Vorname.Location = new System.Drawing.Point(402, 114);
+            this.txt_Vorname.Name = "txt_Vorname";
+            this.txt_Vorname.Size = new System.Drawing.Size(100, 20);
+            this.txt_Vorname.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(302, 250);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 20);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Passwort";
             // 
             // label9
             // 
@@ -233,68 +240,61 @@
             this.label9.Text = "Tel-Nr";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label10
+            // label8
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(302, 250);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 20);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Passwort";
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(303, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Adresse";
             // 
-            // txt_Vorname
+            // label7
             // 
-            this.txt_Vorname.Location = new System.Drawing.Point(402, 114);
-            this.txt_Vorname.Name = "txt_Vorname";
-            this.txt_Vorname.Size = new System.Drawing.Size(100, 20);
-            this.txt_Vorname.TabIndex = 7;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(303, 167);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Email";
             // 
-            // txt_Nachname
+            // label6
             // 
-            this.txt_Nachname.Location = new System.Drawing.Point(402, 142);
-            this.txt_Nachname.Name = "txt_Nachname";
-            this.txt_Nachname.Size = new System.Drawing.Size(100, 20);
-            this.txt_Nachname.TabIndex = 8;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(303, 139);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Nachname";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // txt_Email
+            // label5
             // 
-            this.txt_Email.Location = new System.Drawing.Point(402, 172);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(100, 20);
-            this.txt_Email.TabIndex = 9;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(303, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Vorname";
             // 
-            // txt_Adresse
+            // label4
             // 
-            this.txt_Adresse.Location = new System.Drawing.Point(402, 198);
-            this.txt_Adresse.Name = "txt_Adresse";
-            this.txt_Adresse.Size = new System.Drawing.Size(100, 20);
-            this.txt_Adresse.TabIndex = 10;
-            // 
-            // txt_TelNr
-            // 
-            this.txt_TelNr.Location = new System.Drawing.Point(402, 224);
-            this.txt_TelNr.Name = "txt_TelNr";
-            this.txt_TelNr.Size = new System.Drawing.Size(100, 20);
-            this.txt_TelNr.TabIndex = 11;
-            // 
-            // txt_Reg_Passwort
-            // 
-            this.txt_Reg_Passwort.Location = new System.Drawing.Point(402, 250);
-            this.txt_Reg_Passwort.Name = "txt_Reg_Passwort";
-            this.txt_Reg_Passwort.Size = new System.Drawing.Size(100, 20);
-            this.txt_Reg_Passwort.TabIndex = 12;
-            // 
-            // btn_Reg_Bestätigen
-            // 
-            this.btn_Reg_Bestätigen.Location = new System.Drawing.Point(307, 291);
-            this.btn_Reg_Bestätigen.Name = "btn_Reg_Bestätigen";
-            this.btn_Reg_Bestätigen.Size = new System.Drawing.Size(195, 60);
-            this.btn_Reg_Bestätigen.TabIndex = 13;
-            this.btn_Reg_Bestätigen.Text = "Bestätigen";
-            this.btn_Reg_Bestätigen.UseVisualStyleBackColor = true;
-            this.btn_Reg_Bestätigen.Click += new System.EventHandler(this.btn_Reg_Bestätigen_Click);
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(281, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(301, 57);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Registration";
             // 
             // Anmelde_formular
             // 

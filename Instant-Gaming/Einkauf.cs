@@ -22,8 +22,8 @@ namespace Instant_Gaming
 
 
         int ID;
-        string Tabelle; 
-
+        string Tabelle;
+        bool admin;
         OleDbDataReader reader;
         int anzahl;
         int anzahlerhöhen;
@@ -40,10 +40,11 @@ namespace Instant_Gaming
 
 
 
-        public Einkauf(int id, string tb)
+        public Einkauf(int id, string tb,bool Admin)
         {
             ID = id;
-            Tabelle = tb; 
+            Tabelle = tb;
+            admin = Admin;
             InitializeComponent();
             // Die meisten panels werden zum Anfang hin versteckt
             panel_Produkte.Visible = false;
@@ -304,6 +305,7 @@ namespace Instant_Gaming
 
         private void Uhrzeit_Tick(object sender, EventArgs e)
         {
+            // Akutelle Uhrzeit zum Anzeigen
             DateTime Uhrzeit = DateTime.Now;
             lbl_DateTime.Text = "Aktuelle Uhrzeit : " + Uhrzeit.ToLongTimeString();
         }
@@ -313,6 +315,13 @@ namespace Instant_Gaming
             tb = Tabelle;
         }
 
-       
+        private void btn_Zurück_Click(object sender, EventArgs e)
+        {
+            // Zurück Button 
+            Main_Menü mm = new Main_Menü(ID, Tabelle, admin);
+            mm.Show();
+            this.Visible = false; 
+            
+        }
     }
 }
