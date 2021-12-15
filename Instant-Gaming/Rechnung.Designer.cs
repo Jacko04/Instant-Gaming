@@ -89,9 +89,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Rechnungen);
-            this.panel2.Location = new System.Drawing.Point(1259, 668);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(369, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(20, 23);
+            this.panel2.Size = new System.Drawing.Size(910, 691);
             this.panel2.TabIndex = 2;
             // 
             // dgv_Rechnungen
@@ -107,7 +108,7 @@
             this.dgv_Rechnungen.ReadOnly = true;
             this.dgv_Rechnungen.RowHeadersWidth = 62;
             this.dgv_Rechnungen.RowTemplate.Height = 28;
-            this.dgv_Rechnungen.Size = new System.Drawing.Size(20, 23);
+            this.dgv_Rechnungen.Size = new System.Drawing.Size(910, 691);
             this.dgv_Rechnungen.TabIndex = 0;
             // 
             // RiD

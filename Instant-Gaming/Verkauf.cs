@@ -76,7 +76,7 @@ namespace Instant_Gaming
             {
                 int RiD = 0;
                 //RiD erstellen
-                sql = "select LAST(RiD) from Rechnung";
+                sql = "select MAX(RiD) from Rechnung";
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -162,12 +162,13 @@ namespace Instant_Gaming
                     Einlesen();
 
                     //DB eintrag Rechnung
-                    sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Anzahl, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + "," + anzahl + ",NOW(),'" + Kosten + "','" + Adresse + "','" + Key + "');";
+                    sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + ",NOW(),'" + Kosten + "','" + Adresse + "','" + Key + "');";
                     Verbinden(sql);
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
-            
+                lst_Warenkorb.Items.Clear();
+                lbl_Gespreis.Text = "0";
             }
         }
 
