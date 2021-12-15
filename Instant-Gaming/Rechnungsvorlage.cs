@@ -16,10 +16,5 @@ namespace Instant_Gaming
         {
             InitializeComponent();
         }
-
-        private void dgv_Produkte_SelectionChanged(object sender, EventArgs e)
-        {
-            dgv_Produkte.ClearSelection();
-        }
     }
 }
