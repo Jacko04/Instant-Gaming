@@ -39,7 +39,7 @@ namespace Instant_Gaming
         private void Rechnung_Load(object sender, EventArgs e)
         {
             int Anzahleinträge = 0;
-            sql = "select COUNT(RiD) from Rechnung";
+            sql = "select MAX(RiD) from Rechnung";
             Verbinden(sql);
             reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -48,29 +48,29 @@ namespace Instant_Gaming
             }
             con.Close();
             reader.Close();
-
-            sql = "select DISTINCT RiD from Rechnung where KiD =" + Kid;
+            sql = "select DISTINCT RiD from Rechnung where KiD = " + Kid;
             Verbinden(sql);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Ridload.Add(reader.GetInt32(0));
+                dgv_Rechnungen.Rows.Add(reader.GetInt32(0));
+                //Ridload.Add(reader.GetInt32(0));
             }
             con.Close();
             reader.Close();
 
-            for (int i = 0; i < Anzahleinträge; i++)
-            {
-                sql = "select DISTINCT Datum from Rechnung where KiD =" + Kid;
-                Verbinden(sql);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    dgv_Rechnungen.Rows.Add(Ridload[i], reader.GetDateTime(0));
-                }
-                con.Close();
-                reader.Close();
-            }
+            //for (int i = 0; i < Anzahleinträge; i++)
+            //{
+            //    sql = "select DESTINCT CONVERT( date, GETDATE() ) from Rechnung where KiD =" + Kid;
+            //    Verbinden(sql);
+            //    reader = cmd.ExecuteReader();
+            //    while (reader.Read())
+            //    {
+            //        dgv_Rechnungen.Rows.Add(Ridload[i], reader.GetDateTime(0));
+            //    }
+            //    con.Close();
+            //    reader.Close();
+            //}
         }
 
         public void Verbinden(string sql)
