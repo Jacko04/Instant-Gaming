@@ -90,9 +90,6 @@
     <EmbeddedResource Include="Einkauf.resx">
       <DependentUpon>Einkauf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main_Menü.resx">
       <DependentUpon>Main_Menü.cs</DependentUpon>
     </EmbeddedResource>

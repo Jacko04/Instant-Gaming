@@ -97,7 +97,7 @@ namespace Instant_Gaming
                                         Main_menü.Visible = true;
                                         this.Visible = false;
 
-                                }
+                                    }
                                 }
                                 else if (i == 1)
                                 {
@@ -119,7 +119,7 @@ namespace Instant_Gaming
       
 
             }
-            catch (Exception)
+            catch
             {
 
                 MessageBox.Show("Es wurde wohl etwas falsch eingegeben , über prüfen sie nochmal ihre eingaben");
@@ -236,6 +236,12 @@ namespace Instant_Gaming
         private void btn_Reg_Bestätigen_Click(object sender, EventArgs e)
         {
             Kunden_Hinzufügen();
+            panel_Registrieren.Visible = false;
+            panel_Anmelden.Visible = true;
+        }
+
+        private void btn_Anmeldenoffnen_Click(object sender, EventArgs e)
+        {
             panel_Registrieren.Visible = false;
             panel_Anmelden.Visible = true;
         }
