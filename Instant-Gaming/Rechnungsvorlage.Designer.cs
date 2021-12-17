@@ -330,7 +330,7 @@
             this.p_pdf.Controls.Add(this.label3);
             this.p_pdf.Controls.Add(this.label2);
             this.p_pdf.Controls.Add(this.label1);
-            this.p_pdf.Location = new System.Drawing.Point(67, 244);
+            this.p_pdf.Location = new System.Drawing.Point(54, 244);
             this.p_pdf.Name = "p_pdf";
             this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
@@ -339,7 +339,7 @@
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_drucken.Image = global::Instant_Gaming.Properties.Resources.PDF;
-            this.pic_drucken.Location = new System.Drawing.Point(1064, 144);
+            this.pic_drucken.Location = new System.Drawing.Point(1051, 144);
             this.pic_drucken.Name = "pic_drucken";
             this.pic_drucken.Size = new System.Drawing.Size(65, 73);
             this.pic_drucken.TabIndex = 3;

@@ -24,6 +24,7 @@ namespace Instant_Gaming
         int Row;
         int KiD;
         string Tab;
+        int anzahl = 0;
 
         public Verkauf(int id, string Tabelle)
         {
@@ -90,7 +91,7 @@ namespace Instant_Gaming
                 for (int i = 0; i < lst_Warenkorb.Items.Count; i++)
                 {
 
-                    int anzahl = 0;
+                    
                     int PiD = 0;
                     decimal Kosten = 0;
                     string Adresse = "";
@@ -153,22 +154,29 @@ namespace Instant_Gaming
                     var resultString = new String(Charsarr);
                     Key = resultString;
 
-                    //Bestand wird aktuallisiert 
-                    anzahl--;
-                    sql = "UPDATE Produkt SET Anzahl = " + anzahl + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
-                    Verbinden(sql);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Einlesen();
+                    if (anzahl > 0)
+                    {
 
-                    //DB eintrag Rechnung
-                    sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + ",NOW(),'" + Kosten + "','" + Adresse + "','" + Key + "');";
-                    Verbinden(sql);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                        //Bestand wird aktuallisiert 
+                        anzahl--;
+                        sql = "UPDATE Produkt SET Anzahl = " + anzahl + " where Name = '" + lst_Warenkorb.Items[i].ToString() + "'";
+                        Verbinden(sql);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        Einlesen();
+
+                        //DB eintrag Rechnung
+                        sql = "INSERT INTO Rechnung (RiD, PiD, KiD, Datum, Kosten, Adresse, [Key]) VALUES (" + RiD + "," + PiD + "," + KiD + ",DATE(),'" + Kosten + "','" + Adresse + "','" + Key + "');";
+                        Verbinden(sql);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
                 }
-                lst_Warenkorb.Items.Clear();
-                lbl_Gespreis.Text = "0";
+                if (anzahl > 0)
+                {
+                    lst_Warenkorb.Items.Clear();
+                    lbl_Gespreis.Text = "0";
+                }
             }
         }
 
