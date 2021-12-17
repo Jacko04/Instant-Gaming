@@ -213,7 +213,7 @@ namespace Instant_Gaming
                     ID = reader.GetInt32(0);
 
                     //Ausgabe der ID an den Kunden
-                    MessageBox.Show("Ihre ID ist = " + ID);
+                    MessageBox.Show("Ihre ID ist o " + ID);
 
                     reader.Close();
 
