@@ -35,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Rechnungen = new System.Windows.Forms.DataGridView();
             this.RiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Rechnungen)).BeginInit();
@@ -100,8 +99,7 @@
             this.dgv_Rechnungen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Rechnungen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Rechnungen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RiD,
-            this.Datum});
+            this.RiD});
             this.dgv_Rechnungen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Rechnungen.Location = new System.Drawing.Point(0, 0);
             this.dgv_Rechnungen.Name = "dgv_Rechnungen";
@@ -117,13 +115,6 @@
             this.RiD.MinimumWidth = 8;
             this.RiD.Name = "RiD";
             this.RiD.ReadOnly = true;
-            // 
-            // Datum
-            // 
-            this.Datum.HeaderText = "Datum";
-            this.Datum.MinimumWidth = 8;
-            this.Datum.Name = "Datum";
-            this.Datum.ReadOnly = true;
             // 
             // Rechnung
             // 
@@ -154,6 +145,5 @@
         private System.Windows.Forms.DataGridView dgv_Rechnungen;
         private System.Windows.Forms.Button btn_öffnen;
         private System.Windows.Forms.DataGridViewTextBoxColumn RiD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
     }
 }
