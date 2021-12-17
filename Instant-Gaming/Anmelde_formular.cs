@@ -186,34 +186,43 @@ namespace Instant_Gaming
             string Adresse = Convert.ToString(txt_Adresse.Text);
             int TelNR = Convert.ToInt32(txt_TelNr.Text);
             string Passwort = Convert.ToString(txt_Reg_Passwort.Text);
-            
 
-            con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
-            cmd.Connection = con;
-
-           
-            con.Open();
-            cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNR + " ,'" + Passwort + "')  ";
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-
-            cmd.CommandText = "Select KiD from Kunden where 'E-Mail' = '" + Email + "' and passwort = '" + Passwort + "'";
-            con.Open();
-            reader = cmd.ExecuteReader();
-           
-
-            while (reader.Read())
+            try
             {
-                ID = reader.GetInt32(0);
-                MessageBox.Show("Ihre ID ist = " + ID);
+                  con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
+                  cmd.Connection = con;
+
+                   //Kunden Hinzufügen SQL befehl 
+                    con.Open();
+                   cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNR + " ,'" + Passwort + "')  ";
+                    cmd.ExecuteNonQuery();
+                   con.Close();
+
+
+                   // ID Ausgabe für den Kunden 
+                    //SQL Befehl
+                    cmd.CommandText = "Select * from Kunden where `E-Mail` = '" + Email + "' and passwort = '" + Passwort + "'";
+
+                     //Auslesen des Wertes
+                     con.Open();
+                     reader = cmd.ExecuteReader();
+
+
+                    reader.Read();
+
+                    ID = reader.GetInt32(0);
+
+                    //Ausgabe der ID an den Kunden
+                    MessageBox.Show("Ihre ID ist o " + ID);
+
+                    reader.Close();
+
             }
-            reader.Close();
-          
-            con.Close();
-
+            catch
+            {
+                MessageBox.Show("Da ist wohl etwas schief gelaufen , beachten sie das die Telefon nummer nicht länger als 8 zeichen beihalten darf");
+            }
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
