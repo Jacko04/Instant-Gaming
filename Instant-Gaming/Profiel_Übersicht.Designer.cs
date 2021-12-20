@@ -29,129 +29,261 @@ namespace Instant_Gaming
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Passwort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pb_Profilbild = new System.Windows.Forms.PictureBox();
+            this.panel_Profil_Funktionen = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_KiD = new System.Windows.Forms.TextBox();
+            this.txt_Vorname = new System.Windows.Forms.TextBox();
+            this.txt_Nachname = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_Adresse = new System.Windows.Forms.TextBox();
+            this.txt_TelNr = new System.Windows.Forms.TextBox();
+            this.txt_Passwort = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Profilbild)).BeginInit();
+            this.panel_Profil_Funktionen.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // pb_Profilbild
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Vorname,
-            this.Nachname,
-            this.EMail,
-            this.Adresse,
-            this.TelNr,
-            this.Passwort});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 43);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 46);
-            this.dataGridView1.TabIndex = 0;
+            this.pb_Profilbild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_Profilbild.Image = global::Instant_Gaming.Properties.Resources.anonym_profilbild;
+            this.pb_Profilbild.Location = new System.Drawing.Point(76, 45);
+            this.pb_Profilbild.Name = "pb_Profilbild";
+            this.pb_Profilbild.Size = new System.Drawing.Size(138, 117);
+            this.pb_Profilbild.TabIndex = 0;
+            this.pb_Profilbild.TabStop = false;
             // 
-            // ID
+            // panel_Profil_Funktionen
             // 
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.panel_Profil_Funktionen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel_Profil_Funktionen.Controls.Add(this.label8);
+            this.panel_Profil_Funktionen.Controls.Add(this.label7);
+            this.panel_Profil_Funktionen.Controls.Add(this.label6);
+            this.panel_Profil_Funktionen.Controls.Add(this.label5);
+            this.panel_Profil_Funktionen.Controls.Add(this.label4);
+            this.panel_Profil_Funktionen.Controls.Add(this.label3);
+            this.panel_Profil_Funktionen.Controls.Add(this.label2);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_Passwort);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_TelNr);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_Adresse);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_Email);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_Nachname);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_Vorname);
+            this.panel_Profil_Funktionen.Controls.Add(this.txt_KiD);
+            this.panel_Profil_Funktionen.Controls.Add(this.label1);
+            this.panel_Profil_Funktionen.Controls.Add(this.pb_Profilbild);
+            this.panel_Profil_Funktionen.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_Profil_Funktionen.Location = new System.Drawing.Point(0, 0);
+            this.panel_Profil_Funktionen.Name = "panel_Profil_Funktionen";
+            this.panel_Profil_Funktionen.Size = new System.Drawing.Size(294, 642);
+            this.panel_Profil_Funktionen.TabIndex = 1;
             // 
-            // Vorname
+            // label1
             // 
-            this.Vorname.Frozen = true;
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(103, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Profil";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Nachname
+            // txt_KiD
             // 
-            this.Nachname.Frozen = true;
-            this.Nachname.HeaderText = "Nachname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
+            this.txt_KiD.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_KiD.Location = new System.Drawing.Point(134, 180);
+            this.txt_KiD.Name = "txt_KiD";
+            this.txt_KiD.ReadOnly = true;
+            this.txt_KiD.Size = new System.Drawing.Size(133, 30);
+            this.txt_KiD.TabIndex = 2;
             // 
-            // EMail
+            // txt_Vorname
             // 
-            this.EMail.Frozen = true;
-            this.EMail.HeaderText = "E-mail";
-            this.EMail.Name = "EMail";
-            this.EMail.ReadOnly = true;
+            this.txt_Vorname.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Vorname.Location = new System.Drawing.Point(134, 223);
+            this.txt_Vorname.Name = "txt_Vorname";
+            this.txt_Vorname.ReadOnly = true;
+            this.txt_Vorname.Size = new System.Drawing.Size(133, 30);
+            this.txt_Vorname.TabIndex = 3;
             // 
-            // Adresse
+            // txt_Nachname
             // 
-            this.Adresse.Frozen = true;
-            this.Adresse.HeaderText = "Adresse";
-            this.Adresse.Name = "Adresse";
-            this.Adresse.ReadOnly = true;
+            this.txt_Nachname.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nachname.Location = new System.Drawing.Point(134, 265);
+            this.txt_Nachname.Name = "txt_Nachname";
+            this.txt_Nachname.ReadOnly = true;
+            this.txt_Nachname.Size = new System.Drawing.Size(133, 30);
+            this.txt_Nachname.TabIndex = 4;
             // 
-            // TelNr
+            // txt_Email
             // 
-            this.TelNr.Frozen = true;
-            this.TelNr.HeaderText = "Tel-Nr";
-            this.TelNr.Name = "TelNr";
-            this.TelNr.ReadOnly = true;
+            this.txt_Email.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email.Location = new System.Drawing.Point(134, 312);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.ReadOnly = true;
+            this.txt_Email.Size = new System.Drawing.Size(133, 30);
+            this.txt_Email.TabIndex = 5;
             // 
-            // Passwort
+            // txt_Adresse
             // 
-            this.Passwort.Frozen = true;
-            this.Passwort.HeaderText = "Passwort";
-            this.Passwort.Name = "Passwort";
-            this.Passwort.ReadOnly = true;
+            this.txt_Adresse.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Adresse.Location = new System.Drawing.Point(134, 363);
+            this.txt_Adresse.Name = "txt_Adresse";
+            this.txt_Adresse.ReadOnly = true;
+            this.txt_Adresse.Size = new System.Drawing.Size(132, 30);
+            this.txt_Adresse.TabIndex = 6;
+            // 
+            // txt_TelNr
+            // 
+            this.txt_TelNr.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TelNr.Location = new System.Drawing.Point(134, 410);
+            this.txt_TelNr.Name = "txt_TelNr";
+            this.txt_TelNr.ReadOnly = true;
+            this.txt_TelNr.Size = new System.Drawing.Size(133, 30);
+            this.txt_TelNr.TabIndex = 7;
+            // 
+            // txt_Passwort
+            // 
+            this.txt_Passwort.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Passwort.Location = new System.Drawing.Point(133, 456);
+            this.txt_Passwort.Name = "txt_Passwort";
+            this.txt_Passwort.ReadOnly = true;
+            this.txt_Passwort.Size = new System.Drawing.Size(133, 30);
+            this.txt_Passwort.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 23);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "KiD";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Vorname";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 265);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 23);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Nachname";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 309);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "E-Mail";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 358);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 23);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Adresse";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 405);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 23);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tel-Nr";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 453);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 23);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Passwort";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Profiel_Übersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1053, 642);
+            this.Controls.Add(this.panel_Profil_Funktionen);
             this.Name = "Profiel_Übersicht";
             this.Text = "Profiel_Übersicht";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Profiel_Übersicht_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Profilbild)).EndInit();
+            this.panel_Profil_Funktionen.ResumeLayout(false);
+            this.panel_Profil_Funktionen.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EMail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adresse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Passwort;
+        private System.Windows.Forms.PictureBox pb_Profilbild;
+        private System.Windows.Forms.Panel panel_Profil_Funktionen;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_Passwort;
+        private System.Windows.Forms.TextBox txt_TelNr;
+        private System.Windows.Forms.TextBox txt_Adresse;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_Nachname;
+        private System.Windows.Forms.TextBox txt_Vorname;
+        private System.Windows.Forms.TextBox txt_KiD;
+        private System.Windows.Forms.Label label1;
     }
 }

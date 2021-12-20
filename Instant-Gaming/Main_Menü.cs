@@ -104,7 +104,9 @@ namespace Instant_Gaming
 
         private void btn_Kunden_Profil_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(bearbeitung);
+            Profiel_Übersicht prü = new Profiel_Übersicht(ID);
+            prü.Show();
+            this.Visible = false; 
         }
 
         private void btn_Kunden_Einkauf_Click(object sender, EventArgs e)

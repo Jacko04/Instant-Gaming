@@ -54,3 +54,4 @@ C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug
 C:\Users\koste\OneDrive\Documents\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnung.resources
 C:\Users\ErikB\Desktop\Schule Jahr 2\SWR\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnungsvorlage.resources
 C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Rechnungsvorlage.resources
+C:\Users\justi\OneDrive\Dokumente\GitHub\Instant-Gaming\Instant-Gaming\obj\Debug\Instant_Gaming.Profiel_Übersicht.resources
