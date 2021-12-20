@@ -23,7 +23,7 @@ namespace Instant_Gaming
         List<int> Ridload = new List<int>();
 
         int selectedRiD;
-        string selectedAdress;
+        string selectedDatum;
 
         public Rechnung(int id ,string Tabelle)
         {
