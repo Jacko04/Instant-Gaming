@@ -55,9 +55,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.p_pdf = new System.Windows.Forms.Panel();
             this.pic_drucken = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
             this.p_pdf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -177,7 +179,7 @@
             this.lbl_datum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_datum.AutoSize = true;
             this.lbl_datum.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datum.Location = new System.Drawing.Point(919, 178);
+            this.lbl_datum.Location = new System.Drawing.Point(854, 178);
             this.lbl_datum.Name = "lbl_datum";
             this.lbl_datum.Size = new System.Drawing.Size(72, 33);
             this.lbl_datum.TabIndex = 8;
@@ -202,7 +204,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(790, 178);
+            this.label7.Location = new System.Drawing.Point(725, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 33);
             this.label7.TabIndex = 7;
@@ -330,7 +332,7 @@
             this.p_pdf.Controls.Add(this.label3);
             this.p_pdf.Controls.Add(this.label2);
             this.p_pdf.Controls.Add(this.label1);
-            this.p_pdf.Location = new System.Drawing.Point(41, 244);
+            this.p_pdf.Location = new System.Drawing.Point(28, 244);
             this.p_pdf.Name = "p_pdf";
             this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
@@ -339,11 +341,23 @@
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_drucken.Image = global::Instant_Gaming.Properties.Resources.PDF;
-            this.pic_drucken.Location = new System.Drawing.Point(1038, 144);
+            this.pic_drucken.Location = new System.Drawing.Point(1025, 144);
             this.pic_drucken.Name = "pic_drucken";
             this.pic_drucken.Size = new System.Drawing.Size(65, 73);
             this.pic_drucken.TabIndex = 3;
             this.pic_drucken.TabStop = false;
+            this.pic_drucken.Click += new System.EventHandler(this.pic_drucken_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pic_logo.Image = global::Instant_Gaming.Properties.Resources.unnamed;
+            this.pic_logo.Location = new System.Drawing.Point(28, 137);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(80, 80);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_logo.TabIndex = 6;
+            this.pic_logo.TabStop = false;
             // 
             // Rechnungsvorlage
             // 
@@ -351,6 +365,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1258, 775);
+            this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.lbl_uberschrift);
             this.Controls.Add(this.pic_drucken);
             this.Controls.Add(this.p_pdf);
@@ -362,6 +377,7 @@
             this.p_pdf.ResumeLayout(false);
             this.p_pdf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +411,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel p_pdf;
+        private System.Windows.Forms.PictureBox pic_logo;
     }
 }
