@@ -25,7 +25,15 @@ namespace Instant_Gaming
         bool Admin;
         string Tabelle;
         bool Ladenvorgang;
-        
+        bool Fehler = false;
+
+
+        string Vorname;
+        string Nachname;
+        string Email;
+        string Adresse;
+        int TelNr;
+        string Reg_Passwort; 
 
         public Anmelde_formular( )
         {
@@ -49,7 +57,8 @@ namespace Instant_Gaming
         //Methode für Anmelden#
         public void Überprüfen()
         {   //for schleife zu überprüfung der 2 Tabellen
-            try{
+            try
+            {
                 con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
                 cmd.Connection = con;
                 for (int i = 0; i < 2; i++)
@@ -60,7 +69,7 @@ namespace Instant_Gaming
                     string[] Kennung = { "MiD", "KiD" };
                     //Array If Bedingugen
                     int[] Zahlen = { 8, 6 };
-               
+                    Fehler = true; 
                     //Converten der Infromation aus der Form
                     ID = Convert.ToInt32(txt_ID.Text);
                     Passwort = Convert.ToString(txt_Passwort.Text);
@@ -70,57 +79,65 @@ namespace Instant_Gaming
                     con.Open();
                    
                     reader = cmd.ExecuteReader();
-                
-               
-                
-                        while (reader.Read())
-                        {
-                            if (ID == reader.GetInt32(0) && Passwort == reader.GetString(Zahlen[i]) )
-                            {
-                                if(i == 0)
-                                {
-                                    if (reader.GetBoolean(6) == true )
-                                    {
-                                        Ladenvorgang = true;    
-                                        Admin = true; 
-                                        Tabelle = "Mitarbeiter";
-                                        Main_menü = new Main_Menü(ID,Tabelle, Admin);
-                                        Main_menü.Visible = true;
-                                        this.Visible = false;
-                                }
-                                    else
-                                    {
-                                        Ladenvorgang = true;
-                                        Admin = false;
-                                        Tabelle = "Mitarbeiter";
-                                        Main_menü = new Main_Menü(ID,Tabelle, Admin);
-                                        Main_menü.Visible = true;
-                                        this.Visible = false;
 
-                                    }
-                                }
-                                else if (i == 1)
+
+
+                    while (reader.Read())
+                    {
+                        if (ID == reader.GetInt32(0) && Passwort == reader.GetString(Zahlen[i]))
+                        {
+                            if (i == 0)
+                            {
+                                if (reader.GetBoolean(6) == true)
                                 {
-                                    Tabelle = "Kunden";
                                     Ladenvorgang = true;
-                                    Admin = false; 
-                                    Main_menü = new Main_Menü(ID,Tabelle, Admin);
-                                      Main_menü.Visible = true;
-                                    this.Visible = false;   
-                               
+                                    Admin = true;
+                                    Tabelle = "Mitarbeiter";
+                                    Main_menü = new Main_Menü(ID, Tabelle, Admin);
+                                    Main_menü.Visible = true;
+                                    Fehler = false; 
+                                    this.Visible = false;
+                                    
+                                }
+                                else
+                                {
+                                    Ladenvorgang = true;
+                                    Admin = false;
+                                    Tabelle = "Mitarbeiter";
+                                    Main_menü = new Main_Menü(ID, Tabelle, Admin);
+                                    Main_menü.Visible = true;
+                                    Fehler = false; 
+                                    this.Visible = false;
+                                    
+
                                 }
                             }
+                            else if (i == 1)
+                            {
+                                Tabelle = "Kunden";
+                                Ladenvorgang = true;
+                                Admin = false;
+                                Main_menü = new Main_Menü(ID, Tabelle, Admin);
+                                Main_menü.Visible = true;
+                                Fehler = false; 
+                                this.Visible = false;
+                                
+                            }
                         }
-                
-                   
+                        
+                    }
                     reader.Close();
                     con.Close();
-                 }
-      
+                }
+                if (Fehler == true)
+                {
+                    MessageBox.Show("Es wurde wohl etwas falsch eingegeben , überprüfen sie nochmal ihre eingaben");
+                    con.Close();
+                }
 
             }
-            catch
-            {
+            catch(Exception)
+            { 
 
                 MessageBox.Show("Es wurde wohl etwas falsch eingegeben , über prüfen sie nochmal ihre eingaben");
                 con.Close();
@@ -179,14 +196,22 @@ namespace Instant_Gaming
         {
             //Zusatz werte 
             int ID;
-            //Werte für Den Sql befehl werden geholt
-            string Vorname = Convert.ToString(txt_Vorname.Text);
-            string Nachname = Convert.ToString(txt_Nachname.Text);
-            string Email = Convert.ToString(txt_Email.Text);
-            string Adresse = Convert.ToString(txt_Adresse.Text);
-            int TelNR = Convert.ToInt32(txt_TelNr.Text);
-            string Passwort = Convert.ToString(txt_Reg_Passwort.Text);
+            try
+            {
+                Vorname = Convert.ToString(txt_Vorname.Text);
+                Nachname = Convert.ToString(txt_Nachname.Text);
+                Email = Convert.ToString(txt_Email.Text);
+                Adresse = Convert.ToString(txt_Adresse.Text);
+                TelNr = Convert.ToInt32(txt_TelNr.Text);
+                Passwort = Convert.ToString(txt_Reg_Passwort.Text);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            //Werte für Den Sql befehl werden geholt
+         
             try
             {
                   con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
@@ -194,14 +219,14 @@ namespace Instant_Gaming
 
                    //Kunden Hinzufügen SQL befehl 
                     con.Open();
-                   cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNR + " ,'" + Passwort + "')  ";
+                   cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNr + " ,'" + Reg_Passwort + "')  ";
                     cmd.ExecuteNonQuery();
                    con.Close();
 
 
                    // ID Ausgabe für den Kunden 
                     //SQL Befehl
-                    cmd.CommandText = "Select * from Kunden where `E-Mail` = '" + Email + "' and passwort = '" + Passwort + "'";
+                    cmd.CommandText = "Select * from Kunden where `E-Mail` = '" + Email + "' and passwort = '" + Reg_Passwort + "'";
 
                      //Auslesen des Wertes
                      con.Open();

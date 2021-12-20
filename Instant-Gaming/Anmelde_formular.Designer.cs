@@ -359,8 +359,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.panel_Anmelden);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 500);
             this.Name = "Anmelde_formular";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anmelde Formular";

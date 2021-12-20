@@ -22,6 +22,9 @@ namespace Instant_Gaming
         string Tab;
         List<int> Ridload = new List<int>();
 
+        int selectedRiD;
+        string selectedDatum;
+
         public Rechnung(int id ,string Tabelle)
         {
             InitializeComponent();
@@ -38,13 +41,25 @@ namespace Instant_Gaming
 
         private void Rechnung_Load(object sender, EventArgs e)
         {
+            dgv_Rechnungen.Rows.Clear();
             sql = "select DISTINCT RiD from Rechnung where KiD = " + Kid;
             Verbinden(sql);
             reader = cmd.ExecuteReader();
-            while (reader.Read())
+            for (int i = 0; reader.Read(); i++)
             {
-                dgv_Rechnungen.Rows.Add(reader.GetInt32(0));
-                //Ridload.Add(reader.GetInt32(0));
+                Ridload.Add(reader.GetInt32(0));
+            }
+            con.Close();
+            reader.Close();
+            for (int i = 0; i < Ridload.Count(); i++)
+            {
+                sql = "select Datum from Rechnung where RiD = " + Ridload[i];
+                Verbinden(sql);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    dgv_Rechnungen.Rows.Add(Ridload[i],reader.GetDateTime(0));
+                }
             }
             con.Close();
             reader.Close();
@@ -62,7 +77,14 @@ namespace Instant_Gaming
 
         private void btn_öffnen_Click(object sender, EventArgs e)
         {
-           
+            Rechnungsvorlage Rnvorlage = new Rechnungsvorlage(ID,selectedRiD,selectedDatum);
+            Rnvorlage.ShowDialog();
+        }
+        private void dgv_Rechnungen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int Row = e.RowIndex;
+            selectedRiD = Convert.ToInt32(dgv_Rechnungen.Rows[Row].Cells[0].Value);
+            selectedDatum = dgv_Rechnungen.Rows[Row].Cells[1].Value.ToString();
         }
     }
 }
