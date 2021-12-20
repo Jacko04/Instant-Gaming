@@ -32,13 +32,13 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kosten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_tel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_KiD = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_mail = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Adresse = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_datum = new System.Windows.Forms.Label();
             this.Produkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,16 +84,16 @@
             this.Kosten.Name = "Kosten";
             this.Kosten.ReadOnly = true;
             // 
-            // label12
+            // lbl_tel
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(230, 308);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 33);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Test";
+            this.lbl_tel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_tel.AutoSize = true;
+            this.lbl_tel.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tel.Location = new System.Drawing.Point(230, 308);
+            this.lbl_tel.Name = "lbl_tel";
+            this.lbl_tel.Size = new System.Drawing.Size(72, 33);
+            this.lbl_tel.TabIndex = 16;
+            this.lbl_tel.Text = "Test";
             // 
             // label13
             // 
@@ -106,16 +106,16 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Telefon:";
             // 
-            // label10
+            // lbl_KiD
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(230, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 33);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Test";
+            this.lbl_KiD.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_KiD.AutoSize = true;
+            this.lbl_KiD.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KiD.Location = new System.Drawing.Point(230, 178);
+            this.lbl_KiD.Name = "lbl_KiD";
+            this.lbl_KiD.Size = new System.Drawing.Size(72, 33);
+            this.lbl_KiD.TabIndex = 14;
+            this.lbl_KiD.Text = "Test";
             // 
             // label11
             // 
@@ -128,16 +128,16 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "ID:";
             // 
-            // label8
+            // lbl_mail
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(230, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 33);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Test";
+            this.lbl_mail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_mail.AutoSize = true;
+            this.lbl_mail.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mail.Location = new System.Drawing.Point(230, 275);
+            this.lbl_mail.Name = "lbl_mail";
+            this.lbl_mail.Size = new System.Drawing.Size(72, 33);
+            this.lbl_mail.TabIndex = 12;
+            this.lbl_mail.Text = "Test";
             // 
             // label9
             // 
@@ -150,16 +150,16 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "E-mail:";
             // 
-            // label5
+            // lbl_Adresse
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(230, 242);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 33);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Test";
+            this.lbl_Adresse.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Adresse.AutoSize = true;
+            this.lbl_Adresse.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Adresse.Location = new System.Drawing.Point(230, 242);
+            this.lbl_Adresse.Name = "lbl_Adresse";
+            this.lbl_Adresse.Size = new System.Drawing.Size(72, 33);
+            this.lbl_Adresse.TabIndex = 10;
+            this.lbl_Adresse.Text = "Test";
             // 
             // label6
             // 
@@ -313,13 +313,13 @@
             // 
             this.p_pdf.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.p_pdf.BackColor = System.Drawing.Color.White;
-            this.p_pdf.Controls.Add(this.label12);
+            this.p_pdf.Controls.Add(this.lbl_tel);
             this.p_pdf.Controls.Add(this.label13);
-            this.p_pdf.Controls.Add(this.label10);
+            this.p_pdf.Controls.Add(this.lbl_KiD);
             this.p_pdf.Controls.Add(this.label11);
-            this.p_pdf.Controls.Add(this.label8);
+            this.p_pdf.Controls.Add(this.lbl_mail);
             this.p_pdf.Controls.Add(this.label9);
-            this.p_pdf.Controls.Add(this.label5);
+            this.p_pdf.Controls.Add(this.lbl_Adresse);
             this.p_pdf.Controls.Add(this.label6);
             this.p_pdf.Controls.Add(this.lbl_datum);
             this.p_pdf.Controls.Add(this.label7);
@@ -330,7 +330,7 @@
             this.p_pdf.Controls.Add(this.label3);
             this.p_pdf.Controls.Add(this.label2);
             this.p_pdf.Controls.Add(this.label1);
-            this.p_pdf.Location = new System.Drawing.Point(54, 244);
+            this.p_pdf.Location = new System.Drawing.Point(41, 244);
             this.p_pdf.Name = "p_pdf";
             this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
@@ -339,7 +339,7 @@
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_drucken.Image = global::Instant_Gaming.Properties.Resources.PDF;
-            this.pic_drucken.Location = new System.Drawing.Point(1051, 144);
+            this.pic_drucken.Location = new System.Drawing.Point(1038, 144);
             this.pic_drucken.Name = "pic_drucken";
             this.pic_drucken.Size = new System.Drawing.Size(65, 73);
             this.pic_drucken.TabIndex = 3;
@@ -372,13 +372,13 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Key;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kosten;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_tel;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_KiD;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_mail;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_Adresse;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;

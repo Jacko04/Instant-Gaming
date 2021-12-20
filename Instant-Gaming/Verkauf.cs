@@ -211,9 +211,12 @@ namespace Instant_Gaming
 
         private void btn_rechnungsform_Click(object sender, EventArgs e)
         {
-            Rechnung Rechnung = new Rechnung(KiD, Tab);
-            Rechnung.Show();
-            this.Hide();
+            if (Tab == "Kunden")
+            {
+                Rechnung Rechnung = new Rechnung(KiD, Tab);
+                Rechnung.Show();
+                this.Hide();
+            }
         }
     }
 }
