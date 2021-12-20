@@ -105,7 +105,7 @@ namespace Instant_Gaming
                                     Ladenvorgang = true;
                                     Admin = false; 
                                     Main_menü = new Main_Menü(ID,Tabelle, Admin);
-                                    Main_menü.Visible = true;
+                                      Main_menü.Visible = true;
                                     this.Visible = false;   
                                
                                 }
