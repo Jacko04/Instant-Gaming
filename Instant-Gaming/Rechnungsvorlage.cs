@@ -33,7 +33,7 @@ namespace Instant_Gaming
         int Pnr;
        
 
-        public Rechnungsvorlage(int RiD,int KiD,string Datum)
+        public Rechnungsvorlage(int KiD,int RiD,string Datum)
         {
             InitializeComponent();
             Rnr = RiD;
@@ -137,12 +137,29 @@ namespace Instant_Gaming
         {
             PrinterSettings ps = new PrinterSettings();
             p_pdf = pnl;
-            
+            getprintarea(pnl);
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private Bitmap memoryimg;
+
+        private void getprintarea(Panel pnl)
+        {
+            memoryimg = new Bitmap(pnl.Width, pnl.Height);
+            pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, pnl.Width, pnl.Height));
         }
 
         private void pic_drucken_Click(object sender, EventArgs e)
         {
+            Print(this.p_pdf);
+        }
 
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.p_pdf.Width / 2), this.p_pdf.Location.Y);
         }
     }
 }
