@@ -36,8 +36,11 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Zurück = new System.Windows.Forms.Button();
             this.lbl_DateTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Produkte = new System.Windows.Forms.Button();
+            this.btn_Einkaufstabelle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Produkte = new System.Windows.Forms.DataGridView();
             this.PiD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +51,7 @@
             this.panel_Produkte = new System.Windows.Forms.Panel();
             this.panel_NeueProdukte = new System.Windows.Forms.Panel();
             this.lbl_NeueProdukte_Gesamtkosten = new System.Windows.Forms.Label();
+            this.btn_Hinzufügen = new System.Windows.Forms.Button();
             this.nup_NeueProdukte_Anzahl = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,10 +61,12 @@
             this.txt_NeueProdukte_Name = new System.Windows.Forms.TextBox();
             this.txt_NeueProdukte_Preis = new System.Windows.Forms.TextBox();
             this.txt_NeueProdukte_Kategorie = new System.Windows.Forms.TextBox();
+            this.btn_NeueProdukte = new System.Windows.Forms.Button();
             this.panel_Produkte_Kaufen = new System.Windows.Forms.Panel();
             this.lbl_Gesamtkosten = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_PiD = new System.Windows.Forms.TextBox();
+            this.btn_Einkaufen = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.numeric_Anzahl = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,8 +78,10 @@
             this.txt_Preis = new System.Windows.Forms.TextBox();
             this.txt_Kategorie = new System.Windows.Forms.TextBox();
             this.txt_Anzahl = new System.Windows.Forms.TextBox();
+            this.btn_Produkte_kaufen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Einkauf = new System.Windows.Forms.Panel();
+            this.btn_Verwaltung = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel_Einkauf_Verwaltung = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
@@ -87,15 +95,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.Uhrzeit = new System.Windows.Forms.Timer(this.components);
             this.label11 = new System.Windows.Forms.Label();
-            this.btn_Hinzufügen = new System.Windows.Forms.Button();
-            this.btn_NeueProdukte = new System.Windows.Forms.Button();
-            this.btn_Einkaufen = new System.Windows.Forms.Button();
-            this.btn_Produkte_kaufen = new System.Windows.Forms.Button();
-            this.btn_Verwaltung = new System.Windows.Forms.Button();
-            this.btn_Zurück = new System.Windows.Forms.Button();
-            this.btn_Produkte = new System.Windows.Forms.Button();
-            this.btn_Einkaufstabelle = new System.Windows.Forms.Button();
-            this.pb_InstantGaming = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
@@ -106,7 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Anzahl)).BeginInit();
             this.panel_Einkauf.SuspendLayout();
             this.panel_Einkauf_Verwaltung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_InstantGaming)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Einkauftabelle
@@ -162,6 +160,24 @@
             this.panel1.Size = new System.Drawing.Size(273, 647);
             this.panel1.TabIndex = 2;
             // 
+            // btn_Zurück
+            // 
+            this.btn_Zurück.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Zurück.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Zurück.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Zurück.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Zurück.ForeColor = System.Drawing.Color.Black;
+            this.btn_Zurück.Image = global::Instant_Gaming.Properties.Resources.back_to_48px;
+            this.btn_Zurück.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Zurück.Location = new System.Drawing.Point(41, 489);
+            this.btn_Zurück.Name = "btn_Zurück";
+            this.btn_Zurück.Size = new System.Drawing.Size(178, 54);
+            this.btn_Zurück.TabIndex = 7;
+            this.btn_Zurück.Text = "Zurück";
+            this.btn_Zurück.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Zurück.UseVisualStyleBackColor = false;
+            this.btn_Zurück.Click += new System.EventHandler(this.btn_Zurück_Click);
+            // 
             // lbl_DateTime
             // 
             this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -180,6 +196,41 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(924, 504);
             this.panel2.TabIndex = 4;
+            // 
+            // btn_Produkte
+            // 
+            this.btn_Produkte.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Produkte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Produkte.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Produkte.ForeColor = System.Drawing.Color.Black;
+            this.btn_Produkte.Image = global::Instant_Gaming.Properties.Resources.Produkte;
+            this.btn_Produkte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Produkte.Location = new System.Drawing.Point(41, 167);
+            this.btn_Produkte.Name = "btn_Produkte";
+            this.btn_Produkte.Size = new System.Drawing.Size(178, 54);
+            this.btn_Produkte.TabIndex = 5;
+            this.btn_Produkte.Text = "Produkte";
+            this.btn_Produkte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Produkte.UseVisualStyleBackColor = false;
+            this.btn_Produkte.Visible = false;
+            this.btn_Produkte.Click += new System.EventHandler(this.btn_Produkte_Click);
+            // 
+            // btn_Einkaufstabelle
+            // 
+            this.btn_Einkaufstabelle.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Einkaufstabelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Einkaufstabelle.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Einkaufstabelle.ForeColor = System.Drawing.Color.Black;
+            this.btn_Einkaufstabelle.Image = global::Instant_Gaming.Properties.Resources.Einkauf;
+            this.btn_Einkaufstabelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Einkaufstabelle.Location = new System.Drawing.Point(41, 87);
+            this.btn_Einkaufstabelle.Name = "btn_Einkaufstabelle";
+            this.btn_Einkaufstabelle.Size = new System.Drawing.Size(178, 54);
+            this.btn_Einkaufstabelle.TabIndex = 4;
+            this.btn_Einkaufstabelle.Text = "Einkauf";
+            this.btn_Einkaufstabelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Einkaufstabelle.UseVisualStyleBackColor = false;
+            this.btn_Einkaufstabelle.Click += new System.EventHandler(this.btn_Einkaufstabelle_Click);
             // 
             // label2
             // 
@@ -293,6 +344,23 @@
             this.lbl_NeueProdukte_Gesamtkosten.TabIndex = 16;
             this.lbl_NeueProdukte_Gesamtkosten.Text = "Gesamtkosten : ";
             // 
+            // btn_Hinzufügen
+            // 
+            this.btn_Hinzufügen.BackColor = System.Drawing.Color.Linen;
+            this.btn_Hinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Hinzufügen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Hinzufügen.ForeColor = System.Drawing.Color.Black;
+            this.btn_Hinzufügen.Image = global::Instant_Gaming.Properties.Resources.Hinzufügen;
+            this.btn_Hinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Hinzufügen.Location = new System.Drawing.Point(25, 369);
+            this.btn_Hinzufügen.Name = "btn_Hinzufügen";
+            this.btn_Hinzufügen.Size = new System.Drawing.Size(182, 62);
+            this.btn_Hinzufügen.TabIndex = 12;
+            this.btn_Hinzufügen.Text = "Hinzufügen";
+            this.btn_Hinzufügen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Hinzufügen.UseVisualStyleBackColor = false;
+            this.btn_Hinzufügen.Click += new System.EventHandler(this.btn_Hinzufügen_Click);
+            // 
             // nup_NeueProdukte_Anzahl
             // 
             this.nup_NeueProdukte_Anzahl.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -379,6 +447,24 @@
             this.txt_NeueProdukte_Kategorie.Size = new System.Drawing.Size(183, 27);
             this.txt_NeueProdukte_Kategorie.TabIndex = 8;
             // 
+            // btn_NeueProdukte
+            // 
+            this.btn_NeueProdukte.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_NeueProdukte.FlatAppearance.BorderSize = 0;
+            this.btn_NeueProdukte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NeueProdukte.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NeueProdukte.ForeColor = System.Drawing.Color.Black;
+            this.btn_NeueProdukte.Image = global::Instant_Gaming.Properties.Resources.Neue_Produkte;
+            this.btn_NeueProdukte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NeueProdukte.Location = new System.Drawing.Point(808, 56);
+            this.btn_NeueProdukte.Name = "btn_NeueProdukte";
+            this.btn_NeueProdukte.Size = new System.Drawing.Size(151, 62);
+            this.btn_NeueProdukte.TabIndex = 12;
+            this.btn_NeueProdukte.Text = "Neue Produkte";
+            this.btn_NeueProdukte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_NeueProdukte.UseVisualStyleBackColor = false;
+            this.btn_NeueProdukte.Click += new System.EventHandler(this.btn_NeueProdukte_Click);
+            // 
             // panel_Produkte_Kaufen
             // 
             this.panel_Produkte_Kaufen.BackColor = System.Drawing.Color.White;
@@ -432,6 +518,23 @@
             this.txt_PiD.ReadOnly = true;
             this.txt_PiD.Size = new System.Drawing.Size(183, 27);
             this.txt_PiD.TabIndex = 17;
+            // 
+            // btn_Einkaufen
+            // 
+            this.btn_Einkaufen.BackColor = System.Drawing.Color.Linen;
+            this.btn_Einkaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Einkaufen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Einkaufen.ForeColor = System.Drawing.Color.Black;
+            this.btn_Einkaufen.Image = global::Instant_Gaming.Properties.Resources.Einkaufen;
+            this.btn_Einkaufen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Einkaufen.Location = new System.Drawing.Point(25, 369);
+            this.btn_Einkaufen.Name = "btn_Einkaufen";
+            this.btn_Einkaufen.Size = new System.Drawing.Size(163, 62);
+            this.btn_Einkaufen.TabIndex = 12;
+            this.btn_Einkaufen.Text = "Einkaufen";
+            this.btn_Einkaufen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Einkaufen.UseVisualStyleBackColor = false;
+            this.btn_Einkaufen.Click += new System.EventHandler(this.btn_Einkaufen_Click);
             // 
             // label8
             // 
@@ -541,6 +644,24 @@
             this.txt_Anzahl.TabIndex = 9;
             this.txt_Anzahl.TextChanged += new System.EventHandler(this.txt_Anzahl_TextChanged);
             // 
+            // btn_Produkte_kaufen
+            // 
+            this.btn_Produkte_kaufen.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Produkte_kaufen.FlatAppearance.BorderSize = 0;
+            this.btn_Produkte_kaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Produkte_kaufen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Produkte_kaufen.ForeColor = System.Drawing.Color.Black;
+            this.btn_Produkte_kaufen.Image = global::Instant_Gaming.Properties.Resources.produkte_kaufen;
+            this.btn_Produkte_kaufen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Produkte_kaufen.Location = new System.Drawing.Point(610, 56);
+            this.btn_Produkte_kaufen.Name = "btn_Produkte_kaufen";
+            this.btn_Produkte_kaufen.Size = new System.Drawing.Size(151, 62);
+            this.btn_Produkte_kaufen.TabIndex = 6;
+            this.btn_Produkte_kaufen.Text = "Produkte kaufen";
+            this.btn_Produkte_kaufen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Produkte_kaufen.UseVisualStyleBackColor = false;
+            this.btn_Produkte_kaufen.Click += new System.EventHandler(this.btn_Produkte_kaufen_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -557,14 +678,31 @@
             this.panel_Einkauf.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_Einkauf.Controls.Add(this.panel_Produkte);
             this.panel_Einkauf.Controls.Add(this.btn_Verwaltung);
-            this.panel_Einkauf.Controls.Add(this.dgv_Einkauftabelle);
             this.panel_Einkauf.Controls.Add(this.label10);
             this.panel_Einkauf.Controls.Add(this.panel_Einkauf_Verwaltung);
+            this.panel_Einkauf.Controls.Add(this.dgv_Einkauftabelle);
             this.panel_Einkauf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Einkauf.Location = new System.Drawing.Point(273, 0);
             this.panel_Einkauf.Name = "panel_Einkauf";
             this.panel_Einkauf.Size = new System.Drawing.Size(1041, 647);
             this.panel_Einkauf.TabIndex = 5;
+            // 
+            // btn_Verwaltung
+            // 
+            this.btn_Verwaltung.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_Verwaltung.FlatAppearance.BorderSize = 0;
+            this.btn_Verwaltung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Verwaltung.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Verwaltung.Image = global::Instant_Gaming.Properties.Resources.Verwalten;
+            this.btn_Verwaltung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Verwaltung.Location = new System.Drawing.Point(26, 342);
+            this.btn_Verwaltung.Name = "btn_Verwaltung";
+            this.btn_Verwaltung.Size = new System.Drawing.Size(161, 49);
+            this.btn_Verwaltung.TabIndex = 7;
+            this.btn_Verwaltung.Text = "Verwalten";
+            this.btn_Verwaltung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Verwaltung.UseVisualStyleBackColor = false;
+            this.btn_Verwaltung.Click += new System.EventHandler(this.btn_Verwaltung_Click);
             // 
             // label10
             // 
@@ -696,163 +834,14 @@
             this.label11.Text = "Instant Gaming Einkauf";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Hinzufügen
-            // 
-            this.btn_Hinzufügen.BackColor = System.Drawing.Color.Linen;
-            this.btn_Hinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Hinzufügen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Hinzufügen.ForeColor = System.Drawing.Color.Black;
-            this.btn_Hinzufügen.Image = global::Instant_Gaming.Properties.Resources.Hinzufügen;
-            this.btn_Hinzufügen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Hinzufügen.Location = new System.Drawing.Point(25, 369);
-            this.btn_Hinzufügen.Name = "btn_Hinzufügen";
-            this.btn_Hinzufügen.Size = new System.Drawing.Size(182, 62);
-            this.btn_Hinzufügen.TabIndex = 12;
-            this.btn_Hinzufügen.Text = "Hinzufügen";
-            this.btn_Hinzufügen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Hinzufügen.UseVisualStyleBackColor = false;
-            this.btn_Hinzufügen.Click += new System.EventHandler(this.btn_Hinzufügen_Click);
-            // 
-            // btn_NeueProdukte
-            // 
-            this.btn_NeueProdukte.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_NeueProdukte.FlatAppearance.BorderSize = 0;
-            this.btn_NeueProdukte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NeueProdukte.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NeueProdukte.ForeColor = System.Drawing.Color.Black;
-            this.btn_NeueProdukte.Image = global::Instant_Gaming.Properties.Resources.Neue_Produkte;
-            this.btn_NeueProdukte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NeueProdukte.Location = new System.Drawing.Point(808, 56);
-            this.btn_NeueProdukte.Name = "btn_NeueProdukte";
-            this.btn_NeueProdukte.Size = new System.Drawing.Size(151, 62);
-            this.btn_NeueProdukte.TabIndex = 12;
-            this.btn_NeueProdukte.Text = "Neue Produkte";
-            this.btn_NeueProdukte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_NeueProdukte.UseVisualStyleBackColor = false;
-            this.btn_NeueProdukte.Click += new System.EventHandler(this.btn_NeueProdukte_Click);
-            // 
-            // btn_Einkaufen
-            // 
-            this.btn_Einkaufen.BackColor = System.Drawing.Color.Linen;
-            this.btn_Einkaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Einkaufen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Einkaufen.ForeColor = System.Drawing.Color.Black;
-            this.btn_Einkaufen.Image = global::Instant_Gaming.Properties.Resources.Einkaufen;
-            this.btn_Einkaufen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Einkaufen.Location = new System.Drawing.Point(25, 369);
-            this.btn_Einkaufen.Name = "btn_Einkaufen";
-            this.btn_Einkaufen.Size = new System.Drawing.Size(163, 62);
-            this.btn_Einkaufen.TabIndex = 12;
-            this.btn_Einkaufen.Text = "Einkaufen";
-            this.btn_Einkaufen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Einkaufen.UseVisualStyleBackColor = false;
-            this.btn_Einkaufen.Click += new System.EventHandler(this.btn_Einkaufen_Click);
-            // 
-            // btn_Produkte_kaufen
-            // 
-            this.btn_Produkte_kaufen.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_Produkte_kaufen.FlatAppearance.BorderSize = 0;
-            this.btn_Produkte_kaufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Produkte_kaufen.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Produkte_kaufen.ForeColor = System.Drawing.Color.Black;
-            this.btn_Produkte_kaufen.Image = global::Instant_Gaming.Properties.Resources.produkte_kaufen;
-            this.btn_Produkte_kaufen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Produkte_kaufen.Location = new System.Drawing.Point(610, 56);
-            this.btn_Produkte_kaufen.Name = "btn_Produkte_kaufen";
-            this.btn_Produkte_kaufen.Size = new System.Drawing.Size(151, 62);
-            this.btn_Produkte_kaufen.TabIndex = 6;
-            this.btn_Produkte_kaufen.Text = "Produkte kaufen";
-            this.btn_Produkte_kaufen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Produkte_kaufen.UseVisualStyleBackColor = false;
-            this.btn_Produkte_kaufen.Click += new System.EventHandler(this.btn_Produkte_kaufen_Click);
-            // 
-            // btn_Verwaltung
-            // 
-            this.btn_Verwaltung.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_Verwaltung.FlatAppearance.BorderSize = 0;
-            this.btn_Verwaltung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Verwaltung.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Verwaltung.Image = global::Instant_Gaming.Properties.Resources.Verwalten;
-            this.btn_Verwaltung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Verwaltung.Location = new System.Drawing.Point(26, 342);
-            this.btn_Verwaltung.Name = "btn_Verwaltung";
-            this.btn_Verwaltung.Size = new System.Drawing.Size(161, 49);
-            this.btn_Verwaltung.TabIndex = 7;
-            this.btn_Verwaltung.Text = "Verwalten";
-            this.btn_Verwaltung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Verwaltung.UseVisualStyleBackColor = false;
-            this.btn_Verwaltung.Click += new System.EventHandler(this.btn_Verwaltung_Click);
-            // 
-            // btn_Zurück
-            // 
-            this.btn_Zurück.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_Zurück.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Zurück.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Zurück.ForeColor = System.Drawing.Color.Black;
-            this.btn_Zurück.Image = global::Instant_Gaming.Properties.Resources.back_to_48px;
-            this.btn_Zurück.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Zurück.Location = new System.Drawing.Point(41, 489);
-            this.btn_Zurück.Name = "btn_Zurück";
-            this.btn_Zurück.Size = new System.Drawing.Size(178, 54);
-            this.btn_Zurück.TabIndex = 7;
-            this.btn_Zurück.Text = "Zurück";
-            this.btn_Zurück.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Zurück.UseVisualStyleBackColor = false;
-            this.btn_Zurück.Click += new System.EventHandler(this.btn_Zurück_Click);
-            // 
-            // btn_Produkte
-            // 
-            this.btn_Produkte.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_Produkte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Produkte.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Produkte.ForeColor = System.Drawing.Color.Black;
-            this.btn_Produkte.Image = global::Instant_Gaming.Properties.Resources.Produkte;
-            this.btn_Produkte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Produkte.Location = new System.Drawing.Point(41, 167);
-            this.btn_Produkte.Name = "btn_Produkte";
-            this.btn_Produkte.Size = new System.Drawing.Size(178, 54);
-            this.btn_Produkte.TabIndex = 5;
-            this.btn_Produkte.Text = "Produkte";
-            this.btn_Produkte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Produkte.UseVisualStyleBackColor = false;
-            this.btn_Produkte.Click += new System.EventHandler(this.btn_Produkte_Click);
-            // 
-            // btn_Einkaufstabelle
-            // 
-            this.btn_Einkaufstabelle.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_Einkaufstabelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Einkaufstabelle.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Einkaufstabelle.ForeColor = System.Drawing.Color.Black;
-            this.btn_Einkaufstabelle.Image = global::Instant_Gaming.Properties.Resources.Einkauf;
-            this.btn_Einkaufstabelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Einkaufstabelle.Location = new System.Drawing.Point(41, 87);
-            this.btn_Einkaufstabelle.Name = "btn_Einkaufstabelle";
-            this.btn_Einkaufstabelle.Size = new System.Drawing.Size(178, 54);
-            this.btn_Einkaufstabelle.TabIndex = 4;
-            this.btn_Einkaufstabelle.Text = "Einkauf";
-            this.btn_Einkaufstabelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Einkaufstabelle.UseVisualStyleBackColor = false;
-            this.btn_Einkaufstabelle.Click += new System.EventHandler(this.btn_Einkaufstabelle_Click);
-            // 
-            // pb_InstantGaming
-            // 
-            this.pb_InstantGaming.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_InstantGaming.Image = global::Instant_Gaming.Properties.Resources.unnamed;
-            this.pb_InstantGaming.Location = new System.Drawing.Point(721, 144);
-            this.pb_InstantGaming.Name = "pb_InstantGaming";
-            this.pb_InstantGaming.Size = new System.Drawing.Size(132, 131);
-            this.pb_InstantGaming.TabIndex = 7;
-            this.pb_InstantGaming.TabStop = false;
-            // 
             // Einkauf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1314, 647);
             this.Controls.Add(this.panel_Einkauf);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pb_InstantGaming);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Einkauf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -874,7 +863,6 @@
             this.panel_Einkauf.PerformLayout();
             this.panel_Einkauf_Verwaltung.ResumeLayout(false);
             this.panel_Einkauf_Verwaltung.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_InstantGaming)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -945,7 +933,6 @@
         private System.Windows.Forms.Label lbl_DateTime;
         private System.Windows.Forms.Timer Uhrzeit;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pb_InstantGaming;
         private System.Windows.Forms.Button btn_Zurück;
     }
 }

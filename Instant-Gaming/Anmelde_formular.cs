@@ -59,6 +59,7 @@ namespace Instant_Gaming
         {   //for schleife zu überprüfung der 2 Tabellen
             try
             {
+                Fehler = true;
                 con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
                 cmd.Connection = con;
                 for (int i = 0; i < 2; i++)
@@ -69,7 +70,7 @@ namespace Instant_Gaming
                     string[] Kennung = { "MiD", "KiD" };
                     //Array If Bedingugen
                     int[] Zahlen = { 8, 6 };
-                    Fehler = true; 
+                    
                     //Converten der Infromation aus der Form
                     ID = Convert.ToInt32(txt_ID.Text);
                     Passwort = Convert.ToString(txt_Passwort.Text);
@@ -121,6 +122,7 @@ namespace Instant_Gaming
                                 Main_menü.Visible = true;
                                 Fehler = false; 
                                 this.Visible = false;
+                                
                                 
                             }
                         }
@@ -209,6 +211,7 @@ namespace Instant_Gaming
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
             //Werte für Den Sql befehl werden geholt
          
@@ -238,9 +241,11 @@ namespace Instant_Gaming
                     ID = reader.GetInt32(0);
 
                     //Ausgabe der ID an den Kunden
-                    MessageBox.Show("Ihre ID ist o " + ID);
+                    MessageBox.Show("Ihre ID ist = " + ID);
 
                     reader.Close();
+                    panel_Registrieren.Visible = false;
+                    panel_Anmelden.Visible = true;
 
             }
             catch
@@ -261,14 +266,32 @@ namespace Instant_Gaming
         private void btn_Reg_Bestätigen_Click(object sender, EventArgs e)
         {
             Kunden_Hinzufügen();
-            panel_Registrieren.Visible = false;
-            panel_Anmelden.Visible = true;
+            
         }
 
         private void btn_Anmeldenoffnen_Click(object sender, EventArgs e)
         {
             panel_Registrieren.Visible = false;
             panel_Anmelden.Visible = true;
+        }
+
+        private void btn_Passwort_zeigen_Click(object sender, EventArgs e)
+        {
+            int Zähler = 0;
+            if (Zähler == 0)
+            {
+                txt_Passwort.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_Passwort.UseSystemPasswordChar = true;
+            }
+            Zähler++;
+            if (Zähler == 2)
+            {
+                Zähler = 0;
+            }
+           
         }
     }
 }

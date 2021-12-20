@@ -54,6 +54,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.p_anmeldenfarbe = new System.Windows.Forms.Panel();
+            this.btn_Passwort_zeigen = new System.Windows.Forms.Button();
             this.panel_Anmelden.SuspendLayout();
             this.panel_Registrieren.SuspendLayout();
             this.p_registrationsfarbe.SuspendLayout();
@@ -106,6 +107,7 @@
             this.txt_Passwort.Name = "txt_Passwort";
             this.txt_Passwort.Size = new System.Drawing.Size(100, 33);
             this.txt_Passwort.TabIndex = 6;
+            this.txt_Passwort.UseSystemPasswordChar = true;
             this.txt_Passwort.TextChanged += new System.EventHandler(this.txt_Passwort_TextChanged);
             // 
             // lbl_Registrieren
@@ -139,7 +141,6 @@
             // panel_Anmelden
             // 
             this.panel_Anmelden.BackColor = System.Drawing.Color.Linen;
-            this.panel_Anmelden.Controls.Add(this.panel_Registrieren);
             this.panel_Anmelden.Controls.Add(this.p_anmeldenfarbe);
             this.panel_Anmelden.Controls.Add(this.btn_Bestätigen);
             this.panel_Anmelden.Controls.Add(this.lbl_Registrieren);
@@ -147,6 +148,7 @@
             this.panel_Anmelden.Controls.Add(this.txt_ID);
             this.panel_Anmelden.Controls.Add(this.label3);
             this.panel_Anmelden.Controls.Add(this.label2);
+            this.panel_Anmelden.Controls.Add(this.btn_Passwort_zeigen);
             this.panel_Anmelden.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Anmelden.Location = new System.Drawing.Point(0, 0);
             this.panel_Anmelden.Name = "panel_Anmelden";
@@ -174,7 +176,7 @@
             this.panel_Registrieren.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Registrieren.Location = new System.Drawing.Point(0, 0);
             this.panel_Registrieren.Name = "panel_Registrieren";
-            this.panel_Registrieren.Size = new System.Drawing.Size(884, 461);
+            this.panel_Registrieren.Size = new System.Drawing.Size(884, 90);
             this.panel_Registrieren.TabIndex = 9;
             // 
             // p_registrationsfarbe
@@ -184,7 +186,7 @@
             this.p_registrationsfarbe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.p_registrationsfarbe.Controls.Add(this.label4);
             this.p_registrationsfarbe.Location = new System.Drawing.Point(0, 0);
-            this.p_registrationsfarbe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p_registrationsfarbe.Margin = new System.Windows.Forms.Padding(2);
             this.p_registrationsfarbe.Name = "p_registrationsfarbe";
             this.p_registrationsfarbe.Size = new System.Drawing.Size(884, 90);
             this.p_registrationsfarbe.TabIndex = 15;
@@ -345,12 +347,22 @@
             this.p_anmeldenfarbe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.p_anmeldenfarbe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.p_anmeldenfarbe.Controls.Add(this.panel_Registrieren);
             this.p_anmeldenfarbe.Controls.Add(this.label1);
             this.p_anmeldenfarbe.Location = new System.Drawing.Point(0, 0);
-            this.p_anmeldenfarbe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p_anmeldenfarbe.Margin = new System.Windows.Forms.Padding(2);
             this.p_anmeldenfarbe.Name = "p_anmeldenfarbe";
             this.p_anmeldenfarbe.Size = new System.Drawing.Size(884, 90);
             this.p_anmeldenfarbe.TabIndex = 16;
+            // 
+            // btn_Passwort_zeigen
+            // 
+            this.btn_Passwort_zeigen.Location = new System.Drawing.Point(579, 183);
+            this.btn_Passwort_zeigen.Name = "btn_Passwort_zeigen";
+            this.btn_Passwort_zeigen.Size = new System.Drawing.Size(37, 32);
+            this.btn_Passwort_zeigen.TabIndex = 17;
+            this.btn_Passwort_zeigen.Text = "btn_Passwort_zeigen";
+            this.btn_Passwort_zeigen.UseVisualStyleBackColor = true;
             // 
             // Anmelde_formular
             // 
@@ -402,5 +414,6 @@
         private System.Windows.Forms.Panel p_registrationsfarbe;
         private System.Windows.Forms.Button btn_Anmeldenoffnen;
         private System.Windows.Forms.Panel p_anmeldenfarbe;
+        private System.Windows.Forms.Button btn_Passwort_zeigen;
     }
 }

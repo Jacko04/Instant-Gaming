@@ -318,9 +318,9 @@ namespace Instant_Gaming
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 538);
+            this.Controls.Add(this.panel_Kunden);
             this.Controls.Add(this.panel_Mitarbeiter);
             this.Controls.Add(this.panel_Admin);
-            this.Controls.Add(this.panel_Kunden);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.Name = "Main_Menü";
