@@ -140,7 +140,7 @@ namespace Instant_Gaming
 
         public void Rechnung()
         {
-            Rechnung rng = new Rechnung( ID , Tabelle, admin);
+            Rechnung rng = new Rechnung( ID , Tabelle,admin);
             rng.Show();
             this.Visible = false;
         }
