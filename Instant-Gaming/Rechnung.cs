@@ -18,6 +18,7 @@ namespace Instant_Gaming
         OleDbDataReader reader;
         string sql;
         int Kid = 1;
+        bool Admin;
         int ID;
         string Tab;
         List<int> Ridload = new List<int>();
@@ -25,16 +26,17 @@ namespace Instant_Gaming
         int selectedRiD;
         string selectedDatum;
 
-        public Rechnung(int id ,string Tabelle)
+        public Rechnung(int id ,string Tabelle, bool admin)
         {
             InitializeComponent();
             ID = id;
             Tab = Tabelle;
+            Admin = admin;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Verkauf Verkauf = new Verkauf(ID, Tab);
+            Verkauf Verkauf = new Verkauf(ID, Tab, Admin);
             Verkauf.Show();
             this.Hide();
         }

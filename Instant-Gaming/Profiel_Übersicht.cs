@@ -14,6 +14,7 @@ namespace Instant_Gaming
     public partial class Profiel_Übersicht : Form
     {
         int KiD;
+        bool Admin = false; 
         OleDbCommand cmd = new OleDbCommand();
         OleDbConnection con = new OleDbConnection();
         OleDbDataReader reader; 
@@ -25,6 +26,7 @@ namespace Instant_Gaming
 
 
         }
+        // Methoden um auf die Daten aus der Datenbank zu zugreifen 
         public void Kunden()
         {
             // Methode um die Tabelle Produkte zu laden
@@ -44,6 +46,36 @@ namespace Instant_Gaming
 
             }
         }
+        public void Rechnungen()
+        {
+            // Methode um die Tabelle Produkte zu laden
+            con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb";
+            cmd.Connection = con;
+            cmd.CommandText = "Select * from Rechnung where KiD = " + KiD;
+            try
+            {
+                con.Open();
+                Rechnungeneinlesen();
+                con.Close();
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+        
+        public void Rechnungeneinlesen()
+        {
+
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dgv_Rechnungen.Rows.Add(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetDateTime(3), reader.GetDecimal(4), reader.GetString(5), reader.GetString(6));
+            }
+            reader.Close();
+        }
         public void Kundeneinlesen()
         {
             // Mehtode um Daten aus der Datenbank zu lesen
@@ -62,10 +94,34 @@ namespace Instant_Gaming
 
         }
 
+        // Methoden benutzen um die Daten einzulesen
         private void Profiel_Übersicht_Load(object sender, EventArgs e)
         {
-
+            lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
+            Uhrzeit.Start();
+            Rechnungen();
             Kunden();
+        }
+
+        private void btn_Rechnungsvorlageerstellen_Click(object sender, EventArgs e)
+        {
+            // verweist auf die Rechnungsform 
+            Rechnung rng = new Rechnung(KiD,"Kunden",Admin);
+            rng.Show();
+            this.Visible = false; 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Verweist auf Main Menü und ist der Zurück Button
+            Main_Menü mn = new Main_Menü(KiD, "Kunden", Admin);
+            mn.Show();
+            this.Visible = false; 
+        }
+
+        private void Uhrzeit_Tick(object sender, EventArgs e)
+        {
+            lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
         }
         //Metoden
 
