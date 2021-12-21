@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rechnungsvorlage));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kosten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,9 +56,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.p_pdf = new System.Windows.Forms.Panel();
             this.pic_drucken = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
             this.p_pdf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -177,11 +180,11 @@
             this.lbl_datum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_datum.AutoSize = true;
             this.lbl_datum.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datum.Location = new System.Drawing.Point(919, 178);
+            this.lbl_datum.Location = new System.Drawing.Point(905, 178);
             this.lbl_datum.Name = "lbl_datum";
-            this.lbl_datum.Size = new System.Drawing.Size(72, 33);
+            this.lbl_datum.Size = new System.Drawing.Size(279, 33);
             this.lbl_datum.TabIndex = 8;
-            this.lbl_datum.Text = "Test";
+            this.lbl_datum.Text = "00.00.0000 00.00.00";
             // 
             // Produkt
             // 
@@ -202,7 +205,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(790, 178);
+            this.label7.Location = new System.Drawing.Point(776, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 33);
             this.label7.TabIndex = 7;
@@ -236,8 +239,16 @@
             this.dgv_Produkte.AllowUserToDeleteRows = false;
             this.dgv_Produkte.AllowUserToResizeColumns = false;
             this.dgv_Produkte.AllowUserToResizeRows = false;
-            this.dgv_Produkte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgv_Produkte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgv_Produkte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Produkte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Produkte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Produkte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PiD,
@@ -252,14 +263,20 @@
             this.dgv_Produkte.RowHeadersVisible = false;
             this.dgv_Produkte.RowHeadersWidth = 62;
             this.dgv_Produkte.RowTemplate.Height = 28;
-            this.dgv_Produkte.Size = new System.Drawing.Size(645, 288);
+            this.dgv_Produkte.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_Produkte.Size = new System.Drawing.Size(645, 384);
             this.dgv_Produkte.TabIndex = 3;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // lbl_uberschrift
             // 
+            this.lbl_uberschrift.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_uberschrift.AutoSize = true;
             this.lbl_uberschrift.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uberschrift.Location = new System.Drawing.Point(524, 137);
+            this.lbl_uberschrift.Location = new System.Drawing.Point(515, 51);
             this.lbl_uberschrift.Name = "lbl_uberschrift";
             this.lbl_uberschrift.Size = new System.Drawing.Size(233, 57);
             this.lbl_uberschrift.TabIndex = 4;
@@ -303,7 +320,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(431, 56);
+            this.label1.Location = new System.Drawing.Point(417, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 57);
             this.label1.TabIndex = 0;
@@ -330,7 +347,7 @@
             this.p_pdf.Controls.Add(this.label3);
             this.p_pdf.Controls.Add(this.label2);
             this.p_pdf.Controls.Add(this.label1);
-            this.p_pdf.Location = new System.Drawing.Point(41, 244);
+            this.p_pdf.Location = new System.Drawing.Point(84, 135);
             this.p_pdf.Name = "p_pdf";
             this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
@@ -339,18 +356,31 @@
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_drucken.Image = global::Instant_Gaming.Properties.Resources.PDF;
-            this.pic_drucken.Location = new System.Drawing.Point(1038, 144);
+            this.pic_drucken.Location = new System.Drawing.Point(1081, 35);
             this.pic_drucken.Name = "pic_drucken";
             this.pic_drucken.Size = new System.Drawing.Size(65, 73);
             this.pic_drucken.TabIndex = 3;
             this.pic_drucken.TabStop = false;
+            this.pic_drucken.Click += new System.EventHandler(this.pic_drucken_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pic_logo.Image = global::Instant_Gaming.Properties.Resources.unnamed;
+            this.pic_logo.Location = new System.Drawing.Point(84, 28);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(80, 80);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_logo.TabIndex = 6;
+            this.pic_logo.TabStop = false;
             // 
             // Rechnungsvorlage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1258, 775);
+            this.ClientSize = new System.Drawing.Size(1284, 1050);
+            this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.lbl_uberschrift);
             this.Controls.Add(this.pic_drucken);
             this.Controls.Add(this.p_pdf);
@@ -362,6 +392,7 @@
             this.p_pdf.ResumeLayout(false);
             this.p_pdf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +426,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel p_pdf;
+        private System.Windows.Forms.PictureBox pic_logo;
     }
 }

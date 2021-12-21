@@ -191,5 +191,8 @@
   <ItemGroup>
     <None Include="Resources\back_to_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anonym profilbild.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

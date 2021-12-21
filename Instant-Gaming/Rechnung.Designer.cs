@@ -67,11 +67,12 @@
             // 
             // btn_öffnen
             // 
-            this.btn_öffnen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_öffnen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_öffnen.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_öffnen.Location = new System.Drawing.Point(23, 553);
             this.btn_öffnen.Name = "btn_öffnen";
-            this.btn_öffnen.Size = new System.Drawing.Size(312, 59);
+            this.btn_öffnen.Size = new System.Drawing.Size(324, 59);
             this.btn_öffnen.TabIndex = 2;
             this.btn_öffnen.Text = "Rechnung öffnen";
             this.btn_öffnen.UseVisualStyleBackColor = true;

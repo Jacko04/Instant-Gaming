@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing.Printing;
 
 namespace Instant_Gaming
 {
@@ -18,22 +19,27 @@ namespace Instant_Gaming
         OleDbDataReader reader;
         string sql;
 
+        public Image img = null;
+        
+
         int Rnr;
         int knr;
         string Adress;
         string datum;
         string name;
         string mail;
-        string tel;
-        int Pnr;
+        string pkey;
+        int tel;
+        List<int> Pnr = new List<int>();
        
 
-        public Rechnungsvorlage(int RiD,int KiD,string Datum)
+        public Rechnungsvorlage(int KiD,int RiD,string Datum)
         {
             InitializeComponent();
             Rnr = RiD;
             knr = KiD;
             datum = Datum;
+            Labelladen();
         }
 
         public void Verbinden(string sql)
@@ -50,16 +56,17 @@ namespace Instant_Gaming
         private void Labelladen()
         {
             //Kundenname suchen
-            sql = "select Vornamename,Nachname from Kunden where KiD = "+ knr +";";
+            sql = "select Vorname,Nachname from Kunden where KiD = "+ knr +";";
             Verbinden(sql);
             while (reader.Read())
             {
-                name = reader.GetString(0) + reader.GetString(1);
+                name = reader.GetString(0) + " " + reader.GetString(1);
             }
             con.Close();
             reader.Close();
 
-            sql = "select ´E-Mail´ from Kunden where KiD = " + knr + ";";
+            //email suchen
+            sql = "select `E-Mail` from Kunden where KiD = " + knr + ";";
             Verbinden(sql);
             while (reader.Read())
             {
@@ -68,15 +75,17 @@ namespace Instant_Gaming
             con.Close();
             reader.Close();
 
-            sql = "select ´Tel-Nr´ from Kunden where KiD = " + knr + ";";
+            //telefonnummer suchen
+            sql = "select `Tel-Nr` from Kunden where KiD = " + knr + ";";
             Verbinden(sql);
             while (reader.Read())
             {
-                tel = reader.GetString(0);
+                tel = reader.GetInt32(0);
             }
             con.Close();
             reader.Close();
 
+            //Adresse suchen
             sql = "select Adresse from Kunden where KiD = " + knr + ";";
             Verbinden(sql);
             while (reader.Read())
@@ -86,31 +95,74 @@ namespace Instant_Gaming
             con.Close();
             reader.Close();
 
+            //Produkte suche
             sql = "select PiD from Rechnung where RiD = " + Rnr + ";";
             Verbinden(sql);
             while (reader.Read())
             {
-                Pnr = reader.GetInt32(0);
+                Pnr.Add(reader.GetInt32(0));
             }
             con.Close();
             reader.Close();
 
-            sql = "select * from Produkte where PiD = " + Pnr + ";";
+            //Key suche
+            sql = "select [Key] from Rechnung where RiD = " + Rnr + ";";
             Verbinden(sql);
             while (reader.Read())
             {
-                dgv_Produkte.Rows.Add(reader.GetInt32(0),reader.GetString(1),reader.GetDecimal(2),reader.GetString(3));
+                pkey = reader.GetString(0);
             }
             con.Close();
             reader.Close();
+
+            for (int i = 0; i < Pnr.Count; i++)
+            {
+                sql = "select PiD,Name,Preis from Produkt where PiD = " + Pnr[i] + ";";
+                Verbinden(sql);
+                while (reader.Read())
+                {
+                    dgv_Produkte.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2), pkey);
+                }
+                con.Close();
+                reader.Close();
+            }
 
             lbl_rechnungsnr.Text = Rnr.ToString();
             lbl_KiD.Text = knr.ToString();
             lbl_name.Text = name;
             lbl_Adresse.Text = Adress;
             lbl_mail.Text = mail;
-            lbl_tel.Text = tel;
+            lbl_tel.Text = tel.ToString();
             lbl_datum.Text = datum;
+        }
+
+        private void Print(Panel pnl)
+        {
+            PrinterSettings ps = new PrinterSettings();
+            p_pdf = pnl;
+            getprintarea(pnl);
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private Bitmap memoryimg;
+
+        private void getprintarea(Panel pnl)
+        {
+            memoryimg = new Bitmap(pnl.Width, pnl.Height);
+            pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, pnl.Width, pnl.Height));
+        }
+
+        private void pic_drucken_Click(object sender, EventArgs e)
+        {
+            Print(this.p_pdf);
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.p_pdf.Width / 2), this.p_pdf.Location.Y);
         }
     }
 }

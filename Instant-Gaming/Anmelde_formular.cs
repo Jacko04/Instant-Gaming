@@ -14,7 +14,6 @@ namespace Instant_Gaming
     public partial class Anmelde_formular : Form
     {
         Main_Menü Main_menü;
-        Registration_Form registration;
         //Variablen
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
@@ -39,15 +38,13 @@ namespace Instant_Gaming
         public Anmelde_formular( )
         {
             InitializeComponent();
-            
+            panel_Registrieren.Visible = false;
         }
         
         private void lbl_Registrieren_Click(object sender, EventArgs e)
         {
-            Registration_Form registration = new Registration_Form();
-            registration.Show();
-            this.Visible = false;
-
+          //  panel_Anmelden.Visible = false;
+            panel_Registrieren.Visible = true;
         }
 
         private void btn_Bestätigen_Click(object sender, EventArgs e)
@@ -197,7 +194,65 @@ namespace Instant_Gaming
             }
         }
 
-        
+        private void Kunden_Hinzufügen()
+        {
+            //Zusatz werte 
+            int ID;
+            try
+            {
+                Vorname = Convert.ToString(txt_Vorname.Text);
+                Nachname = Convert.ToString(txt_Nachname.Text);
+                Email = Convert.ToString(txt_Email.Text);
+                Adresse = Convert.ToString(txt_Adresse.Text);
+                TelNr = Convert.ToInt32(txt_TelNr.Text);
+                Passwort = Convert.ToString(txt_Reg_Passwort.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            //Werte für Den Sql befehl werden geholt
+         
+            try
+            {
+                  con.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;" + "Data Source = Instant Gaming Verkauf.mdb ";
+                  cmd.Connection = con;
+
+                   //Kunden Hinzufügen SQL befehl 
+                    con.Open();
+                   cmd.CommandText = "INSERT INTO Kunden ([Vorname] , [Nachname] , [E-Mail] , [Adresse] , [Tel-Nr] , [passwort]) VALUES ('" + Vorname + "' , '" + Nachname + "', '" + Email + "' ,'" + Adresse + "', " + TelNr + " ,'" + Reg_Passwort + "')  ";
+                    cmd.ExecuteNonQuery();
+                   con.Close();
+
+
+                   // ID Ausgabe für den Kunden 
+                    //SQL Befehl
+                    cmd.CommandText = "Select * from Kunden where `E-Mail` = '" + Email + "' and passwort = '" + Reg_Passwort + "'";
+
+                     //Auslesen des Wertes
+                     con.Open();
+                     reader = cmd.ExecuteReader();
+
+
+                    reader.Read();
+
+                    ID = reader.GetInt32(0);
+
+                    //Ausgabe der ID an den Kunden
+                    MessageBox.Show("Ihre ID ist = " + ID);
+
+                    reader.Close();
+                    panel_Registrieren.Visible = false;
+                    panel_Anmelden.Visible = true;
+
+            }
+            catch
+            {
+                MessageBox.Show("Da ist wohl etwas schief gelaufen , beachten sie das die Telefon nummer nicht länger als 8 zeichen beihalten darf");
+            }
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -210,14 +265,14 @@ namespace Instant_Gaming
 
         private void btn_Reg_Bestätigen_Click(object sender, EventArgs e)
         {
-            
+            Kunden_Hinzufügen();
             
         }
 
         private void btn_Anmeldenoffnen_Click(object sender, EventArgs e)
         {
-            
-            
+            panel_Registrieren.Visible = false;
+            panel_Anmelden.Visible = true;
         }
 
         private void btn_Passwort_zeigen_Click(object sender, EventArgs e)
@@ -237,11 +292,6 @@ namespace Instant_Gaming
                 Zähler = 0;
             }
            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -51,9 +51,10 @@ namespace Instant_Gaming
             }
             con.Close();
             reader.Close();
+
             for (int i = 0; i < Ridload.Count(); i++)
             {
-                sql = "select Datum from Rechnung where RiD = " + Ridload[i];
+                sql = "select DISTINCT Datum from Rechnung where RiD = " + Ridload[i];
                 Verbinden(sql);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
