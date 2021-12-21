@@ -122,6 +122,7 @@ namespace Instant_Gaming
         {
             //  Produkt panel anzeigen und die Daten einfügen
             panel_Produkte.Visible = true;
+           
             
             Produkte(); 
         }
@@ -130,17 +131,19 @@ namespace Instant_Gaming
         {
             // Produkte in die einzelnen Textboxen aufteilen
             zeilenindex = e.RowIndex;
-            txt_PiD.Text = dgv_Produkte.Rows[zeilenindex].Cells[0].Value.ToString();
-            txt_name.Text = dgv_Produkte.Rows[zeilenindex].Cells[1].Value.ToString();
-            txt_Preis.Text = dgv_Produkte.Rows[zeilenindex].Cells[2].Value.ToString();
-            txt_Anzahl.Text = dgv_Produkte.Rows[zeilenindex].Cells[3].Value.ToString();
-            txt_Kategorie.Text = dgv_Produkte.Rows[zeilenindex].Cells[4].Value.ToString();
-             anzahl = int.Parse(txt_Anzahl.Text);
-            anzahlerhöhen = 0;
-            numeric_Anzahl.Value = anzahlerhöhen;
-            halbenPreis = Convert.ToDecimal(dgv_Produkte.Rows[zeilenindex].Cells[2].Value) / 2;
-          
-  
+            if (zeilenindex >= 0 && zeilenindex > dgv_Produkte.Rows.Count)
+            {
+                txt_PiD.Text = dgv_Produkte.Rows[zeilenindex].Cells[0].Value.ToString();
+                txt_name.Text = dgv_Produkte.Rows[zeilenindex].Cells[1].Value.ToString();
+                txt_Preis.Text = dgv_Produkte.Rows[zeilenindex].Cells[2].Value.ToString();
+                txt_Anzahl.Text = dgv_Produkte.Rows[zeilenindex].Cells[3].Value.ToString();
+                txt_Kategorie.Text = dgv_Produkte.Rows[zeilenindex].Cells[4].Value.ToString();
+                anzahl = int.Parse(txt_Anzahl.Text);
+                anzahlerhöhen = 0;
+                numeric_Anzahl.Value = anzahlerhöhen;
+                halbenPreis = Convert.ToDecimal(dgv_Produkte.Rows[zeilenindex].Cells[2].Value) / 2;
+            }
+           
             
         }
 
@@ -225,6 +228,7 @@ namespace Instant_Gaming
             // Panels werden sichtbar oder versteckt
             panel_Produkte.Visible = false;
             panel_Einkauf.Visible = true;
+            btn_Produkte.Visible = true;
         }
 
         private void btn_Hinzufügen_Click(object sender, EventArgs e)
