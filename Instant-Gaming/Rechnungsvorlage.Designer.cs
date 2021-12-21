@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rechnungsvorlage));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kosten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,10 +92,9 @@
             this.lbl_tel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_tel.AutoSize = true;
             this.lbl_tel.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tel.Location = new System.Drawing.Point(153, 200);
-            this.lbl_tel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_tel.Location = new System.Drawing.Point(230, 308);
             this.lbl_tel.Name = "lbl_tel";
-            this.lbl_tel.Size = new System.Drawing.Size(49, 23);
+            this.lbl_tel.Size = new System.Drawing.Size(72, 33);
             this.lbl_tel.TabIndex = 16;
             this.lbl_tel.Text = "Test";
             // 
@@ -103,10 +103,9 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(55, 200);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(83, 308);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 23);
+            this.label13.Size = new System.Drawing.Size(119, 33);
             this.label13.TabIndex = 15;
             this.label13.Text = "Telefon:";
             // 
@@ -115,10 +114,9 @@
             this.lbl_KiD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_KiD.AutoSize = true;
             this.lbl_KiD.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KiD.Location = new System.Drawing.Point(153, 116);
-            this.lbl_KiD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_KiD.Location = new System.Drawing.Point(230, 178);
             this.lbl_KiD.Name = "lbl_KiD";
-            this.lbl_KiD.Size = new System.Drawing.Size(49, 23);
+            this.lbl_KiD.Size = new System.Drawing.Size(72, 33);
             this.lbl_KiD.TabIndex = 14;
             this.lbl_KiD.Text = "Test";
             // 
@@ -127,10 +125,9 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(97, 116);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(146, 178);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 23);
+            this.label11.Size = new System.Drawing.Size(56, 33);
             this.label11.TabIndex = 13;
             this.label11.Text = "ID:";
             // 
@@ -139,10 +136,9 @@
             this.lbl_mail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_mail.AutoSize = true;
             this.lbl_mail.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mail.Location = new System.Drawing.Point(153, 179);
-            this.lbl_mail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_mail.Location = new System.Drawing.Point(230, 275);
             this.lbl_mail.Name = "lbl_mail";
-            this.lbl_mail.Size = new System.Drawing.Size(49, 23);
+            this.lbl_mail.Size = new System.Drawing.Size(72, 33);
             this.lbl_mail.TabIndex = 12;
             this.lbl_mail.Text = "Test";
             // 
@@ -151,10 +147,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(61, 179);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(91, 275);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 23);
+            this.label9.Size = new System.Drawing.Size(111, 33);
             this.label9.TabIndex = 11;
             this.label9.Text = "E-mail:";
             // 
@@ -163,10 +158,9 @@
             this.lbl_Adresse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Adresse.AutoSize = true;
             this.lbl_Adresse.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Adresse.Location = new System.Drawing.Point(153, 157);
-            this.lbl_Adresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Adresse.Location = new System.Drawing.Point(230, 242);
             this.lbl_Adresse.Name = "lbl_Adresse";
-            this.lbl_Adresse.Size = new System.Drawing.Size(49, 23);
+            this.lbl_Adresse.Size = new System.Drawing.Size(72, 33);
             this.lbl_Adresse.TabIndex = 10;
             this.lbl_Adresse.Text = "Test";
             // 
@@ -175,10 +169,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(51, 157);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(77, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 23);
+            this.label6.Size = new System.Drawing.Size(125, 33);
             this.label6.TabIndex = 9;
             this.label6.Text = "Adresse:";
             // 
@@ -187,10 +180,9 @@
             this.lbl_datum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_datum.AutoSize = true;
             this.lbl_datum.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datum.Location = new System.Drawing.Point(603, 116);
-            this.lbl_datum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_datum.Location = new System.Drawing.Point(905, 178);
             this.lbl_datum.Name = "lbl_datum";
-            this.lbl_datum.Size = new System.Drawing.Size(189, 23);
+            this.lbl_datum.Size = new System.Drawing.Size(279, 33);
             this.lbl_datum.TabIndex = 8;
             this.lbl_datum.Text = "00.00.0000 00.00.00";
             // 
@@ -213,10 +205,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(517, 116);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(776, 178);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 23);
+            this.label7.Size = new System.Drawing.Size(114, 33);
             this.label7.TabIndex = 7;
             this.label7.Text = "Datum:";
             // 
@@ -225,10 +216,9 @@
             this.lbl_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(153, 136);
-            this.lbl_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_name.Location = new System.Drawing.Point(230, 209);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(49, 23);
+            this.lbl_name.Size = new System.Drawing.Size(72, 33);
             this.lbl_name.TabIndex = 6;
             this.lbl_name.Text = "Test";
             // 
@@ -237,10 +227,9 @@
             this.lbl_rechnungsnr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_rechnungsnr.AutoSize = true;
             this.lbl_rechnungsnr.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rechnungsnr.Location = new System.Drawing.Point(220, 261);
-            this.lbl_rechnungsnr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_rechnungsnr.Location = new System.Drawing.Point(330, 402);
             this.lbl_rechnungsnr.Name = "lbl_rechnungsnr";
-            this.lbl_rechnungsnr.Size = new System.Drawing.Size(49, 23);
+            this.lbl_rechnungsnr.Size = new System.Drawing.Size(72, 33);
             this.lbl_rechnungsnr.TabIndex = 4;
             this.lbl_rechnungsnr.Text = "Test";
             // 
@@ -250,8 +239,16 @@
             this.dgv_Produkte.AllowUserToDeleteRows = false;
             this.dgv_Produkte.AllowUserToResizeColumns = false;
             this.dgv_Produkte.AllowUserToResizeRows = false;
-            this.dgv_Produkte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgv_Produkte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgv_Produkte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Produkte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Produkte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Produkte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PiD,
@@ -259,15 +256,15 @@
             this.Kosten,
             this.Key});
             this.dgv_Produkte.EnableHeadersVisualStyles = false;
-            this.dgv_Produkte.Location = new System.Drawing.Point(224, 305);
-            this.dgv_Produkte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Produkte.Location = new System.Drawing.Point(336, 470);
             this.dgv_Produkte.MultiSelect = false;
             this.dgv_Produkte.Name = "dgv_Produkte";
             this.dgv_Produkte.ReadOnly = true;
             this.dgv_Produkte.RowHeadersVisible = false;
             this.dgv_Produkte.RowHeadersWidth = 62;
             this.dgv_Produkte.RowTemplate.Height = 28;
-            this.dgv_Produkte.Size = new System.Drawing.Size(430, 187);
+            this.dgv_Produkte.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_Produkte.Size = new System.Drawing.Size(645, 384);
             this.dgv_Produkte.TabIndex = 3;
             // 
             // printDocument1
@@ -279,10 +276,9 @@
             this.lbl_uberschrift.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_uberschrift.AutoSize = true;
             this.lbl_uberschrift.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uberschrift.Location = new System.Drawing.Point(343, 33);
-            this.lbl_uberschrift.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_uberschrift.Location = new System.Drawing.Point(515, 51);
             this.lbl_uberschrift.Name = "lbl_uberschrift";
-            this.lbl_uberschrift.Size = new System.Drawing.Size(157, 38);
+            this.lbl_uberschrift.Size = new System.Drawing.Size(233, 57);
             this.lbl_uberschrift.TabIndex = 4;
             this.lbl_uberschrift.Text = "Vorschau";
             // 
@@ -291,10 +287,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 136);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(101, 209);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 23);
+            this.label4.Size = new System.Drawing.Size(101, 33);
             this.label4.TabIndex = 5;
             this.label4.Text = "Name:";
             // 
@@ -303,10 +298,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(106, 305);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(159, 470);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 23);
+            this.label3.Size = new System.Drawing.Size(143, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Produkte:";
             // 
@@ -315,10 +309,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 261);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(37, 402);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 23);
+            this.label2.Size = new System.Drawing.Size(275, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "Rechnungsnummer:";
             // 
@@ -327,10 +320,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(417, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 38);
+            this.label1.Size = new System.Drawing.Size(247, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rechnung";
             // 
@@ -355,20 +347,18 @@
             this.p_pdf.Controls.Add(this.label3);
             this.p_pdf.Controls.Add(this.label2);
             this.p_pdf.Controls.Add(this.label1);
-            this.p_pdf.Location = new System.Drawing.Point(56, 88);
-            this.p_pdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p_pdf.Location = new System.Drawing.Point(84, 135);
             this.p_pdf.Name = "p_pdf";
-            this.p_pdf.Size = new System.Drawing.Size(708, 571);
+            this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
             // 
             // pic_drucken
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_drucken.Image = global::Instant_Gaming.Properties.Resources.PDF;
-            this.pic_drucken.Location = new System.Drawing.Point(720, 23);
-            this.pic_drucken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_drucken.Location = new System.Drawing.Point(1081, 35);
             this.pic_drucken.Name = "pic_drucken";
-            this.pic_drucken.Size = new System.Drawing.Size(43, 47);
+            this.pic_drucken.Size = new System.Drawing.Size(65, 73);
             this.pic_drucken.TabIndex = 3;
             this.pic_drucken.TabStop = false;
             this.pic_drucken.Click += new System.EventHandler(this.pic_drucken_Click);
@@ -377,25 +367,23 @@
             // 
             this.pic_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pic_logo.Image = global::Instant_Gaming.Properties.Resources.unnamed;
-            this.pic_logo.Location = new System.Drawing.Point(56, 18);
-            this.pic_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_logo.Location = new System.Drawing.Point(84, 28);
             this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(53, 52);
+            this.pic_logo.Size = new System.Drawing.Size(80, 80);
             this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_logo.TabIndex = 6;
             this.pic_logo.TabStop = false;
             // 
             // Rechnungsvorlage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(856, 504);
+            this.ClientSize = new System.Drawing.Size(1284, 1050);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.lbl_uberschrift);
             this.Controls.Add(this.pic_drucken);
             this.Controls.Add(this.p_pdf);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Rechnungsvorlage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rechnungsvorlage";

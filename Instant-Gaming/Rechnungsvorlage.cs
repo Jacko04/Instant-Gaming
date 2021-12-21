@@ -30,7 +30,7 @@ namespace Instant_Gaming
         string mail;
         string pkey;
         int tel;
-        int Pnr;
+        List<int> Pnr = new List<int>();
        
 
         public Rechnungsvorlage(int KiD,int RiD,string Datum)
@@ -100,7 +100,7 @@ namespace Instant_Gaming
             Verbinden(sql);
             while (reader.Read())
             {
-                Pnr = reader.GetInt32(0);
+                Pnr.Add(reader.GetInt32(0));
             }
             con.Close();
             reader.Close();
@@ -115,14 +115,17 @@ namespace Instant_Gaming
             con.Close();
             reader.Close();
 
-            sql = "select PiD,Name,Preis,Kategorie from Produkt where PiD = " + Pnr + ";";
-            Verbinden(sql);
-            while (reader.Read())
+            for (int i = 0; i < Pnr.Count; i++)
             {
-                dgv_Produkte.Rows.Add(reader.GetInt32(0),reader.GetString(1),reader.GetDecimal(2),pkey);
+                sql = "select PiD,Name,Preis from Produkt where PiD = " + Pnr[i] + ";";
+                Verbinden(sql);
+                while (reader.Read())
+                {
+                    dgv_Produkte.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2), pkey);
+                }
+                con.Close();
+                reader.Close();
             }
-            con.Close();
-            reader.Close();
 
             lbl_rechnungsnr.Text = Rnr.ToString();
             lbl_KiD.Text = knr.ToString();
