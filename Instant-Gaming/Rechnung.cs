@@ -17,24 +17,25 @@ namespace Instant_Gaming
         OleDbConnection con = new OleDbConnection();
         OleDbDataReader reader;
         string sql;
-        int Kid = 1;
         int ID;
         string Tab;
+        bool Admin;
         List<int> Ridload = new List<int>();
 
         int selectedRiD;
         string selectedDatum;
 
-        public Rechnung(int id ,string Tabelle)
+        public Rechnung(int id ,string Tabelle, bool admin)
         {
             InitializeComponent();
             ID = id;
             Tab = Tabelle;
+            Admin = admin;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Verkauf Verkauf = new Verkauf(ID, Tab);
+            Verkauf Verkauf = new Verkauf(ID, Tab, Admin);
             Verkauf.Show();
             this.Hide();
         }
@@ -42,7 +43,7 @@ namespace Instant_Gaming
         private void Rechnung_Load(object sender, EventArgs e)
         {
             dgv_Rechnungen.Rows.Clear();
-            sql = "select DISTINCT RiD from Rechnung where KiD = " + Kid;
+            sql = "select DISTINCT RiD from Rechnung where KiD = " + ID;
             Verbinden(sql);
             reader = cmd.ExecuteReader();
             for (int i = 0; reader.Read(); i++)

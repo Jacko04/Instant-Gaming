@@ -132,7 +132,7 @@ namespace Instant_Gaming
         //öffnen der Verkaufs form
         public void Verkauf()
         {
-            Verkauf vk = new Verkauf(ID,Tabelle);
+            Verkauf vk = new Verkauf(ID,Tabelle,admin);
             vk.Show();
             this.Visible = false; 
 
@@ -140,7 +140,7 @@ namespace Instant_Gaming
 
         public void Rechnung()
         {
-            Rechnung rng = new Rechnung( ID , Tabelle);
+            Rechnung rng = new Rechnung( ID , Tabelle, admin);
             rng.Show();
             this.Visible = false;
         }

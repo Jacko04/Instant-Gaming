@@ -43,6 +43,7 @@
             this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_back = new System.Windows.Forms.Button();
             this.pn_funktion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Verkauf)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // pn_funktion
             // 
             this.pn_funktion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pn_funktion.Controls.Add(this.btn_back);
             this.pn_funktion.Controls.Add(this.btn_rechnungsform);
             this.pn_funktion.Controls.Add(this.lbl_euro);
             this.pn_funktion.Controls.Add(this.btn_entfernen);
@@ -61,7 +63,7 @@
             this.pn_funktion.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_funktion.Location = new System.Drawing.Point(0, 0);
             this.pn_funktion.Name = "pn_funktion";
-            this.pn_funktion.Size = new System.Drawing.Size(410, 802);
+            this.pn_funktion.Size = new System.Drawing.Size(410, 685);
             this.pn_funktion.TabIndex = 0;
             // 
             // btn_rechnungsform
@@ -69,9 +71,9 @@
             this.btn_rechnungsform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_rechnungsform.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rechnungsform.Location = new System.Drawing.Point(183, 579);
+            this.btn_rechnungsform.Location = new System.Drawing.Point(147, 522);
             this.btn_rechnungsform.Name = "btn_rechnungsform";
-            this.btn_rechnungsform.Size = new System.Drawing.Size(213, 54);
+            this.btn_rechnungsform.Size = new System.Drawing.Size(249, 54);
             this.btn_rechnungsform.TabIndex = 7;
             this.btn_rechnungsform.Text = "Rechnungen anzeigen";
             this.btn_rechnungsform.UseVisualStyleBackColor = true;
@@ -83,7 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_euro.AutoSize = true;
             this.lbl_euro.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_euro.Location = new System.Drawing.Point(358, 646);
+            this.lbl_euro.Location = new System.Drawing.Point(358, 467);
             this.lbl_euro.Name = "lbl_euro";
             this.lbl_euro.Size = new System.Drawing.Size(38, 42);
             this.lbl_euro.TabIndex = 6;
@@ -94,7 +96,7 @@
             this.btn_entfernen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_entfernen.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entfernen.Location = new System.Drawing.Point(13, 579);
+            this.btn_entfernen.Location = new System.Drawing.Point(13, 522);
             this.btn_entfernen.Name = "btn_entfernen";
             this.btn_entfernen.Size = new System.Drawing.Size(107, 54);
             this.btn_entfernen.TabIndex = 5;
@@ -108,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 646);
+            this.label2.Location = new System.Drawing.Point(12, 467);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 42);
             this.label2.TabIndex = 4;
@@ -120,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Gespreis.AutoSize = true;
             this.lbl_Gespreis.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Gespreis.Location = new System.Drawing.Point(258, 646);
+            this.lbl_Gespreis.Location = new System.Drawing.Point(258, 467);
             this.lbl_Gespreis.Name = "lbl_Gespreis";
             this.lbl_Gespreis.Size = new System.Drawing.Size(38, 42);
             this.lbl_Gespreis.TabIndex = 3;
@@ -131,9 +133,9 @@
             this.btn_kaufen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_kaufen.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kaufen.Location = new System.Drawing.Point(13, 708);
+            this.btn_kaufen.Location = new System.Drawing.Point(147, 591);
             this.btn_kaufen.Name = "btn_kaufen";
-            this.btn_kaufen.Size = new System.Drawing.Size(384, 57);
+            this.btn_kaufen.Size = new System.Drawing.Size(250, 57);
             this.btn_kaufen.TabIndex = 2;
             this.btn_kaufen.Text = "Kaufen";
             this.btn_kaufen.UseVisualStyleBackColor = true;
@@ -149,7 +151,7 @@
             this.lst_Warenkorb.ItemHeight = 42;
             this.lst_Warenkorb.Location = new System.Drawing.Point(13, 107);
             this.lst_Warenkorb.Name = "lst_Warenkorb";
-            this.lst_Warenkorb.Size = new System.Drawing.Size(383, 466);
+            this.lst_Warenkorb.Size = new System.Drawing.Size(383, 340);
             this.lst_Warenkorb.TabIndex = 1;
             // 
             // lbl_uberschrift
@@ -180,7 +182,7 @@
             this.dgv_Verkauf.RowHeadersVisible = false;
             this.dgv_Verkauf.RowHeadersWidth = 62;
             this.dgv_Verkauf.RowTemplate.Height = 28;
-            this.dgv_Verkauf.Size = new System.Drawing.Size(865, 802);
+            this.dgv_Verkauf.Size = new System.Drawing.Size(865, 685);
             this.dgv_Verkauf.TabIndex = 1;
             this.dgv_Verkauf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Verkauf_CellContentClick);
             // 
@@ -219,11 +221,24 @@
             this.Kategorie.Name = "Kategorie";
             this.Kategorie.ReadOnly = true;
             // 
+            // btn_back
+            // 
+            this.btn_back.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_back.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.Location = new System.Drawing.Point(13, 591);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(107, 54);
+            this.btn_back.TabIndex = 8;
+            this.btn_back.Text = "Zurück";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Verkauf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 802);
+            this.ClientSize = new System.Drawing.Size(1275, 685);
             this.Controls.Add(this.dgv_Verkauf);
             this.Controls.Add(this.pn_funktion);
             this.Name = "Verkauf";
@@ -254,5 +269,6 @@
         private System.Windows.Forms.Button btn_entfernen;
         private System.Windows.Forms.Label lbl_euro;
         private System.Windows.Forms.Button btn_rechnungsform;
+        private System.Windows.Forms.Button btn_back;
     }
 }

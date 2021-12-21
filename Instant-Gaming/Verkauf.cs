@@ -25,12 +25,14 @@ namespace Instant_Gaming
         int KiD;
         string Tab;
         int anzahl = 0;
+        bool Admin;
 
-        public Verkauf(int id, string Tabelle)
+        public Verkauf(int id, string Tabelle, bool admin)
         {
             InitializeComponent();
             KiD = id;
             Tab = Tabelle;
+            Admin = admin;
             Einlesen();
             foreach (DataGridViewColumn colum in dgv_Verkauf.Columns)
             {
@@ -213,10 +215,17 @@ namespace Instant_Gaming
         {
             if (Tab == "Kunden")
             {
-                Rechnung Rechnung = new Rechnung(KiD, Tab);
+                Rechnung Rechnung = new Rechnung(KiD, Tab, Admin);
                 Rechnung.Show();
                 this.Hide();
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Main_Menü M = new Main_Menü(KiD,Tab,Admin);
+            M.Show();
+            this.Hide();
         }
     }
 }

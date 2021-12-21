@@ -36,8 +36,8 @@ namespace Instant_Gaming
         public Rechnungsvorlage(int KiD,int RiD,string Datum)
         {
             InitializeComponent();
-            Rnr = RiD;
             knr = KiD;
+            Rnr = RiD;
             datum = Datum;
             Labelladen();
         }
@@ -163,6 +163,11 @@ namespace Instant_Gaming
         {
             Rectangle pagearea = e.PageBounds;
             e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.p_pdf.Width / 2), this.p_pdf.Location.Y);
+        }
+
+        private void Rechnungsvorlage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

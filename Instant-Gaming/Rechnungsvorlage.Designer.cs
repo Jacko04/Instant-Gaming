@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rechnungsvorlage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kosten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +55,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.p_pdf = new System.Windows.Forms.Panel();
-            this.pic_drucken = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_drucken = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).BeginInit();
             this.p_pdf.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -241,14 +241,14 @@
             this.dgv_Produkte.AllowUserToResizeRows = false;
             this.dgv_Produkte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgv_Produkte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Produkte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Produkte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Produkte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Produkte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PiD,
@@ -330,6 +330,7 @@
             // 
             this.p_pdf.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.p_pdf.BackColor = System.Drawing.Color.White;
+            this.p_pdf.Controls.Add(this.pic_logo);
             this.p_pdf.Controls.Add(this.lbl_tel);
             this.p_pdf.Controls.Add(this.label13);
             this.p_pdf.Controls.Add(this.lbl_KiD);
@@ -352,6 +353,17 @@
             this.p_pdf.Size = new System.Drawing.Size(1062, 878);
             this.p_pdf.TabIndex = 5;
             // 
+            // pic_logo
+            // 
+            this.pic_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pic_logo.Image = global::Instant_Gaming.Properties.Resources.unnamed;
+            this.pic_logo.Location = new System.Drawing.Point(43, 51);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(80, 80);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_logo.TabIndex = 6;
+            this.pic_logo.TabStop = false;
+            // 
             // pic_drucken
             // 
             this.pic_drucken.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -363,24 +375,12 @@
             this.pic_drucken.TabStop = false;
             this.pic_drucken.Click += new System.EventHandler(this.pic_drucken_Click);
             // 
-            // pic_logo
-            // 
-            this.pic_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pic_logo.Image = global::Instant_Gaming.Properties.Resources.unnamed;
-            this.pic_logo.Location = new System.Drawing.Point(84, 28);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(80, 80);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_logo.TabIndex = 6;
-            this.pic_logo.TabStop = false;
-            // 
             // Rechnungsvorlage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1284, 1050);
-            this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.lbl_uberschrift);
             this.Controls.Add(this.pic_drucken);
             this.Controls.Add(this.p_pdf);
@@ -388,11 +388,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rechnungsvorlage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Rechnungsvorlage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produkte)).EndInit();
             this.p_pdf.ResumeLayout(false);
             this.p_pdf.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_drucken)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
