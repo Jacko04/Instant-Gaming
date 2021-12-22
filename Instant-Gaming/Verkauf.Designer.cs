@@ -62,8 +62,9 @@
             this.pn_funktion.Controls.Add(this.lbl_uberschrift);
             this.pn_funktion.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_funktion.Location = new System.Drawing.Point(0, 0);
+            this.pn_funktion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_funktion.Name = "pn_funktion";
-            this.pn_funktion.Size = new System.Drawing.Size(410, 658);
+            this.pn_funktion.Size = new System.Drawing.Size(273, 428);
             this.pn_funktion.TabIndex = 0;
             // 
             // btn_zurück
@@ -71,9 +72,10 @@
             this.btn_zurück.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_zurück.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_zurück.Location = new System.Drawing.Point(14, 589);
+            this.btn_zurück.Location = new System.Drawing.Point(9, 383);
+            this.btn_zurück.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_zurück.Name = "btn_zurück";
-            this.btn_zurück.Size = new System.Drawing.Size(106, 57);
+            this.btn_zurück.Size = new System.Drawing.Size(71, 37);
             this.btn_zurück.TabIndex = 8;
             this.btn_zurück.Text = "Zurück";
             this.btn_zurück.UseVisualStyleBackColor = true;
@@ -84,9 +86,10 @@
             this.btn_rechnungsform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_rechnungsform.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rechnungsform.Location = new System.Drawing.Point(153, 529);
+            this.btn_rechnungsform.Location = new System.Drawing.Point(102, 344);
+            this.btn_rechnungsform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_rechnungsform.Name = "btn_rechnungsform";
-            this.btn_rechnungsform.Size = new System.Drawing.Size(243, 54);
+            this.btn_rechnungsform.Size = new System.Drawing.Size(162, 35);
             this.btn_rechnungsform.TabIndex = 7;
             this.btn_rechnungsform.Text = "Rechnungen anzeigen";
             this.btn_rechnungsform.UseVisualStyleBackColor = true;
@@ -98,9 +101,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_euro.AutoSize = true;
             this.lbl_euro.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_euro.Location = new System.Drawing.Point(331, 474);
+            this.lbl_euro.Location = new System.Drawing.Point(221, 308);
+            this.lbl_euro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_euro.Name = "lbl_euro";
-            this.lbl_euro.Size = new System.Drawing.Size(38, 42);
+            this.lbl_euro.Size = new System.Drawing.Size(25, 28);
             this.lbl_euro.TabIndex = 6;
             this.lbl_euro.Text = "€";
             // 
@@ -109,9 +113,10 @@
             this.btn_entfernen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_entfernen.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entfernen.Location = new System.Drawing.Point(14, 529);
+            this.btn_entfernen.Location = new System.Drawing.Point(9, 344);
+            this.btn_entfernen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_entfernen.Name = "btn_entfernen";
-            this.btn_entfernen.Size = new System.Drawing.Size(106, 54);
+            this.btn_entfernen.Size = new System.Drawing.Size(71, 35);
             this.btn_entfernen.TabIndex = 5;
             this.btn_entfernen.Text = "Entfernen";
             this.btn_entfernen.UseVisualStyleBackColor = true;
@@ -123,9 +128,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 474);
+            this.label2.Location = new System.Drawing.Point(13, 308);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 42);
+            this.label2.Size = new System.Drawing.Size(160, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "Gesamtpreis:";
             // 
@@ -135,9 +141,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Gespreis.AutoSize = true;
             this.lbl_Gespreis.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Gespreis.Location = new System.Drawing.Point(265, 474);
+            this.lbl_Gespreis.Location = new System.Drawing.Point(177, 308);
+            this.lbl_Gespreis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Gespreis.Name = "lbl_Gespreis";
-            this.lbl_Gespreis.Size = new System.Drawing.Size(38, 42);
+            this.lbl_Gespreis.Size = new System.Drawing.Size(25, 28);
             this.lbl_Gespreis.TabIndex = 3;
             this.lbl_Gespreis.Text = "0";
             // 
@@ -146,9 +153,10 @@
             this.btn_kaufen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_kaufen.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kaufen.Location = new System.Drawing.Point(153, 589);
+            this.btn_kaufen.Location = new System.Drawing.Point(102, 383);
+            this.btn_kaufen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_kaufen.Name = "btn_kaufen";
-            this.btn_kaufen.Size = new System.Drawing.Size(245, 57);
+            this.btn_kaufen.Size = new System.Drawing.Size(163, 37);
             this.btn_kaufen.TabIndex = 2;
             this.btn_kaufen.Text = "Kaufen";
             this.btn_kaufen.UseVisualStyleBackColor = true;
@@ -161,10 +169,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lst_Warenkorb.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Warenkorb.FormattingEnabled = true;
-            this.lst_Warenkorb.ItemHeight = 42;
-            this.lst_Warenkorb.Location = new System.Drawing.Point(14, 108);
+            this.lst_Warenkorb.ItemHeight = 28;
+            this.lst_Warenkorb.Location = new System.Drawing.Point(9, 70);
+            this.lst_Warenkorb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lst_Warenkorb.Name = "lst_Warenkorb";
-            this.lst_Warenkorb.Size = new System.Drawing.Size(384, 340);
+            this.lst_Warenkorb.Size = new System.Drawing.Size(257, 200);
             this.lst_Warenkorb.TabIndex = 1;
             // 
             // lbl_uberschrift
@@ -172,9 +181,10 @@
             this.lbl_uberschrift.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_uberschrift.AutoSize = true;
             this.lbl_uberschrift.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uberschrift.Location = new System.Drawing.Point(92, 32);
+            this.lbl_uberschrift.Location = new System.Drawing.Point(61, 21);
+            this.lbl_uberschrift.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_uberschrift.Name = "lbl_uberschrift";
-            this.lbl_uberschrift.Size = new System.Drawing.Size(204, 57);
+            this.lbl_uberschrift.Size = new System.Drawing.Size(138, 38);
             this.lbl_uberschrift.TabIndex = 0;
             this.lbl_uberschrift.Text = "Einkauf";
             // 
@@ -189,13 +199,14 @@
             this.Anzahl,
             this.Kategorie});
             this.dgv_Verkauf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Verkauf.Location = new System.Drawing.Point(410, 0);
+            this.dgv_Verkauf.Location = new System.Drawing.Point(273, 0);
+            this.dgv_Verkauf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Verkauf.Name = "dgv_Verkauf";
             this.dgv_Verkauf.ReadOnly = true;
             this.dgv_Verkauf.RowHeadersVisible = false;
             this.dgv_Verkauf.RowHeadersWidth = 62;
             this.dgv_Verkauf.RowTemplate.Height = 28;
-            this.dgv_Verkauf.Size = new System.Drawing.Size(865, 658);
+            this.dgv_Verkauf.Size = new System.Drawing.Size(577, 428);
             this.dgv_Verkauf.TabIndex = 1;
             this.dgv_Verkauf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Verkauf_CellContentClick);
             // 
@@ -236,15 +247,17 @@
             // 
             // Verkauf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 658);
+            this.ClientSize = new System.Drawing.Size(850, 428);
             this.Controls.Add(this.dgv_Verkauf);
             this.Controls.Add(this.pn_funktion);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Verkauf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verkauf";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Verkauf_FormClosed);
             this.pn_funktion.ResumeLayout(false);
             this.pn_funktion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Verkauf)).EndInit();

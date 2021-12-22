@@ -326,6 +326,7 @@ namespace Instant_Gaming
             this.Name = "Main_Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Menü";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menü_FormClosed);
             this.Load += new System.EventHandler(this.Main_Menü_Load);
             this.panel_Mitarbeiter.ResumeLayout(false);
             this.panel_Mitarbeiter.PerformLayout();

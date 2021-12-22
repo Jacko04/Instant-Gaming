@@ -374,6 +374,7 @@
             this.Name = "Anmelde_formular";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anmelde Formular";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Anmelde_formular_FormClosed);
             this.panel_Anmelden.ResumeLayout(false);
             this.panel_Anmelden.PerformLayout();
             this.p_anmeldenfarbe.ResumeLayout(false);

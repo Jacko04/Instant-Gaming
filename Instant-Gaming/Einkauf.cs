@@ -327,5 +327,10 @@ namespace Instant_Gaming
             this.Visible = false; 
             
         }
+
+        private void Einkauf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

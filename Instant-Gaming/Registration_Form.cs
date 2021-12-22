@@ -102,5 +102,10 @@ namespace Instant_Gaming
         {
             Kunden_Hinzufügen(); 
         }
+
+        private void Registration_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

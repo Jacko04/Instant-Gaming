@@ -169,5 +169,10 @@ namespace Instant_Gaming
         {
 
         }
+
+        private void Rechnungsvorlage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

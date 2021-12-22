@@ -46,9 +46,10 @@
             // 
             this.btn_back.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_back.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.Location = new System.Drawing.Point(23, 634);
+            this.btn_back.Location = new System.Drawing.Point(15, 412);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(110, 45);
+            this.btn_back.Size = new System.Drawing.Size(73, 29);
             this.btn_back.TabIndex = 0;
             this.btn_back.Text = "Zurück";
             this.btn_back.UseVisualStyleBackColor = true;
@@ -61,8 +62,9 @@
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 691);
+            this.panel1.Size = new System.Drawing.Size(246, 449);
             this.panel1.TabIndex = 1;
             // 
             // btn_öffnen
@@ -70,9 +72,10 @@
             this.btn_öffnen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_öffnen.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_öffnen.Location = new System.Drawing.Point(23, 553);
+            this.btn_öffnen.Location = new System.Drawing.Point(15, 359);
+            this.btn_öffnen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_öffnen.Name = "btn_öffnen";
-            this.btn_öffnen.Size = new System.Drawing.Size(324, 59);
+            this.btn_öffnen.Size = new System.Drawing.Size(216, 38);
             this.btn_öffnen.TabIndex = 2;
             this.btn_öffnen.Text = "Rechnung öffnen";
             this.btn_öffnen.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // 
             this.Uberschrift.AutoSize = true;
             this.Uberschrift.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Uberschrift.Location = new System.Drawing.Point(35, 27);
+            this.Uberschrift.Location = new System.Drawing.Point(23, 18);
+            this.Uberschrift.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Uberschrift.Name = "Uberschrift";
-            this.Uberschrift.Size = new System.Drawing.Size(300, 57);
+            this.Uberschrift.Size = new System.Drawing.Size(203, 38);
             this.Uberschrift.TabIndex = 1;
             this.Uberschrift.Text = "Rechnungen";
             // 
@@ -92,9 +96,10 @@
             // 
             this.panel2.Controls.Add(this.dgv_Rechnungen);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(369, 0);
+            this.panel2.Location = new System.Drawing.Point(246, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(910, 691);
+            this.panel2.Size = new System.Drawing.Size(607, 449);
             this.panel2.TabIndex = 2;
             // 
             // dgv_Rechnungen
@@ -118,6 +123,7 @@
             this.Datum});
             this.dgv_Rechnungen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Rechnungen.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Rechnungen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Rechnungen.MultiSelect = false;
             this.dgv_Rechnungen.Name = "dgv_Rechnungen";
             this.dgv_Rechnungen.ReadOnly = true;
@@ -125,7 +131,7 @@
             this.dgv_Rechnungen.RowHeadersWidth = 62;
             this.dgv_Rechnungen.RowTemplate.Height = 28;
             this.dgv_Rechnungen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Rechnungen.Size = new System.Drawing.Size(910, 691);
+            this.dgv_Rechnungen.Size = new System.Drawing.Size(607, 449);
             this.dgv_Rechnungen.TabIndex = 0;
             this.dgv_Rechnungen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Rechnungen_CellContentClick);
             // 
@@ -145,15 +151,17 @@
             // 
             // Rechnung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 691);
+            this.ClientSize = new System.Drawing.Size(853, 449);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Rechnung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rechnung";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Rechnung_FormClosed);
             this.Load += new System.EventHandler(this.Rechnung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

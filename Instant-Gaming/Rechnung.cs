@@ -89,5 +89,10 @@ namespace Instant_Gaming
             selectedRiD = Convert.ToInt32(dgv_Rechnungen.Rows[Row].Cells[0].Value);
             selectedDatum = dgv_Rechnungen.Rows[Row].Cells[1].Value.ToString();
         }
+
+        private void Rechnung_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

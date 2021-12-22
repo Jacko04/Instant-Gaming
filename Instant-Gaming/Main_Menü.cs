@@ -145,6 +145,9 @@ namespace Instant_Gaming
             this.Visible = false;
         }
 
-       
+        private void Main_Menü_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -123,6 +123,11 @@ namespace Instant_Gaming
         {
             lbl_DateTime.Text = "Aktuelle Uhrzeit : " + DateTime.Now.ToLongTimeString();
         }
+
+        private void Profiel_Übersicht_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
         //Metoden
 
         //Dataggridview abfrage

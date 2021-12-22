@@ -296,5 +296,10 @@ namespace Instant_Gaming
             }
            
         }
+
+        private void Anmelde_formular_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

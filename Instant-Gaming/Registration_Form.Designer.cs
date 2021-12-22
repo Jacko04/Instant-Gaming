@@ -232,6 +232,7 @@ namespace Instant_Gaming
             this.Name = "Registration_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration_Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_Form_FormClosed);
             this.p_registrationsfarbe.ResumeLayout(false);
             this.p_registrationsfarbe.PerformLayout();
             this.ResumeLayout(false);

@@ -227,5 +227,10 @@ namespace Instant_Gaming
             mn.Show();
             this.Visible = false; 
         }
+
+        private void Verkauf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -35,6 +35,9 @@ namespace Instant_Gaming
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profiel_Übersicht));
             this.pb_Profilbild = new System.Windows.Forms.PictureBox();
             this.panel_Profil_Funktionen = new System.Windows.Forms.Panel();
+            this.lbl_DateTime = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Rechnungsvorlageerstellen = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,10 +55,6 @@ namespace Instant_Gaming
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dgv_Rechnungen = new System.Windows.Forms.DataGridView();
-            this.btn_Rechnungsvorlageerstellen = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lbl_DateTime = new System.Windows.Forms.Label();
-            this.Uhrzeit = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +62,7 @@ namespace Instant_Gaming
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Uhrzeit = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Profilbild)).BeginInit();
             this.panel_Profil_Funktionen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Rechnungen)).BeginInit();
@@ -105,6 +105,48 @@ namespace Instant_Gaming
             this.panel_Profil_Funktionen.Name = "panel_Profil_Funktionen";
             this.panel_Profil_Funktionen.Size = new System.Drawing.Size(294, 680);
             this.panel_Profil_Funktionen.TabIndex = 1;
+            // 
+            // lbl_DateTime
+            // 
+            this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_DateTime.AutoSize = true;
+            this.lbl_DateTime.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DateTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_DateTime.Location = new System.Drawing.Point(17, 648);
+            this.lbl_DateTime.Name = "lbl_DateTime";
+            this.lbl_DateTime.Size = new System.Drawing.Size(76, 23);
+            this.lbl_DateTime.TabIndex = 18;
+            this.lbl_DateTime.Text = "label22";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Instant_Gaming.Properties.Resources.back_to_48px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(39, 575);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 49);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Zurück";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Rechnungsvorlageerstellen
+            // 
+            this.btn_Rechnungsvorlageerstellen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Rechnungsvorlageerstellen.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rechnungsvorlageerstellen.Image = global::Instant_Gaming.Properties.Resources.invoice_48px;
+            this.btn_Rechnungsvorlageerstellen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Rechnungsvorlageerstellen.Location = new System.Drawing.Point(39, 502);
+            this.btn_Rechnungsvorlageerstellen.Name = "btn_Rechnungsvorlageerstellen";
+            this.btn_Rechnungsvorlageerstellen.Size = new System.Drawing.Size(203, 49);
+            this.btn_Rechnungsvorlageerstellen.TabIndex = 16;
+            this.btn_Rechnungsvorlageerstellen.Text = "Rechnungsvorlage erstellen";
+            this.btn_Rechnungsvorlageerstellen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Rechnungsvorlageerstellen.UseVisualStyleBackColor = true;
+            this.btn_Rechnungsvorlageerstellen.Click += new System.EventHandler(this.btn_Rechnungsvorlageerstellen_Click);
             // 
             // label8
             // 
@@ -303,52 +345,6 @@ namespace Instant_Gaming
             this.dgv_Rechnungen.Size = new System.Drawing.Size(759, 647);
             this.dgv_Rechnungen.TabIndex = 3;
             // 
-            // btn_Rechnungsvorlageerstellen
-            // 
-            this.btn_Rechnungsvorlageerstellen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Rechnungsvorlageerstellen.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rechnungsvorlageerstellen.Image = global::Instant_Gaming.Properties.Resources.invoice_48px;
-            this.btn_Rechnungsvorlageerstellen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Rechnungsvorlageerstellen.Location = new System.Drawing.Point(39, 502);
-            this.btn_Rechnungsvorlageerstellen.Name = "btn_Rechnungsvorlageerstellen";
-            this.btn_Rechnungsvorlageerstellen.Size = new System.Drawing.Size(203, 49);
-            this.btn_Rechnungsvorlageerstellen.TabIndex = 16;
-            this.btn_Rechnungsvorlageerstellen.Text = "Rechnungsvorlage erstellen";
-            this.btn_Rechnungsvorlageerstellen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Rechnungsvorlageerstellen.UseVisualStyleBackColor = true;
-            this.btn_Rechnungsvorlageerstellen.Click += new System.EventHandler(this.btn_Rechnungsvorlageerstellen_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Instant_Gaming.Properties.Resources.back_to_48px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(39, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 49);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Zurück";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lbl_DateTime
-            // 
-            this.lbl_DateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_DateTime.AutoSize = true;
-            this.lbl_DateTime.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DateTime.ForeColor = System.Drawing.Color.White;
-            this.lbl_DateTime.Location = new System.Drawing.Point(17, 648);
-            this.lbl_DateTime.Name = "lbl_DateTime";
-            this.lbl_DateTime.Size = new System.Drawing.Size(76, 23);
-            this.lbl_DateTime.TabIndex = 18;
-            this.lbl_DateTime.Text = "label22";
-            // 
-            // Uhrzeit
-            // 
-            this.Uhrzeit.Tick += new System.EventHandler(this.Uhrzeit_Tick);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "RiD";
@@ -397,6 +393,10 @@ namespace Instant_Gaming
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
+            // Uhrzeit
+            // 
+            this.Uhrzeit.Tick += new System.EventHandler(this.Uhrzeit_Tick);
+            // 
             // Profiel_Übersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +410,7 @@ namespace Instant_Gaming
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profil-Übersicht";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Profiel_Übersicht_FormClosed);
             this.Load += new System.EventHandler(this.Profiel_Übersicht_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Profilbild)).EndInit();
             this.panel_Profil_Funktionen.ResumeLayout(false);

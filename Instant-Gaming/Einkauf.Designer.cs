@@ -847,6 +847,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Einkauf";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Einkauf_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Einkauftabelle)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
