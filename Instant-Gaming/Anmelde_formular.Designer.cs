@@ -36,6 +36,7 @@
             this.lbl_Registrieren = new System.Windows.Forms.Label();
             this.btn_Bestätigen = new System.Windows.Forms.Button();
             this.panel_Anmelden = new System.Windows.Forms.Panel();
+            this.p_anmeldenfarbe = new System.Windows.Forms.Panel();
             this.panel_Registrieren = new System.Windows.Forms.Panel();
             this.p_registrationsfarbe = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,12 +54,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.p_anmeldenfarbe = new System.Windows.Forms.Panel();
             this.btn_Passwort_zeigen = new System.Windows.Forms.Button();
             this.panel_Anmelden.SuspendLayout();
+            this.p_anmeldenfarbe.SuspendLayout();
             this.panel_Registrieren.SuspendLayout();
             this.p_registrationsfarbe.SuspendLayout();
-            this.p_anmeldenfarbe.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -155,6 +155,19 @@
             this.panel_Anmelden.Size = new System.Drawing.Size(884, 461);
             this.panel_Anmelden.TabIndex = 9;
             // 
+            // p_anmeldenfarbe
+            // 
+            this.p_anmeldenfarbe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.p_anmeldenfarbe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.p_anmeldenfarbe.Controls.Add(this.panel_Registrieren);
+            this.p_anmeldenfarbe.Controls.Add(this.label1);
+            this.p_anmeldenfarbe.Location = new System.Drawing.Point(0, 0);
+            this.p_anmeldenfarbe.Margin = new System.Windows.Forms.Padding(2);
+            this.p_anmeldenfarbe.Name = "p_anmeldenfarbe";
+            this.p_anmeldenfarbe.Size = new System.Drawing.Size(884, 90);
+            this.p_anmeldenfarbe.TabIndex = 16;
+            // 
             // panel_Registrieren
             // 
             this.panel_Registrieren.BackColor = System.Drawing.Color.Linen;
@@ -196,11 +209,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(295, 12);
+            this.label4.Location = new System.Drawing.Point(318, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 57);
+            this.label4.Size = new System.Drawing.Size(252, 57);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Registration";
+            this.label4.Text = "Anmelden";
             // 
             // btn_Anmeldenoffnen
             // 
@@ -342,19 +355,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Vorname";
             // 
-            // p_anmeldenfarbe
-            // 
-            this.p_anmeldenfarbe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.p_anmeldenfarbe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.p_anmeldenfarbe.Controls.Add(this.panel_Registrieren);
-            this.p_anmeldenfarbe.Controls.Add(this.label1);
-            this.p_anmeldenfarbe.Location = new System.Drawing.Point(0, 0);
-            this.p_anmeldenfarbe.Margin = new System.Windows.Forms.Padding(2);
-            this.p_anmeldenfarbe.Name = "p_anmeldenfarbe";
-            this.p_anmeldenfarbe.Size = new System.Drawing.Size(884, 90);
-            this.p_anmeldenfarbe.TabIndex = 16;
-            // 
             // btn_Passwort_zeigen
             // 
             this.btn_Passwort_zeigen.Location = new System.Drawing.Point(579, 183);
@@ -376,12 +376,12 @@
             this.Text = "Anmelde Formular";
             this.panel_Anmelden.ResumeLayout(false);
             this.panel_Anmelden.PerformLayout();
+            this.p_anmeldenfarbe.ResumeLayout(false);
+            this.p_anmeldenfarbe.PerformLayout();
             this.panel_Registrieren.ResumeLayout(false);
             this.panel_Registrieren.PerformLayout();
             this.p_registrationsfarbe.ResumeLayout(false);
             this.p_registrationsfarbe.PerformLayout();
-            this.p_anmeldenfarbe.ResumeLayout(false);
-            this.p_anmeldenfarbe.PerformLayout();
             this.ResumeLayout(false);
 
         }

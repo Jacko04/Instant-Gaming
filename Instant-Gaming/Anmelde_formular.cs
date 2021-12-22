@@ -14,6 +14,7 @@ namespace Instant_Gaming
     public partial class Anmelde_formular : Form
     {
         Main_Menü Main_menü;
+        Registration_Form registration;
         //Variablen
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
@@ -38,13 +39,15 @@ namespace Instant_Gaming
         public Anmelde_formular( )
         {
             InitializeComponent();
-            panel_Registrieren.Visible = false;
+            
         }
         
         private void lbl_Registrieren_Click(object sender, EventArgs e)
         {
-          //  panel_Anmelden.Visible = false;
-            panel_Registrieren.Visible = true;
+            Registration_Form registration = new Registration_Form();
+            registration.Show();
+            this.Visible = false;
+
         }
 
         private void btn_Bestätigen_Click(object sender, EventArgs e)
