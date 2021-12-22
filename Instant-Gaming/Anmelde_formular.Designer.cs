@@ -359,10 +359,11 @@
             // 
             this.btn_Passwort_zeigen.Location = new System.Drawing.Point(579, 183);
             this.btn_Passwort_zeigen.Name = "btn_Passwort_zeigen";
-            this.btn_Passwort_zeigen.Size = new System.Drawing.Size(37, 32);
+            this.btn_Passwort_zeigen.Size = new System.Drawing.Size(59, 32);
             this.btn_Passwort_zeigen.TabIndex = 17;
-            this.btn_Passwort_zeigen.Text = "btn_Passwort_zeigen";
+            this.btn_Passwort_zeigen.Text = "Anzeigen";
             this.btn_Passwort_zeigen.UseVisualStyleBackColor = true;
+            this.btn_Passwort_zeigen.Click += new System.EventHandler(this.btn_Passwort_zeigen_Click_1);
             // 
             // Anmelde_formular
             // 

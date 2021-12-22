@@ -301,5 +301,17 @@ namespace Instant_Gaming
         {
             Environment.Exit(0);
         }
+
+        private void btn_Passwort_zeigen_Click_1(object sender, EventArgs e)
+        {
+            if (txt_Passwort.UseSystemPasswordChar == true)
+            {
+                txt_Passwort.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_Passwort.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
